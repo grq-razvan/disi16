@@ -37,12 +37,24 @@ class KnapsackDataManager {
 
 
     Collection<Item> readDataFile(String path) {
-        return Collections.emptyList()
+        return reader.getLines(path)
     }
 
-    List<Collection<Item>> readDataFolder(String path) {
-        return Collections.emptyList()
+    Collection<Item> readDataFile(File file) {
+        return reader.getLines(file)
     }
+
+//
+//    List<Collection<Item>> readDataFolder(String path) {
+//        File folder = FileUtils.getFile(path)
+//        def result = [[]]
+//        for(file in folder.listFiles()) {
+//            if (file.isFile()) {
+//                result += readDataFile(file)
+//            }
+//        }
+//        return result
+//    }
 
 
 }
