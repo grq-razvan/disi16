@@ -24,4 +24,25 @@ class KnapsackFileDataConverter implements IDataConverter<Item> {
         }
         return map
     }
+
+    @Override
+    List<String> convertToWritableLines(Map<String, Item> data) {
+        return ["${data.size()}"] + data.collect { key, value -> """${key} ${value}""" }
+    }
+
+    @Override
+    Collection<Item> convertToReadableData(List<String> lines) {
+        Collection<Item> result = []
+
+        //remove first elements, which is usually size
+        lines.remove(0)
+
+        lines.each {
+            line ->
+                //three space based input: index, weight, value
+                def content = line.split(" ")
+                result << new Item(weight: Integer.valueOf(content[1]), value: Integer.valueOf(content[2]))
+        }
+        return result
+    }
 }

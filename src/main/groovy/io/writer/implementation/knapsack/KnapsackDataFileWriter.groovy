@@ -1,5 +1,7 @@
 package io.writer.implementation.knapsack
 
+import io.converter.IDataConverter
+import io.converter.implementation.knapsack.KnapsackFileDataConverter
 import io.writer.IFileWriter
 import model.knapsack.Item
 import org.apache.commons.io.FileUtils
@@ -9,16 +11,19 @@ import org.apache.commons.io.FileUtils
  */
 class KnapsackDataFileWriter implements IFileWriter<Item> {
 
+    private final IDataConverter<Item> dataConverter
+
+    KnapsackDataFileWriter() {
+        this.dataConverter = new KnapsackFileDataConverter()
+    }
+
     @Override
     void writeLines(File file, Map<String, Item> linesData) {
-        def lines = ["""${linesData.size()}"""] + linesData.collect { k, v -> """${k} ${v}""" }
-        FileUtils.writeLines(file, lines)
+        FileUtils.writeLines(file, dataConverter.convertToWritableLines(linesData))
     }
 
     @Override
     void writeLines(String path, Map<String, Item> linesData) {
-        def lines = ["""${linesData.size()}"""] + linesData.collect { k, v -> """${k} ${v}""" }
-        File file = FileUtils.getFile(path)
-        FileUtils.writeLines(file, lines)
+        writeLines(FileUtils.getFile(path), linesData)
     }
 }
