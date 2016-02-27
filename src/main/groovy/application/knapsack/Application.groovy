@@ -8,7 +8,7 @@ import solution.knapsack.general.KnapsackExecuter
 class Application {
     public static void main(String[] args) {
         KnapsackExecuter executer = new KnapsackExecuter()
-        executer.writeTestDataFile(10)
+        executer.writeTestDataFile(12, 50, 15)
         executer.processData()
         executer.writeResultDataFile()
     }

@@ -20,16 +20,16 @@ class KnapsackExecuter {
         this.resultManager = new KnapsackResultManager()
     }
 
-    void writeTestDataFile(int itemCount, Integer maxWeight = null, Integer maxValue = null, String path = FILE_DATA_PATH + "${itemCount}.txt") {
+    void writeTestDataFile(int itemCount, Integer maxWeight = null, Integer maxValue = null, String path = FILE_DATA_PATH + "-${itemCount}.txt") {
         inputData = dataManager.generateData(itemCount, maxWeight, maxValue)
         dataManager.writeDataFile(inputData, path)
     }
 
-    void writeResultDataFile(String path = FILE_RESULT_PATH + "${processedData.solution}.txt") {
+    void writeResultDataFile(String path = FILE_RESULT_PATH + "-${inputData.size()}.txt" + "-${processedData.solution}.txt") {
         resultManager.writeResultFile(processedData.results, path)
     }
 
-    void processData(String inputFilePath = FILE_DATA_PATH + "${inputData.size()}.txt", KnapsackSolutionType type = KnapsackSolutionType.ExtensiveSearch, Integer randomParameter = 0) {
+    void processData(String inputFilePath = FILE_DATA_PATH + "-${inputData.size()}.txt", KnapsackSolutionType type = KnapsackSolutionType.ExtensiveSearch, Integer randomParameter = 0) {
         def data = dataManager.readDataFile(inputFilePath)
         processedData =
                 [

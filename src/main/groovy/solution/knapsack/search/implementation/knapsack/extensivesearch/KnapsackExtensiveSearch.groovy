@@ -12,20 +12,22 @@ import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 class KnapsackExtensiveSearch extends AbstractKnapsackSearcher {
 
     KnapsackExtensiveSearch() {
-        knapsacks = [new Knapsack(maxWeight: 500, items: [])]
+        knapsacks = [new Knapsack(maxWeight: 100, items: [])]
         items = []
         type = KnapsackSolutionType.ExtensiveSearch
     }
 
     private static List<String> generateBinaryStrings(Integer itemCount) {
         def result = []
-        for (counter in (1..ArithmeticUtils.pow(2, itemCount) - 1)) {
-            String binaryRepresentation = Integer.toBinaryString(counter)
+        def max = ArithmeticUtils.pow(2L, (itemCount - 1).longValue())
+        for (long l = 1; l < max; l++) {
+            String binaryRepresentation = Long.toBinaryString(l)
             while (binaryRepresentation.length() < itemCount) {
                 binaryRepresentation = '0' + binaryRepresentation
             }
             result.add(binaryRepresentation)
         }
+
         return result
     }
 

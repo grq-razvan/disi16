@@ -43,7 +43,7 @@ class KnapsackResultManager {
         return searcher.solve()
     }
 
-    void writeResultFile(List<Knapsack> result, String path = FILE_RESULT_PATH + ".txt") {
+    void writeResultFile(List<Knapsack> result, String path) {
         def resultMap = resultConverter.convertResultToMap(result)
         resultWriter.writeLines(path, resultMap)
     }
