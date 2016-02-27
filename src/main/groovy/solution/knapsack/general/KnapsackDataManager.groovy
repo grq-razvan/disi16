@@ -14,8 +14,9 @@ import io.writer.implementation.knapsack.KnapsackResultFileWriter
 import model.knapsack.Item
 import model.knapsack.Knapsack
 import solution.ISolver
-import solution.knapsack.search.IKnapsackSearch
-import solution.knapsack.search.implementation.extensivesearch.KnapsackExtensiveSearch
+import solution.knapsack.search.implementation.AbstractKnapsackSearcher
+import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
+import solution.knapsack.search.implementation.knapsack.extensivesearch.KnapsackExtensiveSearch
 
 /**
  * Created by stefangrecu on 25/02/16.
@@ -43,12 +44,12 @@ class KnapsackDataManager {
         solvers = []
     }
 
-    private void addSolver(IKnapsackSearch searchSolution) {
+    private void addSolver(AbstractKnapsackSearcher searchSolution) {
         solvers.add(searchSolution)
     }
 
     private void initializeSolvers() {
-        IKnapsackSearch extensiveSearch = new KnapsackExtensiveSearch()
+        AbstractKnapsackSearcher extensiveSearch = new KnapsackExtensiveSearch()
         addSolver(extensiveSearch)
     }
 
@@ -63,6 +64,25 @@ class KnapsackDataManager {
 
     Collection<Item> readDataFile(String path) {
         return dataReader.getLines(path)
+    }
+
+    List<Knapsack> generateResult(Collection<Item> data, KnapsackSolutionType provider = KnapsackSolutionType.ExtensiveSearch, Integer randomSearchParameter = 0) {
+        AbstractKnapsackSearcher searcher = getSolver(provider)
+        searcher.items = data
+        searcher.randomSearchParameter = randomSearchParameter
+        return searcher.solve()
+    }
+
+    void writeResultFile(List<Knapsack> result, String path = FILE_RESULT_PATH + ".txt") {
+        def resultMap = resultConverter.convertResultToMap(result)
+        resultWriter.writeLines(path, resultMap)
+    }
+
+    private static AbstractKnapsackSearcher getSolver(KnapsackSolutionType provider) {
+        switch (provider) {
+            case KnapsackSolutionType.ExtensiveSearch: return new KnapsackExtensiveSearch(items: [], knapsacks: [new Knapsack(maxWeight: 100, items: [])])
+            default: return new KnapsackExtensiveSearch(items: [], knapsacks: [new Knapsack(maxWeight: 100, items: [])])
+        }
     }
 
 }
