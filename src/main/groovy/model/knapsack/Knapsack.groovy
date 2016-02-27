@@ -33,11 +33,9 @@ class Knapsack {
     }
 
     public void addItem(Item item) {
-        if (canAdd()) {
-            items.add(item)
-            currentWeight += item.weight
-            totalValue += item.value
-        }
+        items.add(item)
+        currentWeight += item.weight
+        totalValue += item.value
     }
 
     @Override

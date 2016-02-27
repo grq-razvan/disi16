@@ -4,13 +4,13 @@ package solution.knapsack.search.implementation.knapsack
  * Created by stefangrecu on 27/02/16.
  */
 enum KnapsackSolutionType {
-    ExtensiveSearch(0),
-    RandomSearch(1),
-    GreedySearch(2)
+    ExtensiveSearch("extensive-search"),
+    RandomSearch("random-search"),
+    GreedySearch("greedy-search")
 
-    Integer orderNumber
+    String solutionType
 
-    KnapsackSolutionType(Integer orderNumber) {
-        this.orderNumber = orderNumber
+    KnapsackSolutionType(String type) {
+        this.solutionType = type
     }
 }

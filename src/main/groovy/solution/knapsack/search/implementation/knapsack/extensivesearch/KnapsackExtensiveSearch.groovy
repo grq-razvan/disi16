@@ -4,6 +4,7 @@ import model.knapsack.Item
 import model.knapsack.Knapsack
 import org.apache.commons.math3.util.ArithmeticUtils
 import solution.knapsack.search.implementation.AbstractKnapsackSearcher
+import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 
 /**
  * Created by stefangrecu on 26/02/16.
@@ -11,8 +12,9 @@ import solution.knapsack.search.implementation.AbstractKnapsackSearcher
 class KnapsackExtensiveSearch extends AbstractKnapsackSearcher {
 
     KnapsackExtensiveSearch() {
-        this.knapsacks = [new Knapsack(maxWeight: 100, items: [])]
-        this.items = []
+        knapsacks = [new Knapsack(maxWeight: 500, items: [])]
+        items = []
+        type = KnapsackSolutionType.ExtensiveSearch
     }
 
     private static List<String> generateBinaryStrings(Integer itemCount) {
@@ -30,16 +32,17 @@ class KnapsackExtensiveSearch extends AbstractKnapsackSearcher {
     public void solveInMemory() {
 
         ArrayList<Knapsack> knapsacks = computeSolution()
-        knapsacks = [knapsacks.sort {
+        this.knapsacks = [knapsacks.sort {
             knapsack1, knapsack2 -> return knapsack2.totalValue <=> knapsack1.totalValue
         }.first()]
 
     }
 
     public List<Knapsack> solve() {
-        ArrayList<Knapsack> knapsacks = computeSolution()
-        return [knapsacks.sort {
+        return [computeSolution().sort {
             knapsack1, knapsack2 -> knapsack2.totalValue <=> knapsack1.totalValue
+        }.findAll {
+            it.currentWeight <= it.maxWeight
         }.first()]
     }
 
@@ -47,7 +50,7 @@ class KnapsackExtensiveSearch extends AbstractKnapsackSearcher {
         List<String> possibleMatches = generateBinaryStrings(items.size())
         List<Knapsack> knapsacks = new ArrayList<>()
         possibleMatches.each {
-            knapsacks.add(new Knapsack(maxWeight: knapsacks[0].maxWeight, items: []))
+            knapsacks.add(new Knapsack(maxWeight: this.knapsacks[0].maxWeight, items: []))
         }
 
         possibleMatches.eachWithIndex { match, index ->
