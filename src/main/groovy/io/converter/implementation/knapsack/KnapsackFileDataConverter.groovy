@@ -45,4 +45,5 @@ class KnapsackFileDataConverter implements IDataConverter<Item> {
         }
         return result
     }
+
 }

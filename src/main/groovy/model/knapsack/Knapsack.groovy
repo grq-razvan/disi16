@@ -5,6 +5,8 @@ package model.knapsack
  */
 class Knapsack {
     Integer maxWeight
+    Integer currentWeight = 0
+    Integer totalValue = 0
     List<Item> items
 
     boolean equals(o) {
@@ -26,10 +28,24 @@ class Knapsack {
         return result
     }
 
+    private boolean canAdd() {
+        return currentWeight < maxWeight
+    }
+
+    public void addItem(Item item) {
+        if (canAdd()) {
+            items.add(item)
+            currentWeight += item.weight
+            totalValue += item.value
+        }
+    }
+
     @Override
     public String toString() {
         return "Knapsack{" +
                 "maxWeight=" + maxWeight +
+                ", currentWeight=" + currentWeight +
+                ", totalValue=" + totalValue +
                 ", items=" + items +
                 '}';
     }
