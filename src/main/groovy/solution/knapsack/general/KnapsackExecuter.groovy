@@ -29,7 +29,7 @@ class KnapsackExecuter {
         resultManager.writeResultFile(processedData.results, path)
     }
 
-    void processData(KnapsackSolutionType type = KnapsackSolutionType.ExtensiveSearch, Integer randomParameter = 0, String inputFilePath = FILE_DATA_PATH + "-${inputData.size()}.txt") {
+    void processData(KnapsackSolutionType type = KnapsackSolutionType.ExtensiveSearch, Double randomParameter = 0, String inputFilePath = FILE_DATA_PATH + "-${inputData.size()}.txt") {
         inputData = dataManager.readDataFile(inputFilePath)
         processedData =
                 [

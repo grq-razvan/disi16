@@ -43,8 +43,8 @@ class KnapsackRandomSearch extends AbstractKnapsackSearcher {
         } else {
             int itemsCount = items.size()
             int expressionBase = ArithmeticUtils.pow(itemsCount, 2)
-            int randomLowerBound = expressionBase - 2 * itemsCount + LOWER_BOUND_FUNCTION_CONSTANT
-            int randomUpperBound = expressionBase - 2 * itemsCount - UPPER_BOUND_FUNCTION_CONSTANT
+            int randomUpperBound = expressionBase - 2 * itemsCount + LOWER_BOUND_FUNCTION_CONSTANT
+            int randomLowerBound = expressionBase - 2 * itemsCount - UPPER_BOUND_FUNCTION_CONSTANT
             return Math.abs(expressionBase - numberGenerator.nextSecureInt(randomLowerBound, randomUpperBound) * (1.0 - epsilon)) / epsilon
         }
     }
