@@ -1,0 +1,12 @@
+0 :
+	value: 126 $
+	weight: 100 kg
+	out of: 100 kg
+	items:
+		item: 2 21
+		item: 20 11
+		item: 36 24
+		item: 19 25
+		item: 9 20
+		item: 14 25
+#############END##############

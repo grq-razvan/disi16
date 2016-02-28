@@ -1,0 +1,24 @@
+0 :
+	value: 81 $
+	weight: 81 kg
+	out of: 100 kg
+	items:
+		item: 8 1
+		item: 13 5
+		item: 18 5
+		item: 19 25
+		item: 9 20
+		item: 14 25
+#############END##############
+1 :
+	value: 81 $
+	weight: 81 kg
+	out of: 100 kg
+	items:
+		item: 8 1
+		item: 13 5
+		item: 18 5
+		item: 19 25
+		item: 9 20
+		item: 14 25
+#############END##############
