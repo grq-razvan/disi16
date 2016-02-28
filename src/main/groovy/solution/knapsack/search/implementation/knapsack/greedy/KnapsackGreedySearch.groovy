@@ -27,9 +27,9 @@ class KnapsackGreedySearch extends AbstractKnapsackSearcher {
     }
 
     private List<Knapsack> computeSolution() {
-        Knapsack knapsack = new Knapsack(maxWeight: this.knapsacks[0].maxWeight, items: this.knapsacks[0].items)
+        Knapsack knapsack = new Knapsack(maxWeight: this.knapsacks[0].maxWeight, items: [])
         List<Item> heuristicallySortedItems = items.sort {
-            Item a, Item b -> (b.value / b.weight) <=> (a.value / a.weight)
+            Item a, Item b -> (b.value / (b.weight == 0 ? 1 : b.weight)) <=> (a.value / (a.weight == 0 ? 1 : a.weight))
         }
         heuristicallySortedItems.each { Item item ->
             if (item.weight < knapsack.maxWeight - knapsack.currentWeight) {

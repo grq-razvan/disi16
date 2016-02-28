@@ -1,0 +1,76 @@
+0 :
+	value: 2411 $
+	weight: 169 kg
+	out of: 250 kg
+	items:
+		item: 4 25
+		item: 1 10
+		item: 2 68
+		item: 2 22
+		item: 9 93
+		item: 10 36
+		item: 7 103
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 6 29
+		item: 3 74
+		item: 0 96
+		item: 8 94
+		item: 4 77
+		item: 0 72
+		item: 4 129
+		item: 2 42
+		item: 1 90
+		item: 1 65
+		item: 8 108
+		item: 9 100
+		item: 4 33
+		item: 10 78
+		item: 7 22
+		item: 5 75
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 5 80
+		item: 6 4
+		item: 6 104
+		item: 10 116
+		item: 5 108
+		item: 1 9
+		item: 2 5
+#############END##############
+1 :
+	value: 1575 $
+	weight: 117 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 4 17
+		item: 1 10
+		item: 1 26
+		item: 2 68
+		item: 2 22
+		item: 3 9
+		item: 0 10
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 6 29
+		item: 3 74
+		item: 8 94
+		item: 4 129
+		item: 6 97
+		item: 1 90
+		item: 1 65
+		item: 10 78
+		item: 5 75
+		item: 3 110
+		item: 7 62
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 1 9
+		item: 2 5
+#############END##############

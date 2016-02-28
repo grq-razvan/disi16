@@ -100,10 +100,10 @@ class KnapsackRandomSearch extends AbstractKnapsackSearcher {
     List<Knapsack> solve() {
         List<Knapsack> results = computeSolution()
         if (this.randomSearchParameter == NumberUtils.createDouble("0.0") || this.randomSearchParameter == NumberUtils.createDouble("1.0")) {
-            return [getBestResults(results).first()]
+            return getBestResults(results).empty ? [] : [getBestResults(results).first()]
         } else {
             def bestCandidates = getBestResults(results)
-            return [bestCandidates.first()] + getAverageResult(bestCandidates)
+            return bestCandidates.empty ? [] : [bestCandidates.first()] + getAverageResult(bestCandidates)
         }
     }
 

@@ -1,0 +1,38 @@
+0 :
+	value: 5303 $
+	weight: 734 kg
+	out of: 750 kg
+	items:
+		item: 0 249
+		item: 1 214
+		item: 1 151
+		item: 2 197
+		item: 0 90
+		item: 4 198
+		item: 2 78
+		item: 4 140
+		item: 8 216
+		item: 1 27
+		item: 12 250
+		item: 13 247
+		item: 9 110
+		item: 17 203
+		item: 12 134
+		item: 11 94
+		item: 31 232
+		item: 39 234
+		item: 31 184
+		item: 24 133
+		item: 32 166
+		item: 47 224
+		item: 42 181
+		item: 39 158
+		item: 52 200
+		item: 49 185
+		item: 45 155
+		item: 35 116
+		item: 48 159
+		item: 62 198
+		item: 26 81
+		item: 35 99
+#############END##############

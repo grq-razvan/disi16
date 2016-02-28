@@ -11,8 +11,10 @@ class KnapsackResultConverter implements IResultConverter<Knapsack> {
     @Override
     Map<String, Knapsack> convertResultToMap(List<Knapsack> knapsacks) {
         def map = [:]
-        for (i in (0..knapsacks.size() - 1)) {
-            map.put("${i}", knapsacks.get(i))
+        if (!knapsacks.empty) {
+            for (i in (0..knapsacks.size() - 1)) {
+                map.put("${i}", knapsacks.get(i))
+            }
         }
         return map
     }
