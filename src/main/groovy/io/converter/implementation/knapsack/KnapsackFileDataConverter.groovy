@@ -4,7 +4,7 @@ import io.converter.IDataConverter
 import model.knapsack.Item
 
 /**
- * Created by stefangrecu on 25/02/16.
+ *  Created by stefangrecu on 25/02/16.
  */
 class KnapsackFileDataConverter implements IDataConverter<Item> {
     @Override

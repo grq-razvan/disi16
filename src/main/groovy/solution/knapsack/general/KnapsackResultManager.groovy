@@ -11,36 +11,37 @@ import solution.knapsack.search.implementation.AbstractKnapsackSearcher
 import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 import solution.knapsack.search.implementation.knapsack.extensivesearch.KnapsackExtensiveSearch
 import solution.knapsack.search.implementation.knapsack.greedy.KnapsackGreedySearch
+import solution.knapsack.search.implementation.knapsack.randomsearch.KnapsackRandomSearch
 
 /**
- * Created by stefangrecu on 27/02/16.
+ *  Created by stefangrecu on 27/02/16.
  */
 class KnapsackResultManager {
-    private static final String FILE_RESULT_PATH = "src/main/resources/knapsack/results/data"
-
     private final IFileWriter<Knapsack> resultWriter
     private final IResultConverter<Knapsack> resultConverter
     private final List<ISolver<Knapsack>> solvers
 
-    KnapsackResultManager(Integer maxWeight) {
+    KnapsackResultManager(Integer maxWeight, Double epsilon) {
         resultWriter = new KnapsackResultFileWriter()
         resultConverter = new KnapsackResultConverter()
         solvers = []
-        initializeSolvers(maxWeight)
+        initializeSolvers(maxWeight, epsilon)
     }
 
     private void addSolver(AbstractKnapsackSearcher searchSolution) {
         solvers.add(searchSolution)
     }
 
-    private void initializeSolvers(Integer maxWeight) {
+    private void initializeSolvers(Integer maxWeight, Double searchEpsilon) {
         AbstractKnapsackSearcher extensiveSearch = new KnapsackExtensiveSearch(maxWeight)
         AbstractKnapsackSearcher greedySearch = new KnapsackGreedySearch(maxWeight)
+        AbstractKnapsackSearcher randomSearch = new KnapsackRandomSearch(maxWeight, searchEpsilon)
         addSolver(extensiveSearch)
         addSolver(greedySearch)
+        addSolver(randomSearch)
     }
 
-    List<Knapsack> generateResult(Collection<Item> data, KnapsackSolutionType provider = KnapsackSolutionType.ExtensiveSearch, Integer randomSearchParameter = 0) {
+    List<Knapsack> generateResult(Collection<Item> data, KnapsackSolutionType provider = KnapsackSolutionType.ExtensiveSearch, Double randomSearchParameter = 0.1) {
         AbstractKnapsackSearcher searcher = getSolver(provider)
         searcher.items = data
         searcher.randomSearchParameter = randomSearchParameter

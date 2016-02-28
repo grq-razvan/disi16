@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9c98e40-3771-4a28-8e0e-2c5a1cd3ba66" name="Default" comment="added execution manager, separated planes between data management and result manangement (io operations, generation)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/KnapsackGreedySearch.groovy" />
+    <list default="true" id="d9c98e40-3771-4a28-8e0e-2c5a1cd3ba66" name="Default" comment="added random search; created function to calculate the number of times it runs">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy" />
     </list>
     <ignored path="laboratory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,25 +52,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="KnapsackExtensiveSearch.groovy" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy">
+      <file leaf-file-name="Knapsack.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61383927">
-              <caret line="52" column="88" selection-start-line="52" selection-start-column="88" selection-end-line="52" selection-end-column="88" />
-              <folding>
-                <element signature="e#74#100#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.6651786">
+              <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KnapsackResultManager.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy">
+      <file leaf-file-name="KnapsackDataManager.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackDataManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
               <folding>
-                <element signature="e#35#71#0" expanded="true" />
+                <element signature="e#35#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,66 +78,8 @@
         <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KnapsackGreedySearch.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/KnapsackGreedySearch.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-              <folding>
-                <element signature="e#65#91#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Knapsack.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractKnapsackSearcher.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-              <folding>
-                <element signature="e#49#75#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="108" selection-start-line="13" selection-start-column="108" selection-end-line="13" selection-end-column="108" />
-              <folding>
-                <element signature="e#30#82#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KnapsackRandomItemGenerator.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/implementation/knapsack/KnapsackRandomItemGenerator.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="e#43#74#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -500,41 +434,44 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/groovy/model/Item.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/model/Knapsack.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/generator/IDataGenerator.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/io/converter/implementation/KnapsackFileDataConverter.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/generator/implementation/KnapsackRandomItemGenerator.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/writer/IFileWriter.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/application/Application.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/io/FileMapping.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/io/writer/implementation/KnapsackDataFileWriter.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/reader/IFileReader.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/io/reader/implementation/KnapsackDataFileReader.groovy" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/IDataConverter.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/writer/implementation/knapsack/KnapsackDataFileWriter.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/reader/implementation/knapsack/KnapsackDataFileReader.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/KnapsackFileDataConverter.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/writer/implementation/knapsack/KnapsackResultFileWriter.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/ISearch.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/KnapsackResultConverter.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/IResultConverter.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/ISolver&lt;T&gt;.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/IKnapsackSearch.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/extensivesearch/KnapsackExtensiveSearch.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionProvider.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/IKnapsackSearch.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackDataManager.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/knapsack/results/dataextensive-search.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/knapsack/data-30.txt" />
-        <option value="$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/generator/implementation/knapsack/KnapsackRandomItemGenerator.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/generator/IDataGenerator.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/KnapsackResultConverter.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/KnapsackFileDataConverter.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/IResultConverter.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/IDataConverter.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/writer/IFileWriter.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/reader/IFileReader.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/reader/implementation/knapsack/KnapsackDataFileReader.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/writer/implementation/knapsack/KnapsackDataFileWriter.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/writer/implementation/knapsack/KnapsackResultFileWriter.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/ISolver.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/KnapsackRandomSearch.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/KnapsackGreedySearch.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackDataManager.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy" />
       </list>
     </option>
   </component>
@@ -744,36 +681,6 @@
               <option name="myItemId" value="knapsack" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laboratory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laboratory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="solution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="knapsack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="implementation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -847,39 +754,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="implementation" />
+              <option name="myItemId" value="general" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="knapsack" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="greedy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laboratory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laboratory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -903,7 +806,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
+              <option name="myItemId" value="io" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -929,11 +832,59 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
+              <option name="myItemId" value="generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="knapsack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1481,7 +1432,7 @@
       <created>1456419108740</created>
       <option name="number" value="Default" />
       <updated>1456419108740</updated>
-      <workItem from="1456419110028" duration="40585000" />
+      <workItem from="1456419110028" duration="47277000" />
     </task>
     <task id="LOCAL-00001" summary="finished manager; continue with extensive search, added binary bitstring representation">
       <created>1456438354691</created>
@@ -1519,11 +1470,29 @@
       <option name="project" value="LOCAL" />
       <updated>1456580587966</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added 3step greedy solution; duplicate fixes, minor edits">
+      <created>1456654319370</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1456654319371</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added random search; created function to calculate the number of times it runs">
+      <created>1456664232890</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1456664232890</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added random search; created function to calculate the number of times it runs">
+      <created>1456664249080</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1456664249080</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40585000" />
+    <option name="totallyTimeSpent" value="47277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="800" extended-state="0" />
@@ -1575,7 +1544,9 @@
     <MESSAGE value="abstracted solutions, implemented extensive search; added separate result io/generation handling" />
     <MESSAGE value="abstracted solutions" />
     <MESSAGE value="added execution manager, separated planes between data management and result manangement (io operations, generation)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added execution manager, separated planes between data management and result manangement (io operations, generation)" />
+    <MESSAGE value="added 3step greedy solution; duplicate fixes, minor edits" />
+    <MESSAGE value="added random search; created function to calculate the number of times it runs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added random search; created function to calculate the number of times it runs" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1602,13 +1573,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy</url>
-          <line>43</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy</url>
-          <line>55</line>
+          <line>56</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
@@ -1620,7 +1591,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy</url>
-          <line>44</line>
+          <line>45</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
@@ -1643,13 +1614,11 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="ArithmeticUtils.pow(2L, 50L)" language="Groovy" custom="" />
-        <watch expression="possibleResult.type == type" language="Groovy" custom="" />
-        <watch expression="possibleResult.type" language="Groovy" custom="" />
+        <watch expression="occurenceMap" language="Groovy" custom="" />
       </configuration>
     </watches-manager>
   </component>
@@ -1658,14 +1627,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/model/knapsack/Item.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5974395">
-          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.0/f0d655bc180703d1553dee71bc97599f724a276e/commons-math3-3.0-sources.jar!/org/apache/commons/math3/random/RandomData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3328592">
@@ -1682,54 +1643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/IFileWriter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19301471">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/implementation/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/implementation/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/reader/implementation/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/implementation/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/model/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.082720585">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/src.zip!/java/util/BitSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1738,134 +1651,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/package-info.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/reader/IFileReader.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/IDataConverter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/implementation/knapsack/KnapsackDataFileWriter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
-          <folding>
-            <element signature="e#43#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/KnapsackFileDataConverter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5639098">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/IResultConverter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41353384">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/ISolver.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/implementation/knapsack/KnapsackResultFileWriter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="61" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20231214">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/reader/implementation/knapsack/KnapsackDataFileReader.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackDataManager.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-          <folding>
-            <element signature="e#35#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/IDataGenerator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/KnapsackResultConverter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1886,77 +1675,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/implementation/knapsack/KnapsackRandomItemGenerator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding>
-            <element signature="e#43#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/data-20.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="108" selection-start-line="13" selection-start-column="108" selection-end-line="13" selection-end-column="108" />
-          <folding>
-            <element signature="e#30#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/KnapsackGreedySearch.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#65#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#49#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding>
-            <element signature="e#35#71#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1976,13 +1699,205 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/implementation/knapsack/KnapsackRandomItemGenerator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="e#43#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/IDataGenerator.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08547009">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34188035">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <marker date="1456664230000" expanded="true" signature="30:106" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/KnapsackResultConverter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21367522">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/KnapsackFileDataConverter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21367522">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/IResultConverter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08547009">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/IDataConverter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12820514">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/IFileWriter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12820514">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/reader/IFileReader.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/reader/implementation/knapsack/KnapsackDataFileReader.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/implementation/knapsack/KnapsackResultFileWriter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21367522">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/implementation/knapsack/KnapsackDataFileWriter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24786325">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="e#43#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/model/knapsack/Item.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/ISolver.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12820514">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20512821">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="e#49#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12820514">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/KnapsackRandomSearch.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20512821">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding>
+            <element signature="e#71#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/KnapsackGreedySearch.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20512821">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="e#65#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61383927">
-          <caret line="52" column="88" selection-start-line="52" selection-start-column="88" selection-end-line="52" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.24786325">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding>
             <element signature="e#74#100#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding>
+            <element signature="e#35#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/KnapsackDataManager.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <element signature="e#35#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6651786">
+          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

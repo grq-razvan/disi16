@@ -3,7 +3,7 @@ package solution.knapsack.general
 import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 
 /**
- * Created by stefangrecu on 27/02/16.
+ *  Created by stefangrecu on 27/02/16.
  */
 class KnapsackExecuter {
     private static final String FILE_DATA_PATH = "src/main/resources/knapsack/data"
@@ -15,9 +15,9 @@ class KnapsackExecuter {
     private final KnapsackDataManager dataManager
     private final KnapsackResultManager resultManager
 
-    public KnapsackExecuter(Integer maxWeight) {
+    public KnapsackExecuter(Integer maxWeight, Double randomCertaintyEpsilon) {
         this.dataManager = new KnapsackDataManager()
-        this.resultManager = new KnapsackResultManager(maxWeight)
+        this.resultManager = new KnapsackResultManager(maxWeight, randomCertaintyEpsilon)
     }
 
     void writeTestDataFile(int itemCount, Integer maxWeight = null, Integer maxValue = null, String path = FILE_DATA_PATH + "-${itemCount}.txt") {

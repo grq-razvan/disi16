@@ -6,7 +6,7 @@ import solution.knapsack.search.implementation.AbstractKnapsackSearcher
 import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 
 /**
- * Created by stefangrecu on 27/02/16.
+ *  Created by stefangrecu on 27/02/16.
  */
 class KnapsackGreedySearch extends AbstractKnapsackSearcher {
 

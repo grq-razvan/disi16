@@ -1,7 +1,7 @@
 package solution.knapsack.search.implementation.knapsack
 
 /**
- * Created by stefangrecu on 27/02/16.
+ *  Created by stefangrecu on 27/02/16.
  */
 enum KnapsackSolutionType {
     ExtensiveSearch("extensive-search"),

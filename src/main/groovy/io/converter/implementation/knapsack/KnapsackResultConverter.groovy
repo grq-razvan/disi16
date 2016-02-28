@@ -4,7 +4,7 @@ import io.converter.IResultConverter
 import model.knapsack.Knapsack
 
 /**
- * Created by stefangrecu on 27/02/16.
+ *  Created by stefangrecu on 27/02/16.
  */
 class KnapsackResultConverter implements IResultConverter<Knapsack> {
 

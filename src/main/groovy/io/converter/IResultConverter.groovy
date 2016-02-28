@@ -1,6 +1,6 @@
 package io.converter
 /**
- * Created by stefangrecu on 27/02/16.
+ *  Created by stefangrecu on 27/02/16.
  */
 interface IResultConverter<T> {
 

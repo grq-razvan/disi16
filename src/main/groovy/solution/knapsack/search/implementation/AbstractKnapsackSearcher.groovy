@@ -6,13 +6,13 @@ import solution.ISolver
 import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 
 /**
- * Created by stefangrecu on 27/02/16.
+ *  Created by stefangrecu on 27/02/16.
  */
 abstract class AbstractKnapsackSearcher implements ISolver<Knapsack> {
 
     List<Item> items
     List<Knapsack> knapsacks
-    Integer randomSearchParameter
+    Double randomSearchParameter
     KnapsackSolutionType type
 
     abstract List<Knapsack> solve()

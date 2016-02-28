@@ -7,7 +7,7 @@ import model.knapsack.Knapsack
 import org.apache.commons.io.FileUtils
 
 /**
- * Created by stefangrecu on 26/02/16.
+ *  Created by stefangrecu on 26/02/16.
  */
 class KnapsackResultFileWriter implements IFileWriter<Knapsack> {
 

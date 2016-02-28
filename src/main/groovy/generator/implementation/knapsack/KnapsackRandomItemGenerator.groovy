@@ -6,7 +6,7 @@ import org.apache.commons.math3.random.RandomData
 import org.apache.commons.math3.random.RandomDataImpl
 
 /**
- * Created by stefangrecu on 25/02/16.
+ *  Created by stefangrecu on 25/02/16.
  */
 class KnapsackRandomItemGenerator implements IDataGenerator<Item> {
 
