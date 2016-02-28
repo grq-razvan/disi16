@@ -11,14 +11,15 @@ import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
  */
 class KnapsackExtensiveSearch extends AbstractKnapsackSearcher {
 
-    KnapsackExtensiveSearch() {
-        knapsacks = [new Knapsack(maxWeight: 100, items: [])]
+    KnapsackExtensiveSearch(Integer knapsackMaxWeight) {
+        knapsacks = [new Knapsack(maxWeight: knapsackMaxWeight, items: [])]
         items = []
         type = KnapsackSolutionType.ExtensiveSearch
     }
 
     private static List<String> generateBinaryStrings(Integer itemCount) {
         def result = []
+
         def max = ArithmeticUtils.pow(2L, (itemCount - 1).longValue())
         for (long l = 1; l < max; l++) {
             String binaryRepresentation = Long.toBinaryString(l)
@@ -41,11 +42,8 @@ class KnapsackExtensiveSearch extends AbstractKnapsackSearcher {
     }
 
     public List<Knapsack> solve() {
-        return [computeSolution().sort {
-            knapsack1, knapsack2 -> knapsack2.totalValue <=> knapsack1.totalValue
-        }.findAll {
-            it.currentWeight <= it.maxWeight
-        }.first()]
+        def result = computeSolution()
+        return result
     }
 
     private List<Knapsack> computeSolution() {
@@ -65,8 +63,11 @@ class KnapsackExtensiveSearch extends AbstractKnapsackSearcher {
             }
         }
 
-        return knapsacks
+        return [knapsacks.sort {
+            knapsack1, knapsack2 -> knapsack2.totalValue <=> knapsack1.totalValue
+        }.findAll {
+            it.currentWeight <= it.maxWeight
+        }.first()]
     }
-
 
 }

@@ -10,6 +10,7 @@ import solution.ISolver
 import solution.knapsack.search.implementation.AbstractKnapsackSearcher
 import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 import solution.knapsack.search.implementation.knapsack.extensivesearch.KnapsackExtensiveSearch
+import solution.knapsack.search.implementation.knapsack.greedy.KnapsackGreedySearch
 
 /**
  * Created by stefangrecu on 27/02/16.
@@ -21,19 +22,22 @@ class KnapsackResultManager {
     private final IResultConverter<Knapsack> resultConverter
     private final List<ISolver<Knapsack>> solvers
 
-    KnapsackResultManager() {
+    KnapsackResultManager(Integer maxWeight) {
         resultWriter = new KnapsackResultFileWriter()
         resultConverter = new KnapsackResultConverter()
         solvers = []
+        initializeSolvers(maxWeight)
     }
 
     private void addSolver(AbstractKnapsackSearcher searchSolution) {
         solvers.add(searchSolution)
     }
 
-    private void initializeSolvers() {
-        AbstractKnapsackSearcher extensiveSearch = new KnapsackExtensiveSearch()
+    private void initializeSolvers(Integer maxWeight) {
+        AbstractKnapsackSearcher extensiveSearch = new KnapsackExtensiveSearch(maxWeight)
+        AbstractKnapsackSearcher greedySearch = new KnapsackGreedySearch(maxWeight)
         addSolver(extensiveSearch)
+        addSolver(greedySearch)
     }
 
     List<Knapsack> generateResult(Collection<Item> data, KnapsackSolutionType provider = KnapsackSolutionType.ExtensiveSearch, Integer randomSearchParameter = 0) {
@@ -49,17 +53,14 @@ class KnapsackResultManager {
     }
 
     private AbstractKnapsackSearcher getSolver(KnapsackSolutionType type) {
-        if (solvers.empty) {
-            initializeSolvers()
-        }
         for (solver in solvers) {
             if (solver instanceof AbstractKnapsackSearcher) {
-                def searcher = solver as AbstractKnapsackSearcher
-                if (searcher.type == type) {
-                    return searcher
+                def possibleResult = solver as AbstractKnapsackSearcher
+                if (possibleResult.type == type) {
+                    return possibleResult
                 }
             }
-            return null
         }
+        return null
     }
 }

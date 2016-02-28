@@ -38,6 +38,20 @@ class Knapsack {
         totalValue += item.value
     }
 
+    public void removeItem(Item item) {
+        items.remove(item)
+        currentWeight -= item.weight
+        totalValue -= item.value
+    }
+
+    public void clearKnapsack() {
+        int i = 0
+        while (!items.empty) {
+            removeItem(items[i])
+        }
+        assert items.empty
+    }
+
     @Override
     public String toString() {
         return "Knapsack{" +
