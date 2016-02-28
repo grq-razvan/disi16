@@ -11,7 +11,7 @@ import io.writer.implementation.knapsack.KnapsackDataFileWriter
 import model.knapsack.Item
 
 /**
- * Created by stefangrecu on 25/02/16.
+ *  Created by stefangrecu on 25/02/16.
  */
 class KnapsackDataManager {
 

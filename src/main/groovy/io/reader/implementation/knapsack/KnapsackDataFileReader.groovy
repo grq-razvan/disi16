@@ -7,7 +7,7 @@ import model.knapsack.Item
 import org.apache.commons.io.FileUtils
 
 /**
- * Created by stefangrecu on 25/02/16.
+ *  Created by stefangrecu on 25/02/16.
  */
 class KnapsackDataFileReader implements IFileReader<Item> {
 
