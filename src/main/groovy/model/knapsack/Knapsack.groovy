@@ -28,8 +28,12 @@ class Knapsack {
         return result
     }
 
-    private boolean canAdd() {
-        return currentWeight < maxWeight
+    public boolean isValid() {
+        return currentWeight <= maxWeight
+    }
+
+    public boolean isBetterThan(Knapsack that) {
+        return this.valid && this.totalValue > that.totalValue
     }
 
     public void addItem(Item item) {

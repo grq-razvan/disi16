@@ -23,24 +23,24 @@ class KnapsackGreedySearch extends AbstractKnapsackSearcher {
 
     @Override
     void solveInMemory() {
-        knapsacks = computeSolution()
+        this.knapsacks = computeSolution()
     }
 
     private List<Knapsack> computeSolution() {
         Knapsack knapsack = new Knapsack(maxWeight: this.knapsacks[0].maxWeight, items: [])
-        List<Item> heuristicallySortedItems = items.sort {
-            Item a, Item b -> (b.value / (b.weight == 0 ? 1 : b.weight)) <=> (a.value / (a.weight == 0 ? 1 : a.weight))
+        List<Item> heuristicallySortedItems = items.sort { Item a, Item b ->
+            (b.value / (b.weight == 0 ? 1 : b.weight)) <=> (a.value / (a.weight == 0 ? 1 : a.weight))
         }
         heuristicallySortedItems.each { Item item ->
-            if (item.weight < knapsack.maxWeight - knapsack.currentWeight) {
+            if (item.weight + knapsack.currentWeight <= knapsack.maxWeight) {
                 knapsack.addItem(item)
             }
         }
 
-        Item item = items.max { Item item -> item.value }
-        if (knapsack.totalValue < item.value && item.weight < knapsack.maxWeight) {
+        Item maxValuedItem = items.max { Item item -> item.value }
+        if (knapsack.totalValue < maxValuedItem.value && maxValuedItem.weight < knapsack.maxWeight) {
             knapsack.clearKnapsack()
-            knapsack.addItem(item)
+            knapsack.addItem(maxValuedItem)
         }
         return [knapsack]
     }

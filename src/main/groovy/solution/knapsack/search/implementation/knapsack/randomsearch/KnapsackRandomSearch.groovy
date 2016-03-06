@@ -1,6 +1,5 @@
 package solution.knapsack.search.implementation.knapsack.randomsearch
 
-import model.knapsack.Item
 import model.knapsack.Knapsack
 import org.apache.commons.lang3.math.NumberUtils
 import org.apache.commons.math3.random.RandomData
@@ -43,30 +42,18 @@ class KnapsackRandomSearch extends AbstractKnapsackSearcher {
         } else {
             int itemsCount = items.size()
             int expressionBase = ArithmeticUtils.pow(itemsCount, 2)
-            int randomUpperBound = expressionBase - 2 * itemsCount + LOWER_BOUND_FUNCTION_CONSTANT
-            int randomLowerBound = expressionBase - 2 * itemsCount - UPPER_BOUND_FUNCTION_CONSTANT
+            int randomBase = expressionBase - 2 * itemsCount
+            int randomUpperBound = randomBase + UPPER_BOUND_FUNCTION_CONSTANT
+            int randomLowerBound = randomBase - LOWER_BOUND_FUNCTION_CONSTANT
             return Math.abs(expressionBase - numberGenerator.nextSecureInt(randomLowerBound, randomUpperBound) * (1.0 - epsilon)) / epsilon
         }
-    }
-
-    private Knapsack createSample(String pickedItems) {
-        Knapsack result = new Knapsack(maxWeight: knapsacks[0].maxWeight, items: [])
-        pickedItems.eachWithIndex { String element, int i ->
-            if (element == '1') {
-                Item item = items.get(i)
-                result.addItem(item)
-            }
-        }
-        return result
     }
 
     private List<Knapsack> computeSolution() {
         List<Knapsack> samples = []
         int numberOfIterations = adjustRuntime(this.randomSearchParameter)
-        for (i in (0..numberOfIterations - 1)) {
-            String candidate = generateRandomBinaryString(items.size())
-            def sample = createSample(candidate)
-            samples.add(sample)
+        numberOfIterations.times {
+            samples.add(createKnapsackFromBinaryString(this.knapsacks[0].maxWeight, generateRandomBinaryString(items.size())))
         }
         return samples
     }
@@ -75,7 +62,7 @@ class KnapsackRandomSearch extends AbstractKnapsackSearcher {
         samples.sort {
             knapsack1, knapsack2 -> knapsack2.totalValue <=> knapsack1.totalValue
         }.findAll {
-            it.currentWeight < it.maxWeight
+            it.valid
         }
     }
 

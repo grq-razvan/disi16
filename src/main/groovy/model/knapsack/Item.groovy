@@ -1,7 +1,7 @@
 package model.knapsack
 
 /**
- * Created by stefangrecu on 25/02/16.
+ *  Created by stefangrecu on 25/02/16.
  */
 class Item {
     Integer weight
