@@ -90,7 +90,7 @@ class Application {
         knapsackExecuter.writeResultDataFile()
 
         //3000kg, wmax=150, vmax=150
-        knapsackExecuter = new KnapsackExecuter(3000, 0.0)
+        knapsackExecuter = new KnapsackExecuter(10000, 0.0)
         knapsackExecuter.processData(KnapsackSolutionType.GreedySearch, 0.0, generatePath(1000))
         knapsackExecuter.writeResultDataFile()
 
@@ -121,7 +121,7 @@ class Application {
     }
 
     void hcTest1() {
-        knapsackExecuter = new KnapsackExecuter(3000, 0.0)
+        knapsackExecuter = new KnapsackExecuter(10000, 0.0)
         knapsackExecuter.processData(KnapsackSolutionType.StochasticHillClimbing, 0.7, generatePath(1000))
         knapsackExecuter.writeResultDataFile()
     }

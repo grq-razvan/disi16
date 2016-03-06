@@ -26,7 +26,9 @@ class KnapsackStochasticHillClimbingSearcher extends AbstractKnapsackHillClimbin
     private String generateRandomCandidateSolution(int length) {
         StringBuilder builder = new StringBuilder()
         while (builder.length() < length) {
-            builder.append(randomGenerator.nextInt(0, 1))
+            Double x = Math.floor(randomGenerator.nextUniform(0.0, 1.1))
+
+            builder.append(x.intValue())
         }
         return builder.toString()
     }
@@ -47,7 +49,7 @@ class KnapsackStochasticHillClimbingSearcher extends AbstractKnapsackHillClimbin
         params.restarts.times {
             String initialSolution = generateRandomCandidateSolution(items.size())
             Knapsack initialKnapsack = createKnapsackFromBinaryString(maxWeight, initialSolution)
-            while (!initialKnapsack.valid) {
+            while (!initialKnapsack.valid && it == 0) {
                 initialSolution = generateRandomCandidateSolution(items.size())
                 initialKnapsack = createKnapsackFromBinaryString(maxWeight, initialSolution)
             }
