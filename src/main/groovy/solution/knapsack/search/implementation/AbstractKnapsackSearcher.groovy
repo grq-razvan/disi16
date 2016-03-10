@@ -19,7 +19,7 @@ abstract class AbstractKnapsackSearcher implements ISolver<Knapsack> {
 
     abstract void solveInMemory()
 
-    protected List<Item> convertBinaryStringToItems(String binaryString) {
+    protected synchronized List<Item> convertBinaryStringToItems(String binaryString) {
         List<Item> results = []
         binaryString.eachWithIndex { String entry, int index ->
             if (entry == '1') {
@@ -29,7 +29,7 @@ abstract class AbstractKnapsackSearcher implements ISolver<Knapsack> {
         return results
     }
 
-    protected Knapsack createKnapsackFromBinaryString(Integer maxWeight, String binaryString) {
+    protected synchronized Knapsack createKnapsackFromBinaryString(Integer maxWeight, String binaryString) {
         Knapsack result = new Knapsack(maxWeight: maxWeight, items: [])
         convertBinaryStringToItems(binaryString).each {
             result.addItem(it)

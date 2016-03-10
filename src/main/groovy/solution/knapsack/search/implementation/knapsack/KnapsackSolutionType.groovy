@@ -6,7 +6,9 @@ enum KnapsackSolutionType {
     ExtensiveSearch("extensive-search"),
     RandomSearch("random-search"),
     GreedySearch("greedy-search"),
-    StochasticHillClimbing("stochastic-hill-climbing")
+    StochasticHillClimbing("stochastic-hill-climbing"),
+    SteepestAscent("steepest-ascent"),
+    SimpleExperiment("test-hc-parallel-mr")
 
     String solutionType
 

@@ -33,7 +33,7 @@ class Knapsack {
     }
 
     public boolean isBetterThan(Knapsack that) {
-        return this.valid && this.totalValue > that.totalValue
+        return this.valid && (that.valid ? this.totalValue > that.totalValue : true)
     }
 
     public void addItem(Item item) {

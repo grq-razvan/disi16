@@ -121,8 +121,8 @@ class Application {
     }
 
     void hcTest1() {
-        knapsackExecuter = new KnapsackExecuter(10000, 0.0)
-        knapsackExecuter.processData(KnapsackSolutionType.StochasticHillClimbing, 0.7, generatePath(1000))
+        knapsackExecuter = new KnapsackExecuter(250, 0.0)
+        knapsackExecuter.processData(KnapsackSolutionType.SteepestAscent, 0.8, generatePath(50))
         knapsackExecuter.writeResultDataFile()
     }
 

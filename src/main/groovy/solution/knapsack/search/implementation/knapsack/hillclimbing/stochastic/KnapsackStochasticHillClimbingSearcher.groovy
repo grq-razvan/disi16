@@ -1,10 +1,7 @@
 package solution.knapsack.search.implementation.knapsack.hillclimbing.stochastic
 
 import model.knapsack.Knapsack
-import org.apache.commons.math3.random.RandomData
 import org.apache.commons.math3.random.RandomDataImpl
-import org.apache.commons.math3.util.ArithmeticUtils
-import org.apache.commons.math3.util.FastMath
 import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 import solution.knapsack.search.implementation.knapsack.hillclimbing.AbstractKnapsackHillClimbingSearcher
 
@@ -13,43 +10,35 @@ import solution.knapsack.search.implementation.knapsack.hillclimbing.AbstractKna
  */
 class KnapsackStochasticHillClimbingSearcher extends AbstractKnapsackHillClimbingSearcher {
 
-    private final RandomData randomGenerator
-
     KnapsackStochasticHillClimbingSearcher(Integer maxKnapsackWeight, Double epsilon) {
-        randomGenerator = new RandomDataImpl()
-        type = KnapsackSolutionType.StochasticHillClimbing
-        knapsacks = [new Knapsack(maxWeight: maxKnapsackWeight, items: [])]
-        randomSearchParameter = epsilon
-        items = []
+        this.randomGenerator = new RandomDataImpl()
+        this.type = KnapsackSolutionType.StochasticHillClimbing
+        this.knapsacks = [new Knapsack(maxWeight: maxKnapsackWeight, items: [])]
+        this.randomSearchParameter = epsilon
+        this.items = []
     }
 
-    private String generateRandomCandidateSolution(int length) {
+
+    @Override
+    protected synchronized String generateRandomCandidateSolution(int length) {
         StringBuilder builder = new StringBuilder()
         while (builder.length() < length) {
-            Double x = Math.floor(randomGenerator.nextUniform(0.0, 1.1))
-
-            builder.append(x.intValue())
+            Double uniformDistributedNumber = Math.floor(randomGenerator.nextUniform(0.0, 1.1))
+            builder.append(uniformDistributedNumber.intValue())
         }
         return builder.toString()
-    }
-
-    private String generateRandomCandidateNeighbour(String candidateSolution) {
-        List<Boolean> booleanRepresentation = convertFromBitString(candidateSolution)
-        Integer randomIndexToFlip = randomGenerator.nextInt(0, booleanRepresentation.size() - 1)
-        booleanRepresentation.set(randomIndexToFlip, !booleanRepresentation[randomIndexToFlip])
-        return convertFromBooleanRepresentation(booleanRepresentation)
     }
 
     @Override
     List<Knapsack> solve() {
         List<Knapsack> localOptima = []
-        def params = adjustRuntimeParameters(this.randomSearchParameter)
+        def params = adjustRuntimeParameters(this.randomSearchParameter, items.size())
         def maxWeight = this.knapsacks[0].maxWeight
 
-        params.restarts.times {
+        params.restarts.times { Integer startCount ->
             String initialSolution = generateRandomCandidateSolution(items.size())
             Knapsack initialKnapsack = createKnapsackFromBinaryString(maxWeight, initialSolution)
-            while (!initialKnapsack.valid && it == 0) {
+            while (!initialKnapsack.valid && startCount == 0) {
                 initialSolution = generateRandomCandidateSolution(items.size())
                 initialKnapsack = createKnapsackFromBinaryString(maxWeight, initialSolution)
             }
@@ -69,19 +58,6 @@ class KnapsackStochasticHillClimbingSearcher extends AbstractKnapsackHillClimbin
     @Override
     void solveInMemory() {
         knapsacks = solve()
-    }
-
-    private def adjustRuntimeParameters(Double epsilon) {
-        Integer itemCount = items.size()
-        def temp = FastMath.log10(FastMath.sqrt(itemCount.doubleValue()) * epsilon)
-        def iterations = (FastMath.cbrt((ArithmeticUtils.pow(itemCount, 2) - itemCount + 41).doubleValue())
-                - FastMath.pow(temp, 2.0)) / (1 - epsilon)
-
-        def restarts = iterations.toInteger().intdiv(4)
-        [
-                iterations: iterations.toInteger(),
-                restarts  : restarts
-        ]
     }
 
 

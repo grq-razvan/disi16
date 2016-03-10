@@ -12,6 +12,8 @@ import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 import solution.knapsack.search.implementation.knapsack.extensivesearch.KnapsackExtensiveSearch
 import solution.knapsack.search.implementation.knapsack.greedy.KnapsackGreedySearch
 import solution.knapsack.search.implementation.knapsack.hillclimbing.AbstractKnapsackHillClimbingSearcher
+import solution.knapsack.search.implementation.knapsack.hillclimbing.highestascent.KnapsackHighestAscentHillClimbingSearcher
+import solution.knapsack.search.implementation.knapsack.hillclimbing.stochastic.KnapsackSimpleRegionStochasticHillClimbingSearcher
 import solution.knapsack.search.implementation.knapsack.hillclimbing.stochastic.KnapsackStochasticHillClimbingSearcher
 import solution.knapsack.search.implementation.knapsack.randomsearch.KnapsackRandomSearch
 
@@ -39,10 +41,14 @@ class KnapsackResultManager {
         AbstractKnapsackSearcher greedySearch = new KnapsackGreedySearch(maxWeight)
         AbstractKnapsackSearcher randomSearch = new KnapsackRandomSearch(maxWeight, searchEpsilon)
         AbstractKnapsackHillClimbingSearcher stochasticHillClimb = new KnapsackStochasticHillClimbingSearcher(maxWeight, searchEpsilon)
+        AbstractKnapsackHillClimbingSearcher steepestAscent = new KnapsackHighestAscentHillClimbingSearcher(maxWeight, searchEpsilon)
+        AbstractKnapsackHillClimbingSearcher experiment1 = new KnapsackSimpleRegionStochasticHillClimbingSearcher(maxWeight)
         addSolver(extensiveSearch)
         addSolver(greedySearch)
         addSolver(randomSearch)
         addSolver(stochasticHillClimb)
+        addSolver(steepestAscent)
+        addSolver(experiment1)
     }
 
     List<Knapsack> generateResult(Collection<Item> data, KnapsackSolutionType provider = KnapsackSolutionType.ExtensiveSearch, Double randomSearchParameter = 0.1) {
