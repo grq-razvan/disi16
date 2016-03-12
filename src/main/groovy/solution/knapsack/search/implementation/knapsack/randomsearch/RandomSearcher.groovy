@@ -1,10 +1,7 @@
 package solution.knapsack.search.implementation.knapsack.randomsearch
 
-
-import org.apache.commons.lang3.math.NumberUtils
-import org.apache.commons.math3.random.RandomData
-import org.apache.commons.math3.random.RandomDataImpl
-import org.apache.commons.math3.util.ArithmeticUtils
+import model.knapsack.Knapsack
+import org.apache.commons.math3.random.RandomDataGenerator
 import solution.knapsack.search.implementation.AbstractKnapsackSearcher
 import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 
@@ -13,95 +10,68 @@ import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
  */
 class RandomSearcher extends AbstractKnapsackSearcher {
 
-    private final RandomData numberGenerator
-    private static final LOWER_BOUND_FUNCTION_CONSTANT = 10
-    private static final UPPER_BOUND_FUNCTION_CONSTANT = 10
+    private final RandomDataGenerator numberGenerator
+    private Map<String, Number> runtimeParams
 
-    RandomSearcher(Integer knapsackMaxWeight, Double randomEpsilon) {
-        this.knapsacks = [new Knapsack(maxWeight: knapsackMaxWeight, items: [])]
-        this.items = []
+    RandomSearcher(Integer maxKnapsackWeight, Double randomEpsilon) {
+        this.type = KnapsackSolutionType.Stochastic
+        this.maxKnapsackWeight = maxKnapsackWeight
         this.adaptiveRandomQuality = randomEpsilon
-        this.type = KnapsackSolutionType.RandomSearch
-        this.numberGenerator = new RandomDataImpl()
+        this.numberGenerator = new RandomDataGenerator()
+        this.runtimeParams = [:]
+    }
+
+    @Override
+    List<Knapsack> solve() {
+        runtimeParams = adjustRuntimeParameters(adaptiveRandomQuality)
+        return computeSolution(runtimeParams)
+    }
+
+    private List<Knapsack> computeSolution(Map<String, Number> runtimeParams) {
+        List<Knapsack> bestResults = []
+        List<Knapsack> avgResults = []
+        runtimeParams.restarts.times {
+            List<Knapsack> samples = createSamples(runtimeParams.iterations)
+            bestResults += (samples.findAll { Knapsack knapsack -> knapsack.validate() }).max()
+            avgResults += getAverageResult(samples)
+        }
+        [bestResults.max()] + avgResults.sort { Knapsack k1, Knapsack k2 -> k2.totalValue <=> k1.totalValue }.take(5)
+    }
+
+    private List<Knapsack> createSamples(Number iterations) {
+        List<Knapsack> samples = []
+        iterations.times {
+            String sampleData = generateRandomBinaryString(items.size())
+            Knapsack knapsack = createKnapsack(sampleData, this.maxKnapsackWeight)
+            samples += knapsack
+        }
+        return samples
+    }
+
+    private static List<Knapsack> getAverageResult(List<Knapsack> samples) {
+        def occurrencesMap = [:]
+        for (it in samples) {
+            def key = it.totalValue
+            if (occurrencesMap.containsKey(key)) {
+                def value = occurrencesMap.get(key)
+                value++
+                occurrencesMap.put(key, value)
+            } else {
+                occurrencesMap.put(key, 1)
+            }
+        }
+        return [samples.find {
+            it.totalValue == occurrencesMap.max { it.value }.key
+        }]
     }
 
     private String generateRandomBinaryString(int length) {
         StringBuilder builder = new StringBuilder()
         while (builder.length() < length) {
-            builder.append(numberGenerator.nextSecureInt(0, 1))
+            builder.append(numberGenerator.nextInt(0, 1))
         }
         return builder.toString()
     }
 
-    private Integer adjustRuntime(Double epsilon) {
-        if (epsilon == NumberUtils.createDouble("1.0")) {
-            return 1
-        } else if (epsilon == NumberUtils.createDouble("0.0")) {
-            int itemsCount = items.size()
-            return ArithmeticUtils.pow(2, itemsCount)
-        } else {
-            int itemsCount = items.size()
-            int expressionBase = ArithmeticUtils.pow(itemsCount, 2)
-            int randomBase = expressionBase - 2 * itemsCount
-            int randomUpperBound = randomBase + UPPER_BOUND_FUNCTION_CONSTANT
-            int randomLowerBound = randomBase - LOWER_BOUND_FUNCTION_CONSTANT
-            return Math.abs(expressionBase - numberGenerator.nextSecureInt(randomLowerBound, randomUpperBound) * (1.0 - epsilon)) / epsilon
-        }
-    }
 
-    private List<Knapsack> computeSolution() {
-        List<Knapsack> samples = []
-        int numberOfIterations = adjustRuntime(this.adaptiveRandomQuality)
-        numberOfIterations.times {
-            samples.add(createKnapsackFromBinaryString(this.knapsacks[0].maxWeight, generateRandomBinaryString(items.size())))
-        }
-        return samples
-    }
-
-    private static List<Knapsack> getBestResults(List<Knapsack> samples) {
-        samples.sort {
-            knapsack1, knapsack2 -> knapsack2.totalValue <=> knapsack1.totalValue
-        }.findAll {
-            it.validate()
-        }
-    }
-
-    public static List<Knapsack> getAverageResult(List<Knapsack> samples) {
-        def occurenceMap = [:]
-        for (it in samples) {
-            def key = it.totalValue
-            if (occurenceMap.containsKey(key)) {
-                def value = occurenceMap.get(key)
-                value++
-                occurenceMap.put(key, value)
-            } else {
-                occurenceMap.put(key, 1)
-            }
-        }
-        return [samples.find {
-            it.totalValue == occurenceMap.max { it.value }.key
-        }]
-    }
-
-    @Override
-    List<Knapsack> solve() {
-        List<Knapsack> results = computeSolution()
-        if (this.adaptiveRandomQuality == NumberUtils.createDouble("0.0") || this.adaptiveRandomQuality == NumberUtils.createDouble("1.0")) {
-            return getBestResults(results).empty ? [] : [getBestResults(results).first()]
-        } else {
-            def bestCandidates = getBestResults(results)
-            return bestCandidates.empty ? [] : [bestCandidates.first()] + getAverageResult(bestCandidates)
-        }
-    }
-
-    @Override
-    void solveInMemory() {
-        List<Knapsack> results = computeSolution()
-        if (this.adaptiveRandomQuality == NumberUtils.createDouble("0.0") || this.adaptiveRandomQuality == NumberUtils.createDouble("1.0")) {
-            knapsacks = [getBestResults(results).first()]
-        } else {
-            def bestCandidates = getBestResults(results)
-            knapsacks = [bestCandidates.first()] + getAverageResult(bestCandidates)
-        }
-    }
 }

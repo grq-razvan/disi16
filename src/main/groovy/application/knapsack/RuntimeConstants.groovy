@@ -5,12 +5,13 @@ import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 import static solution.knapsack.search.implementation.knapsack.KnapsackSolutionType.*
 
 /**
- * Created by stefangrecu on 12/03/16.
+ *  Created by stefangrecu on 12/03/16.
  */
 interface RuntimeConstants {
+    String CLASSIC = 'classic'
     String PATH = 'src/main/resources/knapsack/data-'
-    List<KnapsackSolutionType> CLASSIC_SOLUTIONS = [ExtensiveSearch, GreedySearch, RandomSearch]
-    List<KnapsackSolutionType> HILLCLIMBING_SOLUTIONS = []
+    List<KnapsackSolutionType> CLASSIC_SOLUTIONS = [Exhaustive, Greedy, Stochastic]
+    List<KnapsackSolutionType> HILL_CLIMBING_SOLUTIONS = [Experiment, SteepestAscent, NextAscent, RandomHillClimbing]
     List<Map<String, Integer>> ITEM_PARAMS = [
             [itemCount    : 10,
              maxItemWeight: 50,
@@ -66,4 +67,86 @@ interface RuntimeConstants {
 
     ]
 
+    List<Map<String, Object>> CLASSIC_TEST_CASES = [
+            [
+                    knapsackWeight: 100,
+                    itemCount     : 10,
+                    type          : CLASSIC,
+                    certainty     : 0.95
+
+            ],
+            [
+                    knapsackWeight: 50,
+                    itemCount     : 15,
+                    type          : CLASSIC,
+                    certainty     : 0.85
+
+            ], [
+                    knapsackWeight: 125,
+                    itemCount     : 20,
+                    type          : CLASSIC,
+                    certainty     : 0.51
+
+            ], [
+                    knapsackWeight: 250,
+                    itemCount     : 50,
+                    type          : CLASSIC,
+                    certainty     : 0.91
+
+            ], [
+                    knapsackWeight: 750,
+                    itemCount     : 100,
+                    type          : CLASSIC,
+                    certainty     : 0.49
+
+            ], [
+                    knapsackWeight: 1500,
+                    itemCount     : 200,
+                    type          : CLASSIC,
+                    certainty     : 0.35
+
+            ], [
+                    knapsackWeight: 10000,
+                    itemCount     : 1000,
+                    type          : CLASSIC,
+                    certainty     : 0.6
+
+            ], [
+                    knapsackWeight: 30000,
+                    itemCount     : 2000,
+                    type          : CLASSIC,
+                    certainty     : 0.4
+
+            ], [
+                    knapsackWeight: 40000,
+                    itemCount     : 5000,
+                    type          : CLASSIC,
+                    certainty     : 0.37
+
+            ], [
+                    knapsackWeight: 50000,
+                    itemCount     : 10000,
+                    type          : CLASSIC,
+                    certainty     : 0.33
+
+            ], [
+                    knapsackWeight: 50000,
+                    itemCount     : 50000,
+                    type          : CLASSIC,
+                    certainty     : 0.31
+
+            ], [
+                    knapsackWeight: 80000,
+                    itemCount     : 100000,
+                    type          : CLASSIC,
+                    certainty     : 0.25
+
+            ],
+    ]
+
+
+    List<Map<String, Object>> HILL_CLIMBING_TEST = CLASSIC_TEST_CASES.collect { Map<String, Object> map ->
+        map.type = HILL_CLIMBING_TEST
+        return map
+    }
 }

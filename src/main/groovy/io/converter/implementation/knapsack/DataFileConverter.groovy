@@ -37,7 +37,6 @@ class DataFileConverter implements IDataConverter<Item> {
 
     @Override
     Collection<Item> convertToReadableData(List<String> lines) {
-        //remove first element, which is size
         lines.remove(0)
         return lines.collect { String data ->
             def content = data.split(" ")

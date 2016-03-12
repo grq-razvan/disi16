@@ -12,10 +12,6 @@ import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 import solution.knapsack.search.implementation.knapsack.extensivesearch.ExhaustiveSearcher
 import solution.knapsack.search.implementation.knapsack.greedy.GreedySearcher
 import solution.knapsack.search.implementation.knapsack.hillclimbing.AbstractHillClimbingSearcher
-import solution.knapsack.search.implementation.knapsack.hillclimbing.highestascent.HighestAscentHillClimbingSearcher
-import solution.knapsack.search.implementation.knapsack.hillclimbing.highestascent.HighestAscentMRMVPRSearcher
-import solution.knapsack.search.implementation.knapsack.hillclimbing.highestascent.HighestAscentMRPRSearcher
-import solution.knapsack.search.implementation.knapsack.hillclimbing.stochastic.StochasticHillClimbingSearcher
 import solution.knapsack.search.implementation.knapsack.randomsearch.RandomSearcher
 
 /**
@@ -44,10 +40,7 @@ class ResultHandler {
         AbstractKnapsackSearcher extensiveSearch = new ExhaustiveSearcher(maxWeight)
         AbstractKnapsackSearcher greedySearch = new GreedySearcher(maxWeight)
         AbstractKnapsackSearcher randomSearch = new RandomSearcher(maxWeight, 0.0)
-        AbstractHillClimbingSearcher stochasticHillClimb = new StochasticHillClimbingSearcher(maxWeight, 0.0)
-        AbstractHillClimbingSearcher steepestAscent = new HighestAscentHillClimbingSearcher(maxWeight, 0.0)
-        AbstractHillClimbingSearcher experiment1 = new HighestAscentMRPRSearcher(maxWeight, 0.0)
-        AbstractHillClimbingSearcher experiment2 = new HighestAscentMRMVPRSearcher(maxWeight)
+
         addSolver(extensiveSearch)
         addSolver(greedySearch)
         addSolver(randomSearch)
@@ -57,7 +50,7 @@ class ResultHandler {
         addSolver(experiment2)
     }
 
-    List<Knapsack> generateResult(Collection<Item> data, KnapsackSolutionType provider = KnapsackSolutionType.ExtensiveSearch, Double randomSearchParameter = 0.1) {
+    List<Knapsack> generateResult(Collection<Item> data, KnapsackSolutionType provider = KnapsackSolutionType.Exhaustive, Double randomSearchParameter = 0.1) {
         AbstractKnapsackSearcher searcher = getSolver(provider)
         searcher.items = data
         searcher.adaptiveRandomQuality = randomSearchParameter

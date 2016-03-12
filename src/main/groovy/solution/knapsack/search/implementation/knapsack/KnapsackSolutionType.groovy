@@ -3,13 +3,13 @@ package solution.knapsack.search.implementation.knapsack
  *  Created by stefangrecu on 27/02/16.
  */
 enum KnapsackSolutionType {
-    ExtensiveSearch("extensive-search"),
-    RandomSearch("random-search"),
-    GreedySearch("greedy-search"),
-    StochasticHillClimbing("stochastic-hill-climbing"),
+    Exhaustive("exhaustive-search"),
+    Stochastic("random-search"),
+    Greedy("greedy-search"),
+    RandomHillClimbing("stochastic-hill-climbing"),
     SteepestAscent("steepest-ascent"),
-    SteepestAscentMultipleRegionsMultipleRestarts("steepest-hc-parallel-mr"),
-    SteepestAscentMultipleRegionsMultipleRestartsMultipleNeighbourhoods("steepest-hc-mr-mrn-vn")
+    NextAscent("next-ascent"),
+    Experiment("experiment")
 
     String solutionType
 

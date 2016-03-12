@@ -3,7 +3,8 @@ package solution.knapsack.search.implementation.knapsack.greedy
 import model.knapsack.Item
 import model.knapsack.Knapsack
 import solution.knapsack.search.implementation.AbstractKnapsackSearcher
-import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
+
+import static solution.knapsack.search.implementation.knapsack.KnapsackSolutionType.Greedy
 
 /**
  *  Created by stefangrecu on 27/02/16.
@@ -11,7 +12,7 @@ import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 class GreedySearcher extends AbstractKnapsackSearcher {
 
     GreedySearcher(Integer maxKnapsackWeight) {
-        this.type = KnapsackSolutionType.GreedySearch
+        this.type = Greedy
         this.maxKnapsackWeight = maxKnapsackWeight
     }
 
@@ -21,7 +22,9 @@ class GreedySearcher extends AbstractKnapsackSearcher {
     }
 
     private Knapsack computeSolution() {
-        def greedyRatio = { Item item1, Item item2 -> (item2.value / (item2.weight == 0 ? 1 : item2.weight)) / (item1.value / (item1.weight == 0 ? 1 : item1.weight)) }
+        def greedyRatio = { Item i1, Item i2 ->
+            (i2.value / (i2.weight == 0 ? 1 : i2.weight)) / (i1.value / (i1.weight == 0 ? 1 : i1.weight))
+        }
         Knapsack knapsack = new Knapsack(maxWeight: this.maxKnapsackWeight)
         items.sort(greedyRatio).each { Item item ->
             if (item.weight + knapsack.currentWeight <= knapsack.maxWeight) {
