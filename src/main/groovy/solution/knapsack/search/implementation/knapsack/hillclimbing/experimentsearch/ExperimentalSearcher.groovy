@@ -17,7 +17,7 @@ class ExperimentalSearcher extends AbstractHillClimbingSearcher {
     /*
     * My approach to a multiple restart, multiple region,
     * k-flip neighborhood, parallel algorithm
-    * to solve the knapsack problem using steepest ascent hillclimbing.
+    * to solve the knapsack problem using steepest ascent hill climbing.
     *
     * The procedure should be as follows:
     *  - adaptively create a number of restarts/iterations per run
@@ -43,19 +43,19 @@ class ExperimentalSearcher extends AbstractHillClimbingSearcher {
     }
 
     private List<Knapsack> computeSolution(Map<String, Integer> params) {
-        List<Knapsack> localOptima = new CopyOnWriteArrayList<>()
-        List<Knapsack> regionOptima = new CopyOnWriteArrayList<>()
-        List<Knapsack> results = new CopyOnWriteArrayList<>()
+        List<Knapsack> finalResult = new CopyOnWriteArrayList<>()
+        List<Knapsack> regionIterationsHilltops = new CopyOnWriteArrayList<>()
+        List<Knapsack> regionRestartsHilltops = new CopyOnWriteArrayList<>()
         params.restarts.times {
             List<String> candidateHilltops = createHilltopRegions(params.regions)
             GParsPool.withPool {
                 candidateHilltops.eachParallel { String currentHilltop ->
                     Knapsack currentKnapsack = createKnapsack(currentHilltop)
                     params.iterations.times { Integer iterationIndex ->
-                        IntRange degreeRange = (0..params.maxDegree)
-                        List<String> tempNeighbors = getNeighbors(currentHilltop,
-                                degreeRange.get(iterationIndex) ?: degreeRange.first())
-                        List<String> neighbors = new CopyOnWriteArrayList<>(tempNeighbors)
+                        IntRange degreeRange = (1..params.maxDegree)
+                        List<String> createdNeighbors = getNeighbors(currentHilltop,
+                                degreeRange?.get(iterationIndex) ?: degreeRange.first())
+                        List<String> neighbors = new CopyOnWriteArrayList<>(createdNeighbors)
                         def steepestNeighbor = new ConcurrentHashMap<>(steepestNeighbor(neighbors))
                         if (isNeighborBetter(currentKnapsack, steepestNeighbor.knapsack as Knapsack)) {
                             currentHilltop = steepestNeighbor.hilltop as String
@@ -63,22 +63,22 @@ class ExperimentalSearcher extends AbstractHillClimbingSearcher {
                         }
                     }
                     if (currentKnapsack.validate()) {
-                        localOptima.add(currentKnapsack)
+                        regionIterationsHilltops.add(currentKnapsack)
                     }
                 }
-                if (!localOptima.empty) {
-                    regionOptima.add(localOptima?.max())
+                if (!regionIterationsHilltops.empty) {
+                    regionRestartsHilltops.add(regionIterationsHilltops?.max())
                 }
             }
         }
-        if (!regionOptima.empty) {
-            results += regionOptima
+        if (!regionRestartsHilltops.empty) {
+            finalResult += regionRestartsHilltops
         }
-        if (results.empty) {
+        if (finalResult.empty) {
             return []
         } else {
-            results = results.sort { k1, k2 -> k2.totalValue <=> k1.totalValue }
-            return [results.head()] + results.tail().take(5)
+            finalResult = finalResult.sort { k1, k2 -> k2.totalValue <=> k1.totalValue }
+            return [finalResult.head()] + finalResult.tail().take(5)
         }
     }
 }

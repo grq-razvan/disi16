@@ -42,10 +42,10 @@ class ResultHandler {
             addSolver new ExhaustiveSearcher(maxWeight)
             addSolver new GreedySearcher(maxWeight)
             addSolver new RandomKnapsackSearcher(maxWeight, 0.0)
-            addSolver new RandomSearcher()
-            addSolver new SteepestAscentSearcher()
-            addSolver new NextAscentSearcher()
-            addSolver new ExperimentalSearcher()
+            addSolver new RandomSearcher(maxWeight, 0.0)
+            addSolver new SteepestAscentSearcher(maxWeight, 0.0)
+            addSolver new NextAscentSearcher(maxWeight, 0.0)
+            addSolver new ExperimentalSearcher(maxWeight, 0.0)
         }
 
     }

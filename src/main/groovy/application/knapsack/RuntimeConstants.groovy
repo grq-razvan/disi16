@@ -10,6 +10,7 @@ import static solution.knapsack.search.implementation.knapsack.KnapsackSolutionT
 interface RuntimeConstants {
     String CLASSIC = 'classic'
     String PATH = 'src/main/resources/knapsack/data-'
+    String HILL_CLIMBING = 'hill-climbing'
     List<KnapsackSolutionType> CLASSIC_SOLUTIONS = [Exhaustive, Greedy, Stochastic]
     List<KnapsackSolutionType> HILL_CLIMBING_SOLUTIONS = [Experiment, SteepestAscent, NextAscent, RandomHillClimbing]
     List<Map<String, Integer>> ITEM_PARAMS = [
@@ -146,7 +147,8 @@ interface RuntimeConstants {
 
 
     List<Map<String, Object>> HILL_CLIMBING_TEST = CLASSIC_TEST_CASES.collect { Map<String, Object> map ->
-        map.type = HILL_CLIMBING_TEST
+        map.type = HILL_CLIMBING
         return map
     }
+
 }
