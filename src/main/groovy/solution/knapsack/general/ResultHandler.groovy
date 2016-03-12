@@ -12,7 +12,11 @@ import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 import solution.knapsack.search.implementation.knapsack.extensivesearch.ExhaustiveSearcher
 import solution.knapsack.search.implementation.knapsack.greedy.GreedySearcher
 import solution.knapsack.search.implementation.knapsack.hillclimbing.AbstractHillClimbingSearcher
-import solution.knapsack.search.implementation.knapsack.randomsearch.RandomSearcher
+import solution.knapsack.search.implementation.knapsack.hillclimbing.experimentsearch.ExperimentalSearcher
+import solution.knapsack.search.implementation.knapsack.hillclimbing.nextascentsearch.NextAscentSearcher
+import solution.knapsack.search.implementation.knapsack.hillclimbing.randomsearch.RandomSearcher
+import solution.knapsack.search.implementation.knapsack.hillclimbing.steepestascentsearch.SteepestAscentSearcher
+import solution.knapsack.search.implementation.knapsack.randomsearch.RandomSearcher as RandomKnapsackSearcher
 
 /**
  *  Created by stefangrecu on 27/02/16.
@@ -35,25 +39,27 @@ class ResultHandler {
 
     private void initializeSolvers(Integer maxWeight) {
         if (solvers.empty) {
-
+            addSolver new ExhaustiveSearcher(maxWeight)
+            addSolver new GreedySearcher(maxWeight)
+            addSolver new RandomKnapsackSearcher(maxWeight, 0.0)
+            addSolver new RandomSearcher()
+            addSolver new SteepestAscentSearcher()
+            addSolver new NextAscentSearcher()
+            addSolver new ExperimentalSearcher()
         }
-        AbstractKnapsackSearcher extensiveSearch = new ExhaustiveSearcher(maxWeight)
-        AbstractKnapsackSearcher greedySearch = new GreedySearcher(maxWeight)
-        AbstractKnapsackSearcher randomSearch = new RandomSearcher(maxWeight, 0.0)
 
-        addSolver(extensiveSearch)
-        addSolver(greedySearch)
-        addSolver(randomSearch)
-        addSolver(stochasticHillClimb)
-        addSolver(steepestAscent)
-        addSolver(experiment1)
-        addSolver(experiment2)
     }
 
-    List<Knapsack> generateResult(Collection<Item> data, KnapsackSolutionType provider = KnapsackSolutionType.Exhaustive, Double randomSearchParameter = 0.1) {
+    List<Knapsack> generateResult(Collection<Item> data, KnapsackSolutionType provider = KnapsackSolutionType.Exhaustive, Double randomSearchParameter = 0.1, Integer numberOfRegions = 1, Integer maxDegree = 1) {
         AbstractKnapsackSearcher searcher = getSolver(provider)
         searcher.items = data
         searcher.adaptiveRandomQuality = randomSearchParameter
+        if (AbstractHillClimbingSearcher.isAssignableFrom(searcher.class)) {
+            def hcSearcher = searcher as AbstractHillClimbingSearcher
+            hcSearcher.runtimeParams.putIfAbsent('regions', numberOfRegions)
+            hcSearcher.runtimeParams.putIfAbsent('maxDegree', maxDegree)
+            return hcSearcher.solve()
+        }
         return searcher.solve()
     }
 
@@ -64,9 +70,9 @@ class ResultHandler {
 
     private AbstractKnapsackSearcher getSolver(KnapsackSolutionType type) {
         for (solver in solvers) {
-            if (solver instanceof AbstractKnapsackSearcher) {
+            if (AbstractKnapsackSearcher.isAssignableFrom(solver.class)) {
                 def possibleResult = solver as AbstractKnapsackSearcher
-                if (possibleResult instanceof AbstractHillClimbingSearcher) {
+                if (AbstractHillClimbingSearcher.isAssignableFrom(possibleResult.class)) {
                     def hillClimbPossibleSolution = possibleResult as AbstractHillClimbingSearcher
                     if (hillClimbPossibleSolution.type == type) {
                         return hillClimbPossibleSolution

@@ -1,7 +1,7 @@
 package generator
 
 /**
- * Created by stefangrecu on 12/03/16.
+ *  Created by stefangrecu on 12/03/16.
  */
 interface IFactory<T> {
 

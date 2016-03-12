@@ -14,10 +14,10 @@ import java.util.concurrent.CopyOnWriteArrayList
  */
 abstract class AbstractKnapsackSearcher implements ISolver<Knapsack> {
 
-    protected List<Item> items = []
-    protected Integer maxKnapsackWeight
-    protected Double adaptiveRandomQuality
-    protected KnapsackSolutionType type
+    List<Item> items = []
+    Integer maxKnapsackWeight
+    Double adaptiveRandomQuality
+    KnapsackSolutionType type
 
     abstract List<Knapsack> solve()
 
@@ -31,7 +31,7 @@ abstract class AbstractKnapsackSearcher implements ISolver<Knapsack> {
         return results.toList()
     }
 
-    protected synchronized Knapsack createKnapsack(String bitString, Integer maxWeight) {
+    protected synchronized Knapsack createKnapsack(String bitString, Integer maxWeight = this.maxKnapsackWeight) {
         Knapsack result = new Knapsack(maxWeight: maxWeight)
         convertBitString(bitString).each {
             result.addItem(it)
@@ -39,7 +39,7 @@ abstract class AbstractKnapsackSearcher implements ISolver<Knapsack> {
         return result
     }
 
-    protected synchronized static String createBitString(Number number, int length) {
+    protected synchronized String createBitString(Number number, int length = this.items.size()) {
         StringBuffer binaryRepresentation = new StringBuffer(Long.toBinaryString(number.longValue()))
         while (binaryRepresentation.length() < length) {
             binaryRepresentation.insert(0, '0')
@@ -47,7 +47,8 @@ abstract class AbstractKnapsackSearcher implements ISolver<Knapsack> {
         return binaryRepresentation.toString()
     }
 
-    protected synchronized Map<String, Integer> adjustRuntimeParameters(Double epsilon, Integer size = items.size()) {
+    protected
+    synchronized Map<String, Integer> adjustRuntimeParameters(Double epsilon = this.adaptiveRandomQuality, Integer size = this.items.size()) {
         Integer itemCount = size
         def temp = FastMath.log10(FastMath.sqrt(itemCount.doubleValue()) * epsilon)
         def iterations = (FastMath.cbrt((ArithmeticUtils.pow(itemCount, 2) - itemCount + 41).doubleValue())

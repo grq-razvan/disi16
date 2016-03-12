@@ -1,5 +1,6 @@
 package solution.knapsack.general
 
+import model.knapsack.Knapsack
 import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 
 /**
@@ -26,14 +27,14 @@ class ExecutionHandler {
     }
 
     void writeResultDataFile(String path = FILE_RESULT_PATH + "-${inputData.size()}.txt" + "-${processedData.solution}.txt") {
-        resultManager.writeResultFile(processedData.results, path)
+        resultManager.writeResultFile(processedData.results as List<Knapsack>, path)
     }
 
-    void processData(KnapsackSolutionType type = KnapsackSolutionType.Exhaustive, Double randomParameter = 0, String inputFilePath = FILE_DATA_PATH + "-${inputData.size()}.txt") {
+    void processData(KnapsackSolutionType type = KnapsackSolutionType.Exhaustive, Double randomParameter = 0, String inputFilePath = FILE_DATA_PATH + "-${inputData.size()}.txt", Integer numberOfRegions = 1, Integer maxFlipDegree = 1) {
         inputData = dataManager.readDataFile(inputFilePath)
         processedData =
                 [
-                        results : resultManager.generateResult(inputData, type, randomParameter),
+                        results : resultManager.generateResult(inputData, type, randomParameter, numberOfRegions, maxFlipDegree),
                         solution: type.solutionType
                 ]
     }

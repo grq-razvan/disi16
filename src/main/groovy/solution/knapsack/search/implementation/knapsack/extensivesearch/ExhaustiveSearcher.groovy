@@ -36,4 +36,5 @@ class ExhaustiveSearcher extends AbstractKnapsackSearcher {
         }
         return result
     }
+
 }

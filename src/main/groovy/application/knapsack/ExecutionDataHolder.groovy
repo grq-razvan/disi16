@@ -51,13 +51,16 @@ class ExecutionDataHolder implements RuntimeConstants {
     private static void setAvailableTypes(Integer count, String type, List<KnapsackSolutionType> availableTypes) {
         if (type == CLASSIC) {
             if (count > 20) {
-                availableTypes += CLASSIC_SOLUTIONS
+                CLASSIC_SOLUTIONS.each { availableTypes.add(it) }
             } else {
-                availableTypes += CLASSIC_SOLUTIONS
-                availableTypes -= KnapsackSolutionType.Stochastic
+                CLASSIC_SOLUTIONS.each {
+                    if (it != KnapsackSolutionType.Stochastic) {
+                        availableTypes.add(it)
+                    }
+                }
             }
         } else {
-            availableTypes += HILL_CLIMBING_SOLUTIONS
+            HILL_CLIMBING_SOLUTIONS.each { availableTypes.add(it) }
         }
     }
 
