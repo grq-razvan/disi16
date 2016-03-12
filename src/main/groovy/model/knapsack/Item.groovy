@@ -12,22 +12,4 @@ class Item {
         return """${weight} ${value}"""
     }
 
-    boolean equals(o) {
-        if (this.is(o)) return true
-        if (!(o instanceof Item)) return false
-
-        Item item = (Item) o
-
-        if (value != item.value) return false
-        if (weight != item.weight) return false
-
-        return true
-    }
-
-    int hashCode() {
-        int result
-        result = (weight?.hashCode() ?: 0)
-        result = 31 * result + (value?.hashCode() ?: 0)
-        return result
-    }
 }

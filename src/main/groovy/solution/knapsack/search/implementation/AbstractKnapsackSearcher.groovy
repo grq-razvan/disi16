@@ -5,43 +5,43 @@ import model.knapsack.Knapsack
 import solution.ISolver
 import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 
+import java.util.concurrent.CopyOnWriteArrayList
+
 /**
  *  Created by stefangrecu on 27/02/16.
  */
 abstract class AbstractKnapsackSearcher implements ISolver<Knapsack> {
 
-    List<Item> items
-    List<Knapsack> knapsacks
-    Double randomSearchParameter
-    KnapsackSolutionType type
+    protected List<Item> items = []
+    protected Integer maxKnapsackWeight
+    protected Double adaptiveRandomQuality
+    protected KnapsackSolutionType type
 
     abstract List<Knapsack> solve()
 
-    abstract void solveInMemory()
-
     protected synchronized List<Item> convertBinaryStringToItems(String binaryString) {
-        List<Item> results = []
+        List<Item> results = new CopyOnWriteArrayList<>()
         binaryString.eachWithIndex { String entry, int index ->
             if (entry == '1') {
                 results.add(items.get(index))
             }
         }
-        return results
+        return results.toList()
     }
 
     protected synchronized Knapsack createKnapsackFromBinaryString(Integer maxWeight, String binaryString) {
-        Knapsack result = new Knapsack(maxWeight: maxWeight, items: [])
+        Knapsack result = new Knapsack(maxWeight: maxWeight)
         convertBinaryStringToItems(binaryString).each {
             result.addItem(it)
         }
         return result
     }
 
-    protected static String generateBitString(Number number, int length) {
-        String binaryRepresentation = Long.toBinaryString(number.longValue())
+    protected synchronized static String generateBitString(Number number, int length) {
+        StringBuffer binaryRepresentation = new StringBuffer(Long.toBinaryString(number.longValue()))
         while (binaryRepresentation.length() < length) {
-            binaryRepresentation = '0' + binaryRepresentation
+            binaryRepresentation.insert(0, '0')
         }
-        return binaryRepresentation
+        return binaryRepresentation.toString()
     }
 }

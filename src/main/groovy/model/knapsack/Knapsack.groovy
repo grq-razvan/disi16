@@ -3,37 +3,14 @@ package model.knapsack
 /**
  *  Created by stefangrecu on 25/02/16.
  */
-class Knapsack {
+class Knapsack implements Comparable<Knapsack> {
     Integer maxWeight
     Integer currentWeight = 0
     Integer totalValue = 0
-    List<Item> items
+    List<Item> items = []
 
-    boolean equals(o) {
-        if (this.is(o)) return true
-        if (!(o instanceof Knapsack)) return false
-
-        Knapsack knapsack = (Knapsack) o
-
-        if (items != knapsack.items) return false
-        if (maxWeight != knapsack.maxWeight) return false
-
-        return true
-    }
-
-    int hashCode() {
-        int result
-        result = (maxWeight != null ? maxWeight.hashCode() : 0)
-        result = 31 * result + (items != null ? items.hashCode() : 0)
-        return result
-    }
-
-    public boolean isValid() {
+    public boolean validate() {
         return currentWeight <= maxWeight
-    }
-
-    public boolean isBetterThan(Knapsack that) {
-        return this.valid && (that.valid ? this.totalValue > that.totalValue : true)
     }
 
     public void addItem(Item item) {
@@ -42,18 +19,13 @@ class Knapsack {
         totalValue += item.value
     }
 
-    public void removeItem(Item item) {
-        items.remove(item)
-        currentWeight -= item.weight
-        totalValue -= item.value
-    }
-
     public void clearKnapsack() {
-        int i = 0
-        while (!items.empty) {
-            removeItem(items[i])
+        if (!items.empty) {
+            items = []
+            currentWeight = 0
+            totalValue = 0
         }
-        assert items.empty
+        System.gc()
     }
 
     @Override
@@ -64,5 +36,10 @@ class Knapsack {
                 ", totalValue=" + totalValue +
                 ", items=" + items +
                 '}';
+    }
+
+    @Override
+    int compareTo(Knapsack o) {
+        return this.totalValue - o.totalValue
     }
 }

@@ -8,7 +8,8 @@ enum KnapsackSolutionType {
     GreedySearch("greedy-search"),
     StochasticHillClimbing("stochastic-hill-climbing"),
     SteepestAscent("steepest-ascent"),
-    SimpleExperiment("test-hc-parallel-mr")
+    SteepestAscentMultipleRegionsMultipleRestarts("steepest-hc-parallel-mr"),
+    SteepestAscentMultipleRegionsMultipleRestartsMultipleNeighbourhoods("steepest-hc-mr-mrn-vn")
 
     String solutionType
 
