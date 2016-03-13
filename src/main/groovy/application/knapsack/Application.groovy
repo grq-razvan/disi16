@@ -20,13 +20,13 @@ class Application {
     }
 
     void executeHillClimbing() {
-
+        executionDataHolder.executeHillClimbingBatchTest()
     }
 
     public static void main(String[] args) {
         Application application = new Application()
-        application.generateFiles()
+        //application.generateFiles()
         application.executeClassicMethods()
-        application.executeHillClimbing()
+        //application.executeHillClimbing()
     }
 }

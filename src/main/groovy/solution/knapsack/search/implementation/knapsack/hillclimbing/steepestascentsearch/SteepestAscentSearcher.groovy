@@ -42,7 +42,10 @@ class SteepestAscentSearcher extends AbstractHillClimbingSearcher {
                 results.add(currentKnapsack)
             }
         }
+        if (results.empty) {
+            return []
+        }
         results = results?.sort { k1, k2 -> k2.totalValue <=> k1.totalValue }
-        [results?.head()] + results?.tail()?.take(5)
+        results.empty ? [] : ([results.head()] + results?.tail()?.take(5))
     }
 }

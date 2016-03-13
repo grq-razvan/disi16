@@ -38,7 +38,7 @@ class ExperimentalSearcher extends AbstractHillClimbingSearcher {
 
     @Override
     List<Knapsack> solve() {
-        runtimeParams = adjustRuntimeParameters()
+        runtimeParams << adjustRuntimeParameters()
         return computeSolution(runtimeParams)
     }
 
@@ -52,9 +52,8 @@ class ExperimentalSearcher extends AbstractHillClimbingSearcher {
                 candidateHilltops.eachParallel { String currentHilltop ->
                     Knapsack currentKnapsack = createKnapsack(currentHilltop)
                     params.iterations.times { Integer iterationIndex ->
-                        IntRange degreeRange = (1..params.maxDegree)
                         List<String> createdNeighbors = getNeighbors(currentHilltop,
-                                degreeRange?.get(iterationIndex) ?: degreeRange.first())
+                                getDegree(params.maxDegree, iterationIndex))
                         List<String> neighbors = new CopyOnWriteArrayList<>(createdNeighbors)
                         def steepestNeighbor = new ConcurrentHashMap<>(steepestNeighbor(neighbors))
                         if (isNeighborBetter(currentKnapsack, steepestNeighbor.knapsack as Knapsack)) {
@@ -67,7 +66,7 @@ class ExperimentalSearcher extends AbstractHillClimbingSearcher {
                     }
                 }
                 if (!regionIterationsHilltops.empty) {
-                    regionRestartsHilltops.add(regionIterationsHilltops?.max())
+                    regionRestartsHilltops.add(regionIterationsHilltops?.max { it.totalValue })
                 }
             }
         }
@@ -79,6 +78,19 @@ class ExperimentalSearcher extends AbstractHillClimbingSearcher {
         } else {
             finalResult = finalResult.sort { k1, k2 -> k2.totalValue <=> k1.totalValue }
             return [finalResult.head()] + finalResult.tail().take(5)
+        }
+    }
+
+    private synchronized int getDegree(Integer maxDegree, Integer iterationIndex) {
+        if (maxDegree == 1) {
+            return maxDegree
+        } else {
+            IntRange range = (1..maxDegree)
+            if (iterationIndex >= range.size()) {
+                return range.first()
+            } else {
+                return range.get(iterationIndex)
+            }
         }
     }
 }

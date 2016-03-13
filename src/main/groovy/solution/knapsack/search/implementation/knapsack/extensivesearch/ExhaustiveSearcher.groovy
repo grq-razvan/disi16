@@ -24,13 +24,14 @@ class ExhaustiveSearcher extends AbstractKnapsackSearcher {
         ((generateBinaryStrings()
                 .collect { String match -> createKnapsack(match, maxKnapsackWeight) })
                 .findAll { Knapsack knapsack -> knapsack.validate() })
-                .max()
+                .sort { k1, k2 -> k2.totalValue <=> k1.totalValue }
+                .head()
     }
 
     private List<String> generateBinaryStrings(Integer itemCount = items.size()) {
         List<String> result = []
-        long numberOfPossibilities = ArithmeticUtils.pow(2L, (itemCount - 1))
-        for (long currentNumber = 1; currentNumber < numberOfPossibilities; currentNumber++) {
+        long numberOfPossibilities = ArithmeticUtils.pow(2L, itemCount)
+        for (long currentNumber = 1; currentNumber <= numberOfPossibilities; currentNumber++) {
             String binaryRepresentation = createBitString(currentNumber, itemCount)
             result.add(binaryRepresentation)
         }

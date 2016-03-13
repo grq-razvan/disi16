@@ -27,41 +27,47 @@ class NextAscentSearcher extends AbstractHillClimbingSearcher {
 
     List<Knapsack> computeSolution(Map<String, Integer> params) {
         List<Knapsack> results = []
-        params.restarts.times {
-            String currentHilltop = createHilltop()
-            Knapsack currentKnapsack = createKnapsack(currentHilltop)
-            params.iterations.times {
-                String bestIncrementalHilltop = bestIncrementalHilltop(currentHilltop, 0)
-                Knapsack bestIncrementalKnapsack = createKnapsack(bestIncrementalHilltop)
-                if (isNeighborBetter(currentKnapsack, bestIncrementalKnapsack)) {
-                    currentHilltop = bestIncrementalHilltop
-                    currentKnapsack = bestIncrementalKnapsack
-                }
+        String currentHilltop = createHilltop()
+        Knapsack currentKnapsack = createKnapsack(currentHilltop)
+        params.iterations.times {
+            String bestIncrementalHilltop = bestIncrementalHilltop(currentHilltop, 0)
+            Knapsack bestIncrementalKnapsack = createKnapsack(bestIncrementalHilltop)
+            if (isNeighborBetter(currentKnapsack, bestIncrementalKnapsack)) {
+                currentHilltop = bestIncrementalHilltop
+                currentKnapsack = bestIncrementalKnapsack
             }
-            if (currentKnapsack.validate()) {
-                results.add(currentKnapsack)
-            }
+        }
+        if (currentKnapsack.validate()) {
+            results.add(currentKnapsack)
+        }
+
+        if (results.empty) {
+            return []
         }
         results = results.sort { k1, k2 -> k2.totalValue <=> k1.totalValue }
         return [results.head()] + results.tail().take(5)
     }
 
     private String bestIncrementalHilltop(String currentHilltop, int index) {
-        Knapsack currentKnapsack = createKnapsack(currentHilltop)
-        List<String> neighbors = getNeighbors(currentHilltop)
-        boolean recurse = false
-        while (index < neighbors.size()) {
-            Knapsack neighborKnapsack = createKnapsack(neighbors[index])
-            if (isNeighborBetter(currentKnapsack, neighborKnapsack)) {
-                currentHilltop = neighbors[index]
-                recurse = true
-                break
+        boolean repeat = true
+        while (repeat) {
+            Knapsack currentKnapsack = createKnapsack(currentHilltop)
+            List<String> neighbors = getNeighbors(currentHilltop)
+
+            if (index == neighbors.size()) {
+                repeat = !repeat
             }
-            index++
+
+            while (index < neighbors.size()) {
+                Knapsack neighborKnapsack = createKnapsack(neighbors[index])
+                if (isNeighborBetter(currentKnapsack, neighborKnapsack)) {
+                    currentHilltop = neighbors[index]
+                    break
+                }
+                index++
+            }
         }
-        while (recurse && index < neighbors.size()) {
-            currentHilltop = bestIncrementalHilltop(currentHilltop, index)
-        }
+
         return currentHilltop
     }
 }

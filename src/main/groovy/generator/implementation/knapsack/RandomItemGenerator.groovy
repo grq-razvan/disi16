@@ -29,7 +29,6 @@ class RandomItemGenerator implements IDataGenerator<Item> {
         Integer itemCount = params.itemCount
         for (item in (0..itemCount - 1)) {
             Integer currentWeight = numberGenerator.nextInt(0, maxWeight)
-            numberGenerator.reSeed()
             Integer currentValue = numberGenerator.nextInt(0, maxValue)
             Item currentItem = itemFactory.create([itemWeight: currentWeight, itemValue: currentValue])
             result.add(currentItem)

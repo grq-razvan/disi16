@@ -13,6 +13,7 @@ interface RuntimeConstants {
     String HILL_CLIMBING = 'hill-climbing'
     List<KnapsackSolutionType> CLASSIC_SOLUTIONS = [Exhaustive, Greedy, Stochastic]
     List<KnapsackSolutionType> HILL_CLIMBING_SOLUTIONS = [Experiment, SteepestAscent, NextAscent, RandomHillClimbing]
+
     List<Map<String, Integer>> ITEM_PARAMS = [
             [itemCount    : 10,
              maxItemWeight: 50,
@@ -73,7 +74,7 @@ interface RuntimeConstants {
                     knapsackWeight: 100,
                     itemCount     : 10,
                     type          : CLASSIC,
-                    certainty     : 0.95
+                    certainty     : 0.92
 
             ],
             [
@@ -82,73 +83,172 @@ interface RuntimeConstants {
                     type          : CLASSIC,
                     certainty     : 0.85
 
-            ], [
+            ],
+            [
                     knapsackWeight: 125,
                     itemCount     : 20,
                     type          : CLASSIC,
                     certainty     : 0.51
 
-            ], [
-                    knapsackWeight: 250,
-                    itemCount     : 50,
-                    type          : CLASSIC,
-                    certainty     : 0.91
-
-            ], [
-                    knapsackWeight: 750,
-                    itemCount     : 100,
-                    type          : CLASSIC,
-                    certainty     : 0.49
-
-            ], [
-                    knapsackWeight: 1500,
-                    itemCount     : 200,
-                    type          : CLASSIC,
-                    certainty     : 0.35
-
-            ], [
-                    knapsackWeight: 10000,
-                    itemCount     : 1000,
-                    type          : CLASSIC,
-                    certainty     : 0.6
-
-            ], [
-                    knapsackWeight: 30000,
-                    itemCount     : 2000,
-                    type          : CLASSIC,
-                    certainty     : 0.4
-
-            ], [
-                    knapsackWeight: 40000,
-                    itemCount     : 5000,
-                    type          : CLASSIC,
-                    certainty     : 0.37
-
-            ], [
-                    knapsackWeight: 50000,
-                    itemCount     : 10000,
-                    type          : CLASSIC,
-                    certainty     : 0.33
-
-            ], [
-                    knapsackWeight: 50000,
-                    itemCount     : 50000,
-                    type          : CLASSIC,
-                    certainty     : 0.31
-
-            ], [
-                    knapsackWeight: 80000,
-                    itemCount     : 100000,
-                    type          : CLASSIC,
-                    certainty     : 0.25
-
             ],
+//            [
+//                    knapsackWeight: 250,
+//                    itemCount     : 50,
+//                    type          : CLASSIC,
+//                    certainty     : 0.91
+//
+//            ],
+//            [
+//                    knapsackWeight: 750,
+//                    itemCount     : 100,
+//                    type          : CLASSIC,
+//                    certainty     : 0.49
+//
+//            ],
+//            [
+//                    knapsackWeight: 1500,
+//                    itemCount     : 200,
+//                    type          : CLASSIC,
+//                    certainty     : 0.35
+//
+//            ],
+//            [
+//                    knapsackWeight: 10000,
+//                    itemCount     : 1000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.6
+//
+//            ],
+//            [
+//                    knapsackWeight: 30000,
+//                    itemCount     : 2000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.4
+//
+//            ],
+//            [
+//                    knapsackWeight: 40000,
+//                    itemCount     : 5000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.37
+//
+//            ],
+//            [
+//                    knapsackWeight: 50000,
+//                    itemCount     : 10000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.33
+//
+//            ],
+//            [
+//                    knapsackWeight: 50000,
+//                    itemCount     : 50000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.31
+//
+//            ],
+//            [
+//                    knapsackWeight: 80000,
+//                    itemCount     : 100000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.25
+//
+//            ]
     ]
 
+    List<Map<String, Object>> HILL_CLIMBING_TEST_CASES = [
+            [
+                    knapsackWeight: 100,
+                    itemCount     : 10,
+                    type          : HILL_CLIMBING,
+                    certainty     : 0.92,
+                    regions       : 3,
+                    degree        : 1,
 
-    List<Map<String, Object>> HILL_CLIMBING_TEST = CLASSIC_TEST_CASES.collect { Map<String, Object> map ->
-        map.type = HILL_CLIMBING
-        return map
-    }
+            ],
+            [
+                    knapsackWeight: 50,
+                    itemCount     : 15,
+                    type          : HILL_CLIMBING,
+                    certainty     : 0.85,
+                    regions       : 4,
+                    degree        : 2
+
+            ],
+            [
+                    knapsackWeight: 125,
+                    itemCount     : 20,
+                    type          : HILL_CLIMBING,
+                    certainty     : 0.51,
+                    regions       : 2,
+                    degree        : 2
+
+
+            ],
+//            [
+//                    knapsackWeight: 250,
+//                    itemCount     : 50,
+//                    type          : CLASSIC,
+//                    certainty     : 0.91
+//
+//            ],
+//            [
+//                    knapsackWeight: 750,
+//                    itemCount     : 100,
+//                    type          : CLASSIC,
+//                    certainty     : 0.49
+//
+//            ],
+//            [
+//                    knapsackWeight: 1500,
+//                    itemCount     : 200,
+//                    type          : CLASSIC,
+//                    certainty     : 0.35
+//
+//            ],
+//            [
+//                    knapsackWeight: 10000,
+//                    itemCount     : 1000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.6
+//
+//            ],
+//            [
+//                    knapsackWeight: 30000,
+//                    itemCount     : 2000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.4
+//
+//            ],
+//            [
+//                    knapsackWeight: 40000,
+//                    itemCount     : 5000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.37
+//
+//            ],
+//            [
+//                    knapsackWeight: 50000,
+//                    itemCount     : 10000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.33
+//
+//            ],
+//            [
+//                    knapsackWeight: 50000,
+//                    itemCount     : 50000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.31
+//
+//            ],
+//            [
+//                    knapsackWeight: 80000,
+//                    itemCount     : 100000,
+//                    type          : CLASSIC,
+//                    certainty     : 0.25
+//
+//            ]
+    ]
+
 
 }

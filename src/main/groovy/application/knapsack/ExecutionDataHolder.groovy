@@ -25,12 +25,13 @@ class ExecutionDataHolder implements RuntimeConstants {
         }
     }
 
-    private void executeTestInternal(Integer knapsackWeight, Integer itemCount, String type, Double certainty) {
+    private void executeTestInternal(Integer knapsackWeight, Integer itemCount, String type, Double certainty, Integer regions = 0, Integer degree = 0) {
         List<KnapsackSolutionType> availableTypes = []
         setAvailableTypes(itemCount, type, availableTypes)
         handler.setResultManagerMaxWeight(knapsackWeight)
         availableTypes.each {
-            handler.processData(it, certainty, generatePath(itemCount))
+            handler.processData(it, certainty, generatePath(itemCount), regions, degree)
+            handler.writeResultDataFile()
         }
     }
 
@@ -39,8 +40,11 @@ class ExecutionDataHolder implements RuntimeConstants {
         Integer itemCount = params.itemCount as Integer
         String type = params.type as String
         Double certainty = params.certainty as Double
-        executeTestInternal(weight, itemCount, type, certainty)
+        Integer numberOfRegions = params.regions as Integer ?: 0
+        Integer degrees = params.degree as Integer ?: 0
+        executeTestInternal(weight, itemCount, type, certainty, numberOfRegions, degrees)
     }
+
 
     void executeClassicMethodsBatchTest() {
         CLASSIC_TEST_CASES.each {
@@ -48,9 +52,15 @@ class ExecutionDataHolder implements RuntimeConstants {
         }
     }
 
+    void executeHillClimbingBatchTest() {
+        HILL_CLIMBING_TEST_CASES.each {
+            executeTest(it)
+        }
+    }
+
     private static void setAvailableTypes(Integer count, String type, List<KnapsackSolutionType> availableTypes) {
         if (type == CLASSIC) {
-            if (count > 21) {
+            if (count < 21) {
                 CLASSIC_SOLUTIONS.each { availableTypes.add(it) }
             } else {
                 CLASSIC_SOLUTIONS.each {
@@ -60,7 +70,9 @@ class ExecutionDataHolder implements RuntimeConstants {
                 }
             }
         } else {
-            HILL_CLIMBING_SOLUTIONS.each { availableTypes.add(it) }
+            HILL_CLIMBING_SOLUTIONS.each {
+                availableTypes.add(it)
+            }
         }
     }
 

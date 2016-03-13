@@ -1,9 +1,8 @@
 package model.knapsack
-
 /**
  *  Created by stefangrecu on 25/02/16.
  */
-class Knapsack implements Comparable<Knapsack> {
+class Knapsack {
     Integer maxWeight
     Integer currentWeight = 0
     Integer totalValue = 0
@@ -38,8 +37,4 @@ class Knapsack implements Comparable<Knapsack> {
                 '}';
     }
 
-    @Override
-    int compareTo(Knapsack o) {
-        return this.totalValue - o.totalValue
-    }
 }

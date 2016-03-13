@@ -32,10 +32,18 @@ class RandomSearcher extends AbstractKnapsackSearcher {
         List<Knapsack> avgResults = []
         runtimeParams.restarts.times {
             List<Knapsack> samples = createSamples(runtimeParams.iterations)
-            bestResults += (samples.findAll { Knapsack knapsack -> knapsack.validate() }).max()
+            bestResults += (samples.findAll { Knapsack knapsack -> knapsack.validate() }).max { it.totalValue }
             avgResults += getAverageResult(samples)
         }
-        [bestResults.max()] + avgResults.sort { Knapsack k1, Knapsack k2 -> k2.totalValue <=> k1.totalValue }.take(5)
+        List<Knapsack> results = bestResults + avgResults
+        if (results.empty) {
+            return []
+        }
+        return (results.findAll {
+            if (it) {
+                it.validate()
+            }
+        }).sort { k1, k2 -> k2.totalValue <=> k1.totalValue }.take(5)
     }
 
     private List<Knapsack> createSamples(Number iterations) {
@@ -60,9 +68,12 @@ class RandomSearcher extends AbstractKnapsackSearcher {
                 occurrencesMap.put(key, 1)
             }
         }
-        return [samples.find {
-            it.totalValue == occurrencesMap.max { it.value }.key
-        }]
+        for (sample in samples) {
+            if (sample.totalValue == occurrencesMap.max { it.value }.key) {
+                return [sample]
+            }
+        }
+        return []
     }
 
     private String generateRandomBinaryString(int length) {

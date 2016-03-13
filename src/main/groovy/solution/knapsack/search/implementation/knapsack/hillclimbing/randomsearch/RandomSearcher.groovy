@@ -42,6 +42,9 @@ class RandomSearcher extends AbstractHillClimbingSearcher {
                 localOptima.add(currentKnapsack)
             }
         }
+        if (localOptima.empty) {
+            return []
+        }
         localOptima = localOptima?.sort { k1, k2 -> k2.totalValue <=> k1.totalValue }
         [localOptima?.head()] + localOptima?.tail()?.take(5)
     }

@@ -54,7 +54,7 @@ class ResultHandler {
         AbstractKnapsackSearcher searcher = getSolver(provider)
         searcher.items = data
         searcher.adaptiveRandomQuality = randomSearchParameter
-        if (AbstractHillClimbingSearcher.isAssignableFrom(searcher.class)) {
+        if (searcher instanceof AbstractHillClimbingSearcher) {
             def hcSearcher = searcher as AbstractHillClimbingSearcher
             hcSearcher.runtimeParams.putIfAbsent('regions', numberOfRegions)
             hcSearcher.runtimeParams.putIfAbsent('maxDegree', maxDegree)
@@ -70,9 +70,9 @@ class ResultHandler {
 
     private AbstractKnapsackSearcher getSolver(KnapsackSolutionType type) {
         for (solver in solvers) {
-            if (AbstractKnapsackSearcher.isAssignableFrom(solver.class)) {
+            if (solver instanceof AbstractKnapsackSearcher) {
                 def possibleResult = solver as AbstractKnapsackSearcher
-                if (AbstractHillClimbingSearcher.isAssignableFrom(possibleResult.class)) {
+                if (possibleResult instanceof AbstractHillClimbingSearcher) {
                     def hillClimbPossibleSolution = possibleResult as AbstractHillClimbingSearcher
                     if (hillClimbPossibleSolution.type == type) {
                         return hillClimbPossibleSolution
