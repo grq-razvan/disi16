@@ -79,7 +79,7 @@ abstract class AbstractHillClimbingSearcher extends AbstractKnapsackSearcher {
             degreeIndex--
         }
         Set<String> resultSet = result.toSet()
-        if (degree != 1) {
+        if (degreeIndex != 1) {
             (oneFlipNeighbors + solution).each { if (it in resultSet) resultSet.remove(it) }
         }
         return resultSet.asList()

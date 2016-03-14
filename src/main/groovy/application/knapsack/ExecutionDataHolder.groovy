@@ -6,7 +6,7 @@ import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 /**
  *  Created by stefangrecu on 12/03/16.
  */
-class ExecutionDataHolder implements RuntimeConstants {
+class ExecutionDataHolder implements RuntimeConfiguration {
 
     private final ExecutionHandler handler
 

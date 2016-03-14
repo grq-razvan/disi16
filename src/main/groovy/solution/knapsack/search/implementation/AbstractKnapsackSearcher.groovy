@@ -50,13 +50,39 @@ abstract class AbstractKnapsackSearcher implements ISolver<Knapsack> {
     protected
     synchronized Map<String, Integer> adjustRuntimeParameters(Double epsilon = this.adaptiveRandomQuality, Integer size = this.items.size()) {
         Integer itemCount = size
+        if (itemCount >= 30000) {
+            return [
+                    iterations: 50,
+                    restarts  : 5
+            ]
+        }
+
+        if (itemCount >= 5000) {
+            return [iterations: 80,
+                    restarts  : 8
+            ]
+        }
+
+        if (itemCount >= 1500) {
+            return [iterations: 500,
+                    restarts  : 10
+            ]
+        }
+
+        if (itemCount >= 200) {
+            return [iterations: 100,
+                    restarts  : 10
+            ]
+        }
         def temp = FastMath.log10(FastMath.sqrt(itemCount.doubleValue()) * epsilon)
         def iterations = (FastMath.cbrt((ArithmeticUtils.pow(itemCount, 2) - itemCount + 41).doubleValue())
                 - FastMath.pow(temp, 2.0)) / (1 - epsilon)
 
         Integer iterationsInt = iterations.toInteger()
         Integer restarts = iterationsInt.intdiv(4)
-        restarts > 20 ? restarts = 10 : restarts
+        if (restarts > 100) {
+            restarts = restarts.intdiv(4)
+        }
         [
                 iterations: iterationsInt,
                 restarts  : restarts

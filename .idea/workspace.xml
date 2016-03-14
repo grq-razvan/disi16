@@ -4,21 +4,33 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9c98e40-3771-4a28-8e0e-2c5a1cd3ba66" name="Default" comment="refactoring">
+    <list default="true" id="d9c98e40-3771-4a28-8e0e-2c5a1cd3ba66" name="Default" comment="bug fixing">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConfiguration.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-10.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-100.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-1000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-10000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-100000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-15.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-20.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-200.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-2000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-30.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-50.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-500.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-5000.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/knapsack/data-50000.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConstants.groovy" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConstants.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConstants.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/generator/implementation/knapsack/RandomItemGenerator.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/generator/implementation/knapsack/RandomItemGenerator.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/ResultHandler.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/ResultHandler.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/ExhaustiveSearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/ExhaustiveSearcher.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/GreedySearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/GreedySearcher.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/experimentsearch/ExperimentalSearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/experimentsearch/ExperimentalSearcher.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/nextascentsearch/NextAscentSearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/nextascentsearch/NextAscentSearcher.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/randomsearch/RandomSearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/randomsearch/RandomSearcher.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/steepestascentsearch/SteepestAscentSearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/steepestascentsearch/SteepestAscentSearcher.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/RandomSearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/RandomSearcher.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractHillClimbingSearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractHillClimbingSearcher.groovy" />
     </list>
     <ignored path="laboratory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,6 +77,84 @@
     <ignored path="src/main/resources/knapsack/pre-1203/data-1000.txt-random-search.txt" />
     <ignored path="src/main/resources/knapsack/pre-1203/data-1000.txt-stochastic-hill-climbing.txt" />
     <ignored path="$PROJECT_DIR$/.idea/shelf/" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-200.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-50.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-200.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-50.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-1000.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-100.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-100.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-50.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-1000.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-1000.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-100.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-2000.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-200.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-5000.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-1000.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-5000.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-1000.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-50.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-2000.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-10000.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-2000.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-100.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-50000.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-200.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-10000.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-15.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-20.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-50.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-100.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-200.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-15.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-20.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-10.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-10.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-10.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-15.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-15.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-10.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-20.txt-exhaustive-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-20.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-20.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-10.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-20.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-15.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-20.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-20.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-10.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-10.txt-exhaustive-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-15.txt-steepest-ascent.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-10.txt-stochastic-hill-climbing.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-10.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-20.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-15.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-15.txt-exhaustive-search.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-20.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-2000.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-50000.txt" />
+    <ignored path="src/main/resources/knapsack/batch-1/data-15.txt-experiment.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-10000.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-5000.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-100.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-1000.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-200.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-30.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-15.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-50.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-10.txt" />
+    <ignored path="src/main/resources/knapsack/initial-batches-data/data-500.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-15.txt-exhaustive-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-20.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-20.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-10.txt-exhaustive-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-15.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-15.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-10.txt-greedy-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-20.txt-exhaustive-search.txt" />
+    <ignored path="src/main/resources/knapsack/batch-2/data-10.txt-random-search.txt" />
+    <ignored path="src/main/resources/knapsack/results/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +203,18 @@
     <favorites_list name="laboratory" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Application.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.85077184">
+              <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -473,7 +574,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/KnapsackGreedySearch.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/stochastic/KnapsackExperimentalRegionStochasticHillClimbingSearcher.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/knapsack/results/data-20.txt-test-hc-parallel-mr.txt" />
@@ -505,14 +605,11 @@
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/generator/IFactory.groovy" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractHillClimbingSearcher.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/generator/implementation/knapsack/RandomItemGenerator.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/knapsack/data-10.txt" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/ExecutionHandler.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/ResultHandler.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/knapsack/results/data-10.txt-exhaustive-search.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/knapsack/results/data-10.txt-greedy-search.txt" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/GreedySearcher.groovy" />
@@ -522,8 +619,12 @@
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/nextascentsearch/NextAscentSearcher.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/steepestascentsearch/SteepestAscentSearcher.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/randomsearch/RandomSearcher.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConstants.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/RandomSearcher.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConstants.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractHillClimbingSearcher.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConfiguration.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy" />
       </list>
     </option>
   </component>
@@ -540,8 +641,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="height" value="989" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -590,7 +692,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -650,6 +752,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="knapsack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="knapsack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1172,32 +1304,6 @@
               <option name="myItemId" value="groovy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="knapsack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laboratory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laboratory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1283,8 +1389,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1293,14 +1399,14 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="runti&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConstants.groovy&#10;Knapsa&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy&#10;Exh&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/ExhaustiveSearcher.groovy&#10;Applica&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;KST&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy&#10;Knapsack&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy&#10;exhs&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/ExhaustiveSearcher.groovy&#10;ExhS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/resources/knapsack/results/data-10.txt-exhaustive-search.txt&#10;RandomSe&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/RandomSearcher.groovy&#10;EDH&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy&#10;Runtim&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConstants.groovy&#10;RandomS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/randomsearch/RandomSearcher.groovy&#10;runtime&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConstants.groovy&#10;exsear&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/ExhaustiveSearcher.groovy&#10;Applic&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;RandomSearcher&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/RandomSearcher.groovy&#10;Runtime&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConstants.groovy&#10;ExecHan&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/general/ExecutionHandler.groovy&#10;AHC&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractHillClimbingSearcher.groovy&#10;AKS&#9;null&#9;null&#10;RandomSear&#9;null&#9;null&#10;application&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;KExe&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy&#10;KEXS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy&#10;AKHCS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractKnapsackHillClimbingSearcher.groovy&#10;Application&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;KRMana&#9;null&#9;null&#10;KSType&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy&#10;MRMV&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/highestascent/KnapsackHighestAscentMRMVPRSearcher.groovy&#10;knapsack&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy&#10;KES&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy&#10;applica&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;m&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/highestascent/KnapsackHighestAscentMRPRSolver.groovy&#10;KHC&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/highestascent/KnapsackHighestAscentHillClimbingSearcher.groovy&#10;knapsack.g&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy&#10;KSTy&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy&#10;kST&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/stochastic/KnapsackSimpleRegionStochasticHillClimbingSearcher.groovy&#10;highest&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/highestascent/KnapsackHighestAscentHillClimbingSearcher.groovy&#10;resul&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy&#10;Hill&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/stochastic/KnapsackStochasticHillClimbingSearcher.groovy&#10;aks&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy&#10;KRS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/KnapsackRandomSearch.groovy&#10;appl&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;knap&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy&#10;applic&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;appli&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;KE&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy&#10;Exten&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy&#10;KExec&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy" />
+    <property name="SearchEverywhereHistoryKey" value="AKS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy&#10;aks&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy&#10;con&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConfiguration.groovy&#10;HC&#9;null&#9;null&#10;appli&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;EDH&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy&#10;EHa&#9;null&#9;null&#10;Runt&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConstants.groovy&#10;Runtime&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConstants.groovy&#10;runtime&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConstants.groovy&#10;Runtim&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConstants.groovy&#10;EH&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy&#10;runti&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/RuntimeConstants.groovy&#10;Knapsa&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy&#10;Exh&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/ExhaustiveSearcher.groovy&#10;Applica&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;KST&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy&#10;Knapsack&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy&#10;exhs&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/ExhaustiveSearcher.groovy&#10;ExhS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/resources/knapsack/results/data-10.txt-exhaustive-search.txt&#10;RandomSe&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/RandomSearcher.groovy&#10;RandomS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/randomsearch/RandomSearcher.groovy&#10;exsear&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/ExhaustiveSearcher.groovy&#10;Applic&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;RandomSearcher&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/RandomSearcher.groovy&#10;ExecHan&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/general/ExecutionHandler.groovy&#10;AHC&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractHillClimbingSearcher.groovy&#10;RandomSear&#9;null&#9;null&#10;application&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;KExe&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/general/KnapsackExecuter.groovy&#10;KEXS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy&#10;AKHCS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractKnapsackHillClimbingSearcher.groovy&#10;Application&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;KRMana&#9;null&#9;null&#10;KSType&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy&#10;MRMV&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/highestascent/KnapsackHighestAscentMRMVPRSearcher.groovy&#10;knapsack&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy&#10;KES&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/KnapsackExtensiveSearch.groovy&#10;applica&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;m&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/highestascent/KnapsackHighestAscentMRPRSolver.groovy&#10;KHC&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/highestascent/KnapsackHighestAscentHillClimbingSearcher.groovy&#10;knapsack.g&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy&#10;KSTy&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy&#10;kST&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/stochastic/KnapsackSimpleRegionStochasticHillClimbingSearcher.groovy&#10;highest&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/highestascent/KnapsackHighestAscentHillClimbingSearcher.groovy&#10;resul&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/general/KnapsackResultManager.groovy&#10;Hill&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/stochastic/KnapsackStochasticHillClimbingSearcher.groovy&#10;KRS&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/KnapsackRandomSearch.groovy&#10;appl&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/application/knapsack/Application.groovy&#10;knap&#9;FILE&#9;file:///Users/stefangrecu/IdeaProjects/laboratory/src/main/groovy/model/knapsack/Knapsack.groovy" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/knapsack/initial-batches-data" />
       <recent name="$PROJECT_DIR$/src/main/resources/knapsack/batch-2" />
     </key>
   </component>
@@ -1313,7 +1419,7 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="application.knapsack.Application" />
-      <option name="VM_PARAMETERS" value="-Xmx6G -Xms6G -XX:+UseG1GC" />
+      <option name="VM_PARAMETERS" value="-Xmx8G -Xms8G -XX:+UseG1GC" />
       <option name="PROGRAM_PARAMETERS" value="&quot;src/main/resources/knapsack&quot;" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1849,7 +1955,8 @@
       <workItem from="1457261271387" duration="29753000" />
       <workItem from="1457457747650" duration="1072000" />
       <workItem from="1457590416511" duration="43297000" />
-      <workItem from="1457805300126" duration="17676000" />
+      <workItem from="1457805300126" duration="18318000" />
+      <workItem from="1457836507502" duration="22243000" />
     </task>
     <task id="LOCAL-00001" summary="finished manager; continue with extensive search, added binary bitstring representation">
       <created>1456438354691</created>
@@ -1971,11 +2078,17 @@
       <option name="project" value="LOCAL" />
       <updated>1457826838007</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="bug fixing">
+      <created>1457835824653</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1457835824653</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156507000" />
+    <option name="totallyTimeSpent" value="179392000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1987,24 +2100,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="989" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23168316" sideWeight="0.47497338" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3188406" sideWeight="0.5532481" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.49427754" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.319802" sideWeight="0.46781117" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23564357" sideWeight="0.45922747" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32684284" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2807229" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3188406" sideWeight="0.44675186" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26532888" sideWeight="0.4547391" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32552955" sideWeight="0.49361023" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19222577" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.48855507" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2014,8 +2124,11 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2807229" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.49427754" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.48855507" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2049,7 +2162,8 @@
     <MESSAGE value="cleanup, refactoring" />
     <MESSAGE value="hillclimbing + refactoring" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="bug fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2122,11 +2236,17 @@
           <properties />
           <option name="timeStamp" value="147" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/nextascentsearch/NextAscentSearcher.groovy</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="154" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="153" />
+      <option name="time" value="155" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -2143,125 +2263,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/model/knapsack/Item.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11432927">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/DataFileConverter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76198936">
-          <caret line="38" column="64" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
-          <folding>
-            <element signature="e#46#71#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/reader/implementation/knapsack/DataFileReader.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18650089">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/ISolver.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14018692">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/IFactory.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/src.zip!/java/util/AbstractMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_73.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="822" column="11" selection-start-line="822" selection-start-column="11" selection-end-line="822" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.6/fd2c46e38f8b08e4ec69badf3cd2b2cc436f628f/groovy-all-2.4.6-sources.jar!/groovy/lang/IntRange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3553616">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/implementation/knapsack/RandomItemGenerator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/ExecutionHandler.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/ResultHandler.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33274338">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#35#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractHillClimbingSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41238937">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="e#71#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-20.txt-exhaustive-search.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/data-10.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2269,7 +2271,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-20.txt-experiment.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/data-15.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2277,7 +2279,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-20.txt-greedy-search.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-10.txt-greedy-search.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2285,15 +2287,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-20.txt-random-search.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50373137">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-20.txt-steepest-ascent.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-15.txt-greedy-search.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2301,7 +2295,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-20.txt-stochastic-hill-climbing.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-15.txt-random-search.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2309,213 +2303,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-15.txt-stochastic-hill-climbing.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-20.txt-random-search.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-15.txt-steepest-ascent.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-10000.txt-greedy-search.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-5000.txt-greedy-search.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/KnapsackSolutionType.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-5000.txt-random-search.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15929204">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-10.txt-exhaustive-search.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-10000.txt-random-search.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-10.txt-experiment.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-50000.txt-greedy-search.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+        <state vertical-scroll-proportion="-0.99841523">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-10.txt-greedy-search.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-50000.txt-random-search.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+        <state vertical-scroll-proportion="13.977813">
+          <caret line="588" column="0" selection-start-line="588" selection-start-column="0" selection-end-line="588" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-10.txt-random-search.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-100000.txt-greedy-search.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-10.txt-steepest-ascent.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-10.txt-experiment.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-10.txt-stochastic-hill-climbing.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-15.txt-exhaustive-search.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-15.txt-experiment.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-15.txt-greedy-search.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/batch-2/data-15.txt-random-search.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4778761">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/model/knapsack/Knapsack.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18584071">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/extensivesearch/ExhaustiveSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
-          <folding>
-            <element signature="e#74#104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/greedy/GreedySearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/experimentsearch/ExperimentalSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6296296">
-          <caret line="78" column="42" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="42" />
-          <folding>
-            <element signature="e#88#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/steepestascentsearch/SteepestAscentSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="75" selection-start-line="47" selection-start-column="75" selection-end-line="47" selection-end-column="75" />
-          <folding>
-            <element signature="e#92#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/randomsearch/RandomSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="83" selection-start-line="47" selection-start-column="83" selection-end-line="47" selection-end-column="83" />
-          <folding>
-            <element signature="e#84#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/nextascentsearch/NextAscentSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4074073">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#88#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConstants.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
-          <folding>
-            <element signature="e#30#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/randomsearch/RandomSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="e#71#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/data-20.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-10.txt-random-search.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2531,15 +2391,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-10.txt-greedy-search.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2016129">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-10.txt-random-search.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-10.txt-steepest-ascent.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2547,7 +2399,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-20.txt-greedy-search.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-10.txt-stochastic-hill-climbing.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-15.txt-exhaustive-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-15.txt-experiment.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2563,10 +2431,242 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-20.txt-random-search.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-20.txt-experiment.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-20.txt-stochastic-hill-climbing.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-50.txt-greedy-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-50.txt-experiment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.9746434">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-50.txt-random-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-50.txt-steepest-ascent.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-100.txt-greedy-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-100.txt-random-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-100.txt-steepest-ascent.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-100.txt-stochastic-hill-climbing.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-100.txt-experiment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/ExecutionHandler.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/experimentsearch/ExperimentalSearcher.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/knapsack/hillclimbing/AbstractHillClimbingSearcher.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16640253">
+          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-200.txt-greedy-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-200.txt-random-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-200.txt-experiment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-200.txt-steepest-ascent.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-200.txt-stochastic-hill-climbing.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-1000.txt-greedy-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-1000.txt-random-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-1000.txt-stochastic-hill-climbing.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-2000.txt-random-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-2000.txt-greedy-search.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-2000.txt-steepest-ascent.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/knapsack/results/data-2000.txt-stochastic-hill-climbing.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/search/implementation/AbstractKnapsackSearcher.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47512865">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConfiguration.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="7.0463123">
+          <caret line="302" column="13" selection-start-line="267" selection-start-column="0" selection-end-line="302" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/Application.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85077184">
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
           <folding />
         </state>
       </provider>
