@@ -25,7 +25,7 @@ class GreedySearcher extends AbstractKnapsackSearcher {
         def greedyRatio = { Item i1, Item i2 ->
             int i1Ratio = (i1.value.intdiv(i1.weight == 0 ? 1 : i1.weight))
             int i2Ratio = (i2.value.intdiv(i2.weight == 0 ? 1 : i2.weight))
-            i2Ratio / (i1Ratio == 0 ? Integer.MAX_VALUE : i1Ratio)
+            i2Ratio <=> i1Ratio
         }
         Knapsack knapsack = new Knapsack(maxWeight: this.maxKnapsackWeight)
         items.sort(greedyRatio).each { Item item ->
