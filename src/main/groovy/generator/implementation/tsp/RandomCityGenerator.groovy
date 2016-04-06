@@ -8,12 +8,12 @@ import org.apache.commons.math3.random.RandomDataGenerator
 /**
  *  Created by stefangrecu on 07/04/16.
  */
-class RandomItemGenerator implements IDataGenerator<City> {
+class RandomCityGenerator implements IDataGenerator<City> {
 
     private final RandomDataGenerator numberGenerator
     private final IFactory<City> cityFactory
 
-    RandomItemGenerator() {
+    RandomCityGenerator() {
         this.numberGenerator = new RandomDataGenerator()
         this.cityFactory = new CityFactory()
     }

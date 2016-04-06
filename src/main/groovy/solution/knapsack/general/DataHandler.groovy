@@ -28,12 +28,16 @@ class DataHandler {
     }
 
     List<Item> generateData(Integer itemCount, Integer maxWeight = 10, Integer maxValue = 50) {
-        return dataGenerator.generateData(itemCount: itemCount, maxWeight: maxWeight, maxValue: maxValue)
+        return dataGenerator.generateData(
+                itemCount: itemCount,
+                maxWeight: maxWeight,
+                maxValue: maxValue
+        )
     }
 
     void writeDataFile(List<Item> data, String path) {
-        def dataMap = dataConverter.convertToMap(data)
-        dataWriter.writeLines(path, dataMap)
+        def content = dataConverter.convertToMap(data)
+        dataWriter.writeLines(path, content)
     }
 
     Collection<Item> readDataFile(String path) {

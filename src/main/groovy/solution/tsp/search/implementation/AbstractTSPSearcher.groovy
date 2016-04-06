@@ -10,10 +10,10 @@ import solution.ISolver
  */
 abstract class AbstractTSPSearcher implements ISolver<Route> {
 
-    protected List<City> cities = []
-    protected TSPSolutionType solutionType
-    protected Integer maxNumber = 1
-    protected Map<String, Object> runtimeParams = [:]
+    List<City> cities = []
+    TSPSolutionType solutionType
+    Integer maxNumber = 1
+    Map<String, Object> runtimeParams = [:]
     protected RandomGenerator randomGenerator
 
     protected List<List<Integer>> generatePermutations() {

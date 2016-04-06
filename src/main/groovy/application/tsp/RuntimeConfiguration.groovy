@@ -7,7 +7,7 @@ interface RuntimeConfiguration {
     int EIL_51 = 0, EIL_76 = 1, EIL_101 = 2, KROC_100 = 3, CH_130 = 4
     def INSTANCES_METADATA = [
             [
-                    filePath      : 'resources/tsp/eil51.tsp',
+                    filePath      : 'src/main/resources/tsp/eil51.tsp',
                     name          : 'eil51',
                     type          : 'tsp',
                     comment       : '51-city-problem',
@@ -15,7 +15,7 @@ interface RuntimeConfiguration {
                     edgeWeightType: 'EUC_2D'
             ],
             [
-                    filePath      : 'resources/tsp/eil75.tsp',
+                    filePath      : 'src/main/resources/tsp/eil75.tsp',
                     name          : 'eil76',
                     type          : 'tsp',
                     comment       : '76-city-problem',
@@ -23,7 +23,7 @@ interface RuntimeConfiguration {
                     edgeWeightType: 'EUC_2D'
             ],
             [
-                    filePath      : 'resources/tsp/eil101.tsp',
+                    filePath      : 'src/main/resources/tsp/eil101.tsp',
                     name          : 'eil101',
                     type          : 'tsp',
                     comment       : '101-city-problem',
@@ -31,7 +31,7 @@ interface RuntimeConfiguration {
                     edgeWeightType: 'EUC_2D'
             ],
             [
-                    filePath      : 'resources/tsp/kroC100.tsp',
+                    filePath      : 'src/main/resources/tsp/kroC100.tsp',
                     name          : 'kroC100',
                     type          : 'tsp',
                     comment       : '100-city-problem C',
@@ -39,7 +39,7 @@ interface RuntimeConfiguration {
                     edgeWeightType: 'EUC_2D'
             ],
             [
-                    filePath      : 'resources/tsp/ch130.tsp',
+                    filePath      : 'src/main/resources/tsp/ch130.tsp',
                     name          : 'ch130',
                     type          : 'tsp',
                     comment       : '130-city-problem',
