@@ -1,18 +1,21 @@
 package solution.tsp.search
 
+import model.tsp.City
 import model.tsp.Route
+import solution.ISolver
 
 /**
  *  Created by stefangrecu on 24/03/16.
  */
-class AbstractTSPSearcher {
+abstract class AbstractTSPSearcher implements ISolver<Route> {
 
-    protected Route route
+    protected List<City> cities
+    protected TSPSolutionType solutionType
+    protected Integer maxNumber
 
-    protected static List<List<Integer>> generatePermutations(Integer maxNumber) {
-        def result = []
+    protected List<List<Integer>> generatePermutations() {
         List<Integer> inputs = (0..<maxNumber).collect()
-        result = inputs.permutations().toList()
-        return result;
+        return inputs.permutations().toList()
     }
+
 }
