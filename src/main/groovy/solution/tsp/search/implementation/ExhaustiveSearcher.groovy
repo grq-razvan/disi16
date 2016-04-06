@@ -1,4 +1,4 @@
-package solution.tsp.search
+package solution.tsp.search.implementation
 
 /**
  *  Created by stefangrecu on 06/04/16.
