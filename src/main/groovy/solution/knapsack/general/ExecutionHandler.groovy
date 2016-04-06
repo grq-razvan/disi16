@@ -13,34 +13,34 @@ class ExecutionHandler {
     private inputData
     private processedData
 
-    private final DataHandler dataManager
-    private ResultHandler resultManager
+    private final DataHandler dataHandler
+    private ResultHandler resultHandler
 
-    public ExecutionHandler(Integer maxWeight) {
-        this.dataManager = new DataHandler()
-        this.resultManager = new ResultHandler(maxWeight)
+    ExecutionHandler(Integer maxWeight) {
+        this.dataHandler = new DataHandler()
+        this.resultHandler = new ResultHandler(maxWeight)
     }
 
     void writeTestDataFile(int itemCount, Integer maxWeight = null, Integer maxValue = null, String path = FILE_DATA_PATH + "-${itemCount}.txt") {
-        inputData = dataManager.generateData(itemCount, maxWeight, maxValue)
-        dataManager.writeDataFile(inputData, path)
+        inputData = dataHandler.generateData(itemCount, maxWeight, maxValue)
+        dataHandler.writeDataFile(inputData, path)
     }
 
     void writeResultDataFile(String path = FILE_RESULT_PATH + "-${inputData.size()}.txt" + "-${processedData.solution}.txt") {
-        resultManager.writeResultFile(processedData.results as List<Knapsack>, path)
+        resultHandler.writeResultFile(processedData.results as List<Knapsack>, path)
     }
 
     void processData(KnapsackSolutionType type = KnapsackSolutionType.Exhaustive, Double randomParameter = 0, String inputFilePath = FILE_DATA_PATH + "-${inputData.size()}.txt", Integer numberOfRegions = 1, Integer maxFlipDegree = 1) {
-        inputData = dataManager.readDataFile(inputFilePath)
+        inputData = dataHandler.readDataFile(inputFilePath)
         processedData =
                 [
-                        results : resultManager.generateResult(inputData, type, randomParameter, numberOfRegions, maxFlipDegree),
+                        results : resultHandler.generateResult(inputData, type, randomParameter, numberOfRegions, maxFlipDegree),
                         solution: type.solutionType
                 ]
     }
 
-    public void setResultManagerMaxWeight(Integer maxWeight) {
-        resultManager = new ResultHandler(maxWeight)
+    public void createResultHandlerWith(Integer maxWeight) {
+        resultHandler = new ResultHandler(maxWeight)
     }
 
 }

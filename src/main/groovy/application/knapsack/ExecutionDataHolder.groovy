@@ -28,7 +28,7 @@ class ExecutionDataHolder implements RuntimeConfiguration {
     private void executeTestInternal(Integer knapsackWeight, Integer itemCount, String type, Double certainty, Integer regions = 0, Integer degree = 0) {
         List<KnapsackSolutionType> availableTypes = []
         setAvailableTypes(itemCount, type, availableTypes)
-        handler.setResultManagerMaxWeight(knapsackWeight)
+        handler.createResultHandlerWith(knapsackWeight)
         availableTypes.each {
             handler.processData(it, certainty, generatePath(itemCount), regions, degree)
             handler.writeResultDataFile()
