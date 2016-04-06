@@ -14,4 +14,10 @@ class City {
                 [otherCity.coordinates.first.doubleValue(), otherCity.coordinates.second.doubleValue()].toArray() as double[]);
         return result ?: 0
     }
+
+
+    @Override
+    public String toString() {
+        return """City with coordinates (${coordinates.first}, ${coordinates.second})"""
+    }
 }

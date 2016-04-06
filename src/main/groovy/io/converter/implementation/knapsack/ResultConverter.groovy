@@ -23,7 +23,8 @@ class ResultConverter implements IResultConverter<Knapsack> {
     List<String> convertResultToWritableLines(Map<String, Knapsack> map) {
         return map.collect {
             key, value ->
-                def sb = new StringBuilder().append("${key} :\n")
+                def sb = new StringBuilder()
+                        .append("${key} :\n")
                         .append("\tvalue: ${value.totalValue} \$\n")
                         .append("\tweight: ${value.currentWeight} kg\n")
                         .append("\tout of: ${value.maxWeight} kg\n")
