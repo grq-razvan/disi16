@@ -1,0 +1,26 @@
+0 :
+	value: 107 $
+	weight: 124 kg
+	out of: 125 kg
+	items:
+		item: 2 21
+		item: 35 8
+		item: 13 5
+		item: 18 5
+		item: 33 23
+		item: 9 20
+		item: 14 25
+#############END##############
+1 :
+	value: 107 $
+	weight: 124 kg
+	out of: 125 kg
+	items:
+		item: 2 21
+		item: 35 8
+		item: 13 5
+		item: 18 5
+		item: 33 23
+		item: 9 20
+		item: 14 25
+#############END##############

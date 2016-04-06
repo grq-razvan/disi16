@@ -1,0 +1,63 @@
+0 :
+	value: 110 $
+	weight: 118 kg
+	out of: 125 kg
+	items:
+		item: 2 21
+		item: 8 1
+		item: 35 8
+		item: 13 5
+		item: 18 5
+		item: 19 25
+		item: 9 20
+		item: 14 25
+#############END##############
+1 :
+	value: 98 $
+	weight: 118 kg
+	out of: 125 kg
+	items:
+		item: 20 11
+		item: 13 5
+		item: 27 10
+		item: 19 25
+		item: 16 2
+		item: 9 20
+		item: 14 25
+#############END##############
+2 :
+	value: 93 $
+	weight: 118 kg
+	out of: 125 kg
+	items:
+		item: 25 10
+		item: 2 21
+		item: 8 1
+		item: 36 24
+		item: 33 12
+		item: 14 25
+#############END##############
+3 :
+	value: 86 $
+	weight: 124 kg
+	out of: 125 kg
+	items:
+		item: 37 19
+		item: 13 5
+		item: 18 5
+		item: 33 12
+		item: 9 20
+		item: 14 25
+#############END##############
+4 :
+	value: 85 $
+	weight: 125 kg
+	out of: 125 kg
+	items:
+		item: 2 21
+		item: 37 19
+		item: 18 5
+		item: 16 2
+		item: 14 25
+		item: 38 13
+#############END##############

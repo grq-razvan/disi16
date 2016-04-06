@@ -1,0 +1,2112 @@
+0 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+1 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+2 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+3 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+4 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+5 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+6 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+7 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+8 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+9 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+10 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+11 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+12 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+13 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+14 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+15 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+16 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+17 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+18 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+19 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+20 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+21 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+22 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+23 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+24 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+25 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+26 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+27 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+28 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+29 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+30 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+31 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+32 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+33 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+34 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+35 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+36 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+37 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+38 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+39 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+40 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+41 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+42 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+43 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+44 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+45 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+46 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+47 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+48 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+49 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+50 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+51 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+52 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+53 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+54 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+55 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+56 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+57 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+58 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+59 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+60 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+61 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+62 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############
+63 :
+	value: 1746 $
+	weight: 144 kg
+	out of: 250 kg
+	items:
+		item: 9 1
+		item: 6 78
+		item: 4 17
+		item: 1 26
+		item: 5 5
+		item: 3 9
+		item: 9 93
+		item: 8 30
+		item: 0 100
+		item: 3 117
+		item: 0 96
+		item: 4 39
+		item: 4 129
+		item: 2 42
+		item: 8 108
+		item: 9 100
+		item: 10 78
+		item: 10 38
+		item: 5 46
+		item: 1 113
+		item: 6 4
+		item: 6 104
+		item: 10 102
+		item: 5 38
+		item: 10 116
+		item: 5 108
+		item: 1 9
+#############END##############

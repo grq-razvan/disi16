@@ -1,0 +1,214 @@
+0 :
+	value: 60 $
+	weight: 48 kg
+	out of: 50 kg
+	items:
+		item: 2 21
+		item: 37 19
+		item: 9 20
+#############END##############
+1 :
+	value: 60 $
+	weight: 48 kg
+	out of: 50 kg
+	items:
+		item: 2 21
+		item: 37 19
+		item: 9 20
+#############END##############
+2 :
+	value: 120 $
+	weight: 174 kg
+	out of: 50 kg
+	items:
+		item: 20 11
+		item: 13 5
+		item: 33 12
+		item: 47 24
+		item: 33 23
+		item: 19 25
+		item: 9 20
+#############END##############
+3 :
+	value: 120 $
+	weight: 174 kg
+	out of: 50 kg
+	items:
+		item: 20 11
+		item: 13 5
+		item: 33 12
+		item: 47 24
+		item: 33 23
+		item: 19 25
+		item: 9 20
+#############END##############
+4 :
+	value: 49 $
+	weight: 50 kg
+	out of: 50 kg
+	items:
+		item: 36 24
+		item: 14 25
+#############END##############
+5 :
+	value: 46 $
+	weight: 48 kg
+	out of: 50 kg
+	items:
+		item: 2 21
+		item: 37 5
+		item: 9 20
+#############END##############
+6 :
+	value: 28 $
+	weight: 38 kg
+	out of: 50 kg
+	items:
+		item: 8 1
+		item: 16 2
+		item: 14 25
+#############END##############
+7 :
+	value: 60 $
+	weight: 48 kg
+	out of: 50 kg
+	items:
+		item: 2 21
+		item: 37 19
+		item: 9 20
+#############END##############
+8 :
+	value: 56 $
+	weight: 47 kg
+	out of: 50 kg
+	items:
+		item: 2 21
+		item: 13 5
+		item: 18 5
+		item: 14 25
+#############END##############
+9 :
+	value: 46 $
+	weight: 48 kg
+	out of: 50 kg
+	items:
+		item: 2 21
+		item: 37 5
+		item: 9 20
+#############END##############
+10 :
+	value: 56 $
+	weight: 46 kg
+	out of: 50 kg
+	items:
+		item: 25 10
+		item: 2 21
+		item: 19 25
+#############END##############
+11 :
+	value: 33 $
+	weight: 47 kg
+	out of: 50 kg
+	items:
+		item: 9 20
+		item: 38 13
+#############END##############
+12 :
+	value: 58 $
+	weight: 116 kg
+	out of: 50 kg
+	items:
+		item: 2 21
+		item: 8 1
+		item: 20 11
+		item: 35 8
+		item: 18 5
+		item: 33 12
+#############END##############
+13 :
+	value: 104 $
+	weight: 242 kg
+	out of: 50 kg
+	items:
+		item: 25 10
+		item: 8 1
+		item: 35 8
+		item: 27 10
+		item: 18 5
+		item: 33 12
+		item: 33 23
+		item: 16 2
+		item: 9 20
+		item: 38 13
+#############END##############
+14 :
+	value: 120 $
+	weight: 174 kg
+	out of: 50 kg
+	items:
+		item: 20 11
+		item: 13 5
+		item: 33 12
+		item: 47 24
+		item: 33 23
+		item: 19 25
+		item: 9 20
+#############END##############
+15 :
+	value: 54 $
+	weight: 49 kg
+	out of: 50 kg
+	items:
+		item: 2 21
+		item: 9 20
+		item: 38 13
+#############END##############
+16 :
+	value: 91 $
+	weight: 247 kg
+	out of: 50 kg
+	items:
+		item: 37 24
+		item: 8 1
+		item: 37 5
+		item: 35 8
+		item: 36 24
+		item: 27 10
+		item: 18 5
+		item: 33 12
+		item: 16 2
+#############END##############
+17 :
+	value: 29 $
+	weight: 50 kg
+	out of: 50 kg
+	items:
+		item: 37 24
+		item: 13 5
+#############END##############
+18 :
+	value: 84 $
+	weight: 137 kg
+	out of: 50 kg
+	items:
+		item: 8 1
+		item: 37 5
+		item: 13 5
+		item: 18 5
+		item: 33 23
+		item: 19 25
+		item: 9 20
+#############END##############
+19 :
+	value: 95 $
+	weight: 181 kg
+	out of: 50 kg
+	items:
+		item: 2 21
+		item: 37 19
+		item: 37 5
+		item: 35 8
+		item: 18 5
+		item: 33 12
+		item: 19 25
+#############END##############
