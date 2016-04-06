@@ -18,7 +18,7 @@ class DataFileConverter implements IDataConverter<Item> {
 
     @Override
     Collection<Item> convertFromMap(Map<String, Item> data) {
-        return data.values().collect { Item item -> item }
+        return data.values().collect()
     }
 
     @Override
