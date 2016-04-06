@@ -5,7 +5,7 @@ package application.tsp
  */
 interface RuntimeConfiguration {
     int EIL_51 = 0, EIL_76 = 1, EIL_101 = 2, KROC_100 = 3, CH_130 = 4
-    def INSTANCES_META_DATA = [
+    def INSTANCES_METADATA = [
             [
                     filePath      : 'resources/tsp/eil51.tsp',
                     name          : 'eil51',

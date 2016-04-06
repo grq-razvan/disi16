@@ -23,16 +23,21 @@ class RandomItemGenerator implements IDataGenerator<Item> {
 
     @Override
     List<Item> generateData(Map<String, Number> params) {
-        List<Item> result = new ArrayList<>()
         Integer maxWeight = params.maxWeight ?: MAX_ITEM_WEIGHT
         Integer maxValue = params.maxValue ?: MAX_ITEM_VALUE
         Integer itemCount = params.itemCount
-        for (item in (0..itemCount - 1)) {
-            Integer currentWeight = numberGenerator.nextInt(0, maxWeight)
-            Integer currentValue = numberGenerator.nextInt(0, maxValue)
-            Item currentItem = itemFactory.create([itemWeight: currentWeight, itemValue: currentValue])
-            result.add(currentItem)
-        }
-        return Collections.unmodifiableList(result)
+        return Collections.unmodifiableList(
+                (0..<itemCount).collect {
+                    Integer currentWeight = numberGenerator.nextInt(0, maxWeight)
+                    Integer currentValue = numberGenerator.nextInt(0, maxValue)
+                    itemFactory.create(
+                            [
+                                    itemWeight: currentWeight,
+                                    itemValue : currentValue
+                            ]
+                    )
+                }
+        )
+
     }
 }
