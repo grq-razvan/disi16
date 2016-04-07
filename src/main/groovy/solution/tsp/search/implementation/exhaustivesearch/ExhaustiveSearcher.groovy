@@ -1,7 +1,9 @@
-package solution.tsp.search.implementation
+package solution.tsp.search.implementation.exhaustivesearch
 
 import model.tsp.City
 import model.tsp.Route
+import solution.tsp.search.implementation.AbstractTSPSearcher
+import solution.tsp.search.implementation.TSPSolutionType
 
 /**
  *  Created by stefangrecu on 06/04/16.

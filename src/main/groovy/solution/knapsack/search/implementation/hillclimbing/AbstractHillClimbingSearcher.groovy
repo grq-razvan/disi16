@@ -1,4 +1,4 @@
-package solution.knapsack.search.implementation.knapsack.hillclimbing
+package solution.knapsack.search.implementation.hillclimbing
 
 import model.knapsack.Knapsack
 import org.apache.commons.math3.random.RandomDataGenerator

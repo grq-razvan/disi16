@@ -1,10 +1,10 @@
-package solution.knapsack.search.implementation.knapsack.hillclimbing.randomsearch
+package solution.knapsack.search.implementation.hillclimbing.randomsearch
 
 import model.knapsack.Knapsack
 import org.apache.commons.math3.random.RandomDataGenerator
-import solution.knapsack.search.implementation.knapsack.hillclimbing.AbstractHillClimbingSearcher
+import solution.knapsack.search.implementation.hillclimbing.AbstractHillClimbingSearcher
 
-import static solution.knapsack.search.implementation.knapsack.KnapsackSolutionType.RandomHillClimbing
+import static solution.knapsack.search.implementation.KnapsackSolutionType.RandomHillClimbing
 
 /**
  *  Created by stefangrecu on 12/03/16.

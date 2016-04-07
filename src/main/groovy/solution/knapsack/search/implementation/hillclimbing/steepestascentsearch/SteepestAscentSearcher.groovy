@@ -1,10 +1,10 @@
-package solution.knapsack.search.implementation.knapsack.hillclimbing.steepestascentsearch
+package solution.knapsack.search.implementation.hillclimbing.steepestascentsearch
 
 import model.knapsack.Knapsack
 import org.apache.commons.math3.random.RandomDataGenerator
-import solution.knapsack.search.implementation.knapsack.hillclimbing.AbstractHillClimbingSearcher
+import solution.knapsack.search.implementation.hillclimbing.AbstractHillClimbingSearcher
 
-import static solution.knapsack.search.implementation.knapsack.KnapsackSolutionType.SteepestAscent
+import static solution.knapsack.search.implementation.KnapsackSolutionType.SteepestAscent
 
 /**
  *  Created by stefangrecu on 12/03/16.

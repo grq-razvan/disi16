@@ -1,4 +1,4 @@
-package solution.knapsack.search.implementation.knapsack
+package solution.knapsack.search.implementation
 /**
  *  Created by stefangrecu on 27/02/16.
  */

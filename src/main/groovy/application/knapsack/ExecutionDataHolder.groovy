@@ -1,7 +1,7 @@
 package application.knapsack
 
 import solution.knapsack.general.ExecutionHandler
-import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
+import solution.knapsack.search.implementation.KnapsackSolutionType
 
 /**
  *  Created by stefangrecu on 12/03/16.

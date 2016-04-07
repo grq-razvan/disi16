@@ -5,7 +5,6 @@ import model.knapsack.Knapsack
 import org.apache.commons.math3.util.ArithmeticUtils
 import org.apache.commons.math3.util.FastMath
 import solution.ISolver
-import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
 
 import java.util.concurrent.CopyOnWriteArrayList
 

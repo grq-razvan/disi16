@@ -1,4 +1,4 @@
-package solution.tsp.search.general
+package solution.tsp.general
 
 import io.converter.IResultConverter
 import io.converter.implementation.tsp.ResultConverter

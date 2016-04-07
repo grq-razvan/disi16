@@ -8,15 +8,15 @@ import model.knapsack.Item
 import model.knapsack.Knapsack
 import solution.ISolver
 import solution.knapsack.search.implementation.AbstractKnapsackSearcher
-import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
-import solution.knapsack.search.implementation.knapsack.extensivesearch.ExhaustiveSearcher
-import solution.knapsack.search.implementation.knapsack.greedy.GreedySearcher
-import solution.knapsack.search.implementation.knapsack.hillclimbing.AbstractHillClimbingSearcher
-import solution.knapsack.search.implementation.knapsack.hillclimbing.experimentsearch.ExperimentalSearcher
-import solution.knapsack.search.implementation.knapsack.hillclimbing.nextascentsearch.NextAscentSearcher
-import solution.knapsack.search.implementation.knapsack.hillclimbing.randomsearch.RandomSearcher
-import solution.knapsack.search.implementation.knapsack.hillclimbing.steepestascentsearch.SteepestAscentSearcher
-import solution.knapsack.search.implementation.knapsack.randomsearch.RandomSearcher as RandomKnapsackSearcher
+import solution.knapsack.search.implementation.KnapsackSolutionType
+import solution.knapsack.search.implementation.exhaustivesearch.ExhaustiveSearcher
+import solution.knapsack.search.implementation.greedysearch.GreedySearcher
+import solution.knapsack.search.implementation.hillclimbing.AbstractHillClimbingSearcher
+import solution.knapsack.search.implementation.hillclimbing.experimentsearch.ExperimentalSearcher
+import solution.knapsack.search.implementation.hillclimbing.nextascentsearch.NextAscentSearcher
+import solution.knapsack.search.implementation.hillclimbing.randomsearch.RandomSearcher
+import solution.knapsack.search.implementation.hillclimbing.steepestascentsearch.SteepestAscentSearcher
+import solution.knapsack.search.implementation.randomsearch.RandomSearcher as RandomKnapsackSearcher
 
 /**
  *  Created by stefangrecu on 27/02/16.

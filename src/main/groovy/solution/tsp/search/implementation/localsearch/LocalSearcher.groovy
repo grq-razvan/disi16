@@ -1,8 +1,10 @@
-package solution.tsp.search.implementation
+package solution.tsp.search.implementation.localsearch
 
 import model.tsp.City
 import model.tsp.Route
 import org.apache.commons.math3.random.RandomDataGenerator
+import solution.tsp.search.implementation.AbstractTSPSearcher
+import solution.tsp.search.implementation.TSPSolutionType
 
 /**
  *  Created by stefangrecu on 06/04/16.
@@ -14,7 +16,7 @@ class LocalSearcher extends AbstractTSPSearcher {
         this.solutionType = TSPSolutionType.Local
         this.maxNumber = cityCount
         this.runtimeParams.iterations = (cityCount * 1.5).toInteger()
-        this.runtimeParams.restarts = (super.runtimeParams.iterations as Integer).intdiv(10).intValue()
+        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(10).intValue()
     }
 
     @Override

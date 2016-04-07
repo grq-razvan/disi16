@@ -1,7 +1,9 @@
-package solution.tsp.search.implementation
+package solution.tsp.search.implementation.localgreedysearch
 
 import model.tsp.Route
 import org.apache.commons.math3.random.RandomDataGenerator
+import solution.tsp.search.implementation.AbstractTSPSearcher
+import solution.tsp.search.implementation.TSPSolutionType
 
 import java.util.concurrent.CopyOnWriteArrayList
 

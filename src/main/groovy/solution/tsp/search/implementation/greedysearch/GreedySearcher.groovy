@@ -1,8 +1,10 @@
-package solution.tsp.search.implementation
+package solution.tsp.search.implementation.greedysearch
 
 import model.tsp.City
 import model.tsp.Route
 import org.apache.commons.math3.random.RandomDataGenerator
+import solution.tsp.search.implementation.AbstractTSPSearcher
+import solution.tsp.search.implementation.TSPSolutionType
 
 /**
  *  Created by stefangrecu on 06/04/16.

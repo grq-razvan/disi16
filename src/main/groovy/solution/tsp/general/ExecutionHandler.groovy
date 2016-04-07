@@ -1,4 +1,4 @@
-package solution.tsp.search.general
+package solution.tsp.general
 
 import model.tsp.Route
 import solution.tsp.search.implementation.TSPSolutionType

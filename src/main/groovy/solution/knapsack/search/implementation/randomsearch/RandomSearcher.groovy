@@ -1,9 +1,9 @@
-package solution.knapsack.search.implementation.knapsack.randomsearch
+package solution.knapsack.search.implementation.randomsearch
 
 import model.knapsack.Knapsack
 import org.apache.commons.math3.random.RandomDataGenerator
 import solution.knapsack.search.implementation.AbstractKnapsackSearcher
-import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
+import solution.knapsack.search.implementation.KnapsackSolutionType
 
 /**
  *  Created by stefangrecu on 28/02/16.

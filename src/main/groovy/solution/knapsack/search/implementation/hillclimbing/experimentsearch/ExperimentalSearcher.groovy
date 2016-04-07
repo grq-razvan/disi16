@@ -1,10 +1,10 @@
-package solution.knapsack.search.implementation.knapsack.hillclimbing.experimentsearch
+package solution.knapsack.search.implementation.hillclimbing.experimentsearch
 
 import groovyx.gpars.GParsPool
 import model.knapsack.Knapsack
 import org.apache.commons.math3.random.RandomDataGenerator
-import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
-import solution.knapsack.search.implementation.knapsack.hillclimbing.AbstractHillClimbingSearcher
+import solution.knapsack.search.implementation.KnapsackSolutionType
+import solution.knapsack.search.implementation.hillclimbing.AbstractHillClimbingSearcher
 
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CopyOnWriteArrayList

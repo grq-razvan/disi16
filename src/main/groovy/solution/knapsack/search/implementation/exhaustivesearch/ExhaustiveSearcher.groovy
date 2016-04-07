@@ -1,10 +1,10 @@
-package solution.knapsack.search.implementation.knapsack.extensivesearch
+package solution.knapsack.search.implementation.exhaustivesearch
 
 import model.knapsack.Knapsack
 import org.apache.commons.math3.util.ArithmeticUtils
 import solution.knapsack.search.implementation.AbstractKnapsackSearcher
 
-import static solution.knapsack.search.implementation.knapsack.KnapsackSolutionType.Exhaustive
+import static solution.knapsack.search.implementation.KnapsackSolutionType.Exhaustive
 
 /**
  *  Created by stefangrecu on 26/02/16.

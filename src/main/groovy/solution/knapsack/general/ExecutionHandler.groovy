@@ -1,7 +1,7 @@
 package solution.knapsack.general
 
 import model.knapsack.Knapsack
-import solution.knapsack.search.implementation.knapsack.KnapsackSolutionType
+import solution.knapsack.search.implementation.KnapsackSolutionType
 
 /**
  *  Created by stefangrecu on 27/02/16.

@@ -1,10 +1,10 @@
-package solution.knapsack.search.implementation.knapsack.greedy
+package solution.knapsack.search.implementation.greedysearch
 
 import model.knapsack.Item
 import model.knapsack.Knapsack
 import solution.knapsack.search.implementation.AbstractKnapsackSearcher
 
-import static solution.knapsack.search.implementation.knapsack.KnapsackSolutionType.Greedy
+import static solution.knapsack.search.implementation.KnapsackSolutionType.Greedy
 
 /**
  *  Created by stefangrecu on 27/02/16.
