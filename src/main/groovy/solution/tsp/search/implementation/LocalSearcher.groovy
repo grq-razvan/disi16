@@ -13,6 +13,7 @@ class LocalSearcher extends AbstractTSPSearcher {
         super.randomGenerator = new RandomDataGenerator()
         super.solutionType = TSPSolutionType.Local
         super.maxNumber = cityCount
+        super.runtimeParams.iterations = (cityCount * 1.5).toInteger()
     }
 
     @Override
@@ -34,14 +35,6 @@ class LocalSearcher extends AbstractTSPSearcher {
         return [candidate]
     }
 
-    private void initRoute(Route route, List<City> cities, Object dimension) {
-        (dimension as Integer).times {
-            def randomIndex = randomGenerator.nextInt(cities.indices.first(), cities.indices.last())
-            City randomCity = cities.get(randomIndex)
-            route.cities.add(randomCity)
-            cities.remove(randomCity)
-        }
-    }
 
     private static Route createNeighborRoute(Route initial, int i, int j) {
         List<City> swaps = initial.cities.collect()

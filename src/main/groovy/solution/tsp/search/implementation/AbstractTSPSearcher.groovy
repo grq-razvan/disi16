@@ -21,4 +21,13 @@ abstract class AbstractTSPSearcher implements ISolver<Route> {
         return inputs.permutations().toList()
     }
 
+    protected void initRoute(Route route, List<City> cities, Object dimension) {
+        (dimension as Integer).times {
+            def randomIndex = randomGenerator.nextInt(cities.indices.first(), cities.indices.last())
+            City randomCity = cities.get(randomIndex)
+            route.cities.add(randomCity)
+            cities.remove(randomCity)
+        }
+    }
+
 }
