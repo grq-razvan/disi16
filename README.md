@@ -18,4 +18,9 @@
  - Use Next-Ascent in Experiment HC.
  - Instead of binary strings, use bitsets of item count length.
  - Create an iterative approach to getting neighbors of degree N.
-		
+
+>Lab assignment 2 - TSP
+ - *Exhaustive search*, *Local search*, *Greedy search*, *Local/greedy mix search*
+	Multiple restarts for local/local-greedy
+	used 2-opt swap heuristic, and 3-opt move (in local/greedy)
+ 
