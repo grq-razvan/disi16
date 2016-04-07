@@ -1,29 +1,22 @@
 package solution.tsp.general
 
-import generator.IDataGenerator
 import generator.implementation.tsp.RandomCityGenerator
-import io.converter.IDataConverter
 import io.converter.implementation.tsp.DataFileConverter
-import io.reader.IFileReader
 import io.reader.implementation.tsp.DataFileReader
-import io.writer.IFileWriter
 import io.writer.implementation.tsp.DataFileWriter
 import model.tsp.City
+import solution.meta.AbstractDataHandler
 
 /**
  *  Created by stefangrecu on 07/04/16.
  */
-class DataHandler {
-    private final IFileReader<City> dataReader
-    private final IFileWriter<City> dataWriter
-    private final IDataGenerator<City> dataGenerator
-    private final IDataConverter<City> dataConverter
+class DataHandler extends AbstractDataHandler<City> {
 
     DataHandler() {
-        dataReader = new DataFileReader()
-        dataWriter = new DataFileWriter()
-        dataGenerator = new RandomCityGenerator()
-        dataConverter = new DataFileConverter()
+        this.dataReader = new DataFileReader()
+        this.dataWriter = new DataFileWriter()
+        this.dataGenerator = new RandomCityGenerator()
+        this.dataConverter = new DataFileConverter()
     }
 
     List<City> generateData(Integer cityCount, Number xMax = 50.0, Number yMax = 50.0) {
@@ -34,11 +27,13 @@ class DataHandler {
         )
     }
 
+    @Override
     void writeDataFile(List<City> data, String path) {
         def content = dataConverter.convertToMap(data)
         dataWriter.writeLines(path, content)
     }
 
+    @Override
     Collection<City> readDataFile(String path) {
         return dataReader.getLines(path)
     }

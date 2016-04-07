@@ -1,17 +1,14 @@
 package solution.tsp.general
 
+import model.tsp.City
 import model.tsp.Route
+import solution.meta.AbstractExecutionHandler
 import solution.tsp.search.implementation.TSPSolutionType
 
 /**
  *  Created by stefangrecu on 07/04/16.
  */
-class ExecutionHandler implements RuntimePathsContainer {
-
-    private inputData
-    private processedData
-    private final DataHandler dataHandler
-    private ResultHandler resultHandler
+class ExecutionHandler extends AbstractExecutionHandler<City, Route> implements RuntimePathsContainer {
 
     ExecutionHandler(Integer cityCount) {
         this.dataHandler = new DataHandler()
