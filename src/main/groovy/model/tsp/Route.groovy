@@ -6,9 +6,20 @@ package model.tsp
 class Route {
     List<City> cities
     Integer maxNumber
-    Number totalCost
 
     boolean isBetter(Route otherRoute) {
         return this.totalCost > otherRoute.totalCost
+    }
+
+    Number getTotalCost() {
+        Number result = cities.last().distance(cities.first())
+        return -(result + getTotalCostInternal(cities))
+    }
+
+    private getTotalCostInternal(List<City> cities) {
+        if (cities.tail().empty || !cities.tail().head()) {
+            return 0
+        }
+        return cities.head().distance(cities.tail().head()) + getTotalCostInternal(cities.tail())
     }
 }
