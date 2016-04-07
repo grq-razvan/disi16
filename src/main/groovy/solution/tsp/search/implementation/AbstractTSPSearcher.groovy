@@ -21,7 +21,7 @@ abstract class AbstractTSPSearcher implements ISolver<Route> {
         return inputs.permutations().toList()
     }
 
-    protected void initRoute(Route route, List<City> cities, Object dimension = this.maxNumber) {
+    protected synchronized void initRoute(Route route, List<City> cities, Object dimension = this.maxNumber) {
         (dimension as Integer).times {
             def randomIndex = randomGenerator.nextInt(cities.indices.first(), cities.indices.last())
             City randomCity = cities.get(randomIndex)
@@ -30,7 +30,7 @@ abstract class AbstractTSPSearcher implements ISolver<Route> {
         }
     }
 
-    protected static Route create2SwapRoute(Route initial, int i, int j) {
+    protected synchronized static Route create2SwapRoute(Route initial, int i, int j) {
         List<City> swaps = initial.cities.collect()
         def firstIndex = swaps.indices.first()
         def lastIndex = swaps.indices.last()
@@ -38,7 +38,7 @@ abstract class AbstractTSPSearcher implements ISolver<Route> {
         return new Route(cities: cities, maxNumber: initial.maxNumber)
     }
 
-    protected static Route create3MoveRoute(Route initial, int i, int length = 3, int shift = 1) {
+    protected synchronized static Route create3MoveRoute(Route initial, int i, int length = 3, int shift = 1) {
         List<City> temp = initial.cities.collect()
         def firstIndex = temp.indices.first()
         def lastIndex = temp.indices.last()

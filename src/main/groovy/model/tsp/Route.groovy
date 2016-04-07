@@ -7,16 +7,16 @@ class Route {
     List<City> cities
     Integer maxNumber
 
-    boolean isBetter(Route otherRoute) {
+    synchronized boolean isBetter(Route otherRoute) {
         return this.totalCost > otherRoute.totalCost
     }
 
-    Number getTotalCost() {
+    synchronized Number getTotalCost() {
         Number result = cities.last().distance(cities.first())
         return -(result + getTotalCostInternal(cities))
     }
 
-    private getTotalCostInternal(List<City> cities) {
+    private synchronized getTotalCostInternal(List<City> cities) {
         if (cities.tail().empty || !cities.tail().head()) {
             return 0
         }

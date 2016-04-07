@@ -3,6 +3,8 @@ package solution.tsp.search.implementation
 import model.tsp.Route
 import org.apache.commons.math3.random.RandomDataGenerator
 
+import java.util.concurrent.CopyOnWriteArrayList
+
 /**
  *  Created by stefangrecu on 06/04/16.
  */
@@ -22,13 +24,13 @@ class LocalGreedySearcher extends AbstractTSPSearcher {
     }
 
     private List<Route> solveInternal(Map params) {
-        List<Route> routes = []
-        params.restarts.times {
+        CopyOnWriteArrayList<Route> routes = []
+        (1..params.restarts).eachParallel {
             Route route = new Route(cities: [], maxNumber: this.maxNumber)
-            initRoute(route, cities, this.maxNumber)
+            initRoute(route, Collections.synchronizedList(cities), this.maxNumber)
             params.iterations.times {
-                List<Route> swaps = []
-                List<Route> moves = []
+                CopyOnWriteArrayList<Route> swaps = []
+                CopyOnWriteArrayList<Route> moves = []
                 int startIndex = route.cities.indices.first()
                 int lastIndex = route.cities.indices.last()
                 for (int i = startIndex; i < lastIndex - 1; i++) {
