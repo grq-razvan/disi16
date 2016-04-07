@@ -11,9 +11,10 @@ class LocalSearcher extends AbstractTSPSearcher {
 
     LocalSearcher(Integer cityCount) {
         super.randomGenerator = new RandomDataGenerator()
-        super.solutionType = TSPSolutionType.Local
-        super.maxNumber = cityCount
-        super.runtimeParams.iterations = (cityCount * 1.5).toInteger()
+        this.solutionType = TSPSolutionType.Local
+        this.maxNumber = cityCount
+        this.runtimeParams.iterations = (cityCount * 1.5).toInteger()
+        this.runtimeParams.restarts = (super.runtimeParams.iterations as Integer).intdiv(10).intValue()
     }
 
     @Override
@@ -22,17 +23,21 @@ class LocalSearcher extends AbstractTSPSearcher {
     }
 
     private List<Route> solveInternal(Map params) {
-        Route candidate = new Route(cities: [], maxNumber: super.maxNumber)
-        initRoute(candidate, cities.collect(), super.maxNumber)
-        params.iterations.times {
-            int firstIndex = randomGenerator.nextInt(0, candidate.cities.size())
-            int lastIndex = randomGenerator.nextInt(firstIndex, candidate.cities.size())
-            Route neighbor = createNeighborRoute(candidate, firstIndex, lastIndex)
-            if (neighbor.isBetter(candidate)) {
-                candidate = neighbor
+        List<Route> routes = []
+        params.restarts.times {
+            Route candidate = new Route(cities: [], maxNumber: this.maxNumber)
+            initRoute(candidate, cities.collect())
+            params.iterations.times {
+                int firstIndex = randomGenerator.nextInt(0, candidate.cities.size())
+                int lastIndex = randomGenerator.nextInt(firstIndex, candidate.cities.size())
+                Route neighbor = create2SwapRoute(candidate, firstIndex, lastIndex)
+                if (neighbor.isBetter(candidate)) {
+                    candidate = neighbor
+                }
             }
+            routes.add(candidate)
         }
-        return [candidate]
+        return [routes.max { it.totalCost }]
     }
 
 

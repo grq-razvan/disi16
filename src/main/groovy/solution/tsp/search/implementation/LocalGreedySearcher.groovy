@@ -9,14 +9,48 @@ import org.apache.commons.math3.random.RandomDataGenerator
 class LocalGreedySearcher extends AbstractTSPSearcher {
 
     LocalGreedySearcher(Integer maxNumber) {
-        this.randomGenerator = new RandomDataGenerator()
+        super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.Mix
         this.maxNumber = maxNumber
-        super.runtimeParams.iterations = (maxNumber * 1.5).toInteger()
+        this.runtimeParams.iterations = (maxNumber * 1.5).toInteger()
+        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(10).intValue()
     }
 
     @Override
     List<Route> solve() {
-        return null
+        return solveInternal(runtimeParams)
+    }
+
+    private List<Route> solveInternal(Map params) {
+        List<Route> routes = []
+        params.restarts.times {
+            Route route = new Route(cities: [], maxNumber: this.maxNumber)
+            initRoute(route, cities, this.maxNumber)
+            params.iterations.times {
+                List<Route> swaps = []
+                List<Route> moves = []
+                int startIndex = route.cities.indices.first()
+                int lastIndex = route.cities.indices.last()
+                for (int i = startIndex; i < lastIndex - 1; i++) {
+                    for (int j = i + 1; j < lastIndex; j++) {
+                        def otherRoute = create2SwapRoute(route, i, j)
+                        if (otherRoute.isBetter(route)) {
+                            swaps.add(otherRoute)
+                            route = otherRoute
+                        }
+                    }
+                    def randomShift = randomGenerator.nextInt(0, 1)
+                    def otherRoute = create3MoveRoute(route, i, 3, randomShift)
+                    if (otherRoute.isBetter(swaps.max { it.totalCost })) {
+                        moves.add(otherRoute)
+                        route = otherRoute
+                    }
+
+                }
+                def temp = swaps + moves
+                routes += temp
+            }
+        }
+        return routes.sort { a, b -> b.totalCost <=> a.totalCost }.take(3)
     }
 }
