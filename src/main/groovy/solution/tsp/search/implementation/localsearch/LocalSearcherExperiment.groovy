@@ -14,8 +14,8 @@ class LocalSearcherExperiment extends AbstractTSPSearcher {
         super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.LocalExperiment
         this.maxNumber = cityCount
-        this.runtimeParams.iterations = (cityCount * 10).toInteger()
-        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(5).intValue()
+        this.runtimeParams.iterations = 650
+        this.runtimeParams.restarts = 50
     }
 
     @Override

@@ -8,6 +8,8 @@ import solution.tsp.search.implementation.TSPSolutionType
 class Application {
     public static void main(String[] args) {
         ExecutionDataHolder holder = new ExecutionDataHolder()
-        holder.executeMyTests(TSPSolutionType.SimulatedAnnealing)
+        holder.executeReqTests()
+        holder.executeSingleTest([dimension: 15], TSPSolutionType.Exhaustive)
+        holder.executeSingleTest([dimension: 20], TSPSolutionType.Exhaustive)
     }
 }

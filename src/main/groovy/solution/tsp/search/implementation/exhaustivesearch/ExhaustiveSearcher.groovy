@@ -22,11 +22,10 @@ class ExhaustiveSearcher extends AbstractTSPSearcher {
 
     private List<Route> solveInternal(Map params) {
         def startTime = System.currentTimeMillis()
-        List<City> bestCityRoute = this.cities.permutations().sort { a, b ->
-            Route aRoute = new Route(cities: a, maxNumber: this.maxNumber)
-            Route bRoute = new Route(cities: b, maxNumber: this.maxNumber)
-            bRoute.totalCost <=> aRoute.totalCost
-        }.head()
+        List<City> bestCityRoute = this.cities.permutations().max { cities ->
+            Route route = new Route(cities: cities, maxNumber: this.maxNumber)
+            route.totalCost
+        }
         def endTime = System.currentTimeMillis()
         Route route = new Route(cities: bestCityRoute, maxNumber: this.maxNumber)
         params.time = endTime - startTime

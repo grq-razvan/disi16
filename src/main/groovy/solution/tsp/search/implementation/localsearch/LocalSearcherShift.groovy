@@ -13,8 +13,8 @@ class LocalSearcherShift extends AbstractTSPSearcher {
         super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.Local3Move
         this.maxNumber = cityCount
-        this.runtimeParams.iterations = (cityCount * 3.5).toInteger()
-        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(8).intValue()
+        this.runtimeParams.iterations = 650
+        this.runtimeParams.restarts = 50
     }
 
     @Override

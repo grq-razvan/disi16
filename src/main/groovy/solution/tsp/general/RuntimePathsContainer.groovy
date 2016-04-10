@@ -49,7 +49,7 @@ interface RuntimePathsContainer {
                     edgeWeightType: 'EUC_2D'
             ],
             [
-                    filePath      : '/eil75.tsp',
+                    filePath      : '/eil76.tsp',
                     name          : 'eil76',
                     type          : 'tsp',
                     comment       : '76-city-problem',

@@ -8,7 +8,7 @@ import org.apache.commons.math3.util.FastMath
 trait SimulatedAnnealing {
     Double temperature
     Double minTemperature
-    private final Double ALPHA = 0.93
+    private final Double ALPHA = 0.995
 
     abstract Double computeAcceptanceProbability(Double solutionEnergy, Double neighborEnergy)
 

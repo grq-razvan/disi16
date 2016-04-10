@@ -16,8 +16,8 @@ class LocalGreedySearcher extends AbstractTSPSearcher {
         super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.Mix
         this.maxNumber = maxNumber
-        this.runtimeParams.iterations = (maxNumber * 3.5).toInteger()
-        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(8).intValue()
+        this.runtimeParams.iterations = 500
+        this.runtimeParams.restarts = 50
     }
 
     @Override
@@ -28,7 +28,7 @@ class LocalGreedySearcher extends AbstractTSPSearcher {
     private List<Route> solveInternal(Map params) {
         CopyOnWriteArrayList<Route> routes = []
         if (params.restarts == 0) {
-            params.restarts = 2
+            params.restarts = 1
         }
         def start = System.currentTimeMillis()
         params.restarts.times {

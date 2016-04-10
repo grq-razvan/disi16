@@ -16,10 +16,10 @@ class SimulatedAnnealingSearcher extends AbstractTSPSearcher implements Simulate
         this.solutionType = TSPSolutionType.SimulatedAnnealing
         this.cities = []
         this.maxNumber = maxNumber
-        this.runtimeParams.iterations = (maxNumber * 6.5).toInteger()
+        this.runtimeParams.iterations = 500
         this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(8).intValue()
         temperature = 10000.0
-        minTemperature = 1.0
+        minTemperature = 0.1
     }
 
     @Override
@@ -33,18 +33,17 @@ class SimulatedAnnealingSearcher extends AbstractTSPSearcher implements Simulate
             params.restarts = 1
         }
         def startTime = System.currentTimeMillis()
-        params.restarts.times {
+        5.times {
             int t = 0
             Route candidate = new Route(cities: [], maxNumber: this.maxNumber)
             List<City> shuffledCities = cities.collect()
-            Collections.shuffle(shuffledCities)
             initRoute(candidate, shuffledCities)
             while (temperature > minTemperature) {
                 while (t < params.iterations) {
                     int firstIndex = randomGenerator.nextInt(candidate.cities.indices.first(), candidate.cities.indices.last() - 1)
                     int lastIndex = randomGenerator.nextInt(firstIndex + 1, candidate.cities.indices.last())
                     Route neighbor = create2SwapRoute(candidate, firstIndex, lastIndex)
-                    if (neighbor.isBetter(candidate, true)) {
+                    if (neighbor.isBetter(candidate)) {
                         candidate = neighbor
                     } else {
                         Double acceptanceProbability = computeAcceptanceProbability(candidate.totalCostMinimum.doubleValue(),
@@ -61,7 +60,7 @@ class SimulatedAnnealingSearcher extends AbstractTSPSearcher implements Simulate
             }
         }
         def endTime = System.currentTimeMillis()
-        def maxRoute = routes.min { it.totalCostMinimum }
+        def maxRoute = routes.max { it.totalCost }
         maxRoute.executionTime = endTime - startTime
         return [maxRoute]
     }

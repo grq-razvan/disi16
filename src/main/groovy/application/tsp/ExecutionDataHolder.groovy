@@ -47,23 +47,23 @@ class ExecutionDataHolder implements RuntimeConfiguration {
     }
 
 
-    void executeReqTests() {
+    void executeReqTests(TSPSolutionType solutionType = null) {
         REQ_TESTS.each {
-            executeSingleTest(it)
+            executeSingleTest(it, solutionType)
         }
     }
 
-    void executeTests() {
-        executeMyTests()
-        executeReqTests()
+    void executeTests(TSPSolutionType type = null) {
+        executeMyTests(type)
+        executeReqTests(type)
     }
 
     private static List<TSPSolutionType> getAvailableTypes(int cityCount) {
         List<TSPSolutionType> availableTypes = []
         if (cityCount <= 20) {
-            availableTypes = TSPSolutionType.findAll() - TSPSolutionType.LocalExperiment
+            availableTypes = TSPSolutionType.findAll()
         } else {
-            availableTypes = TSPSolutionType.findAll() - TSPSolutionType.Exhaustive - TSPSolutionType.LocalExperiment
+            availableTypes = TSPSolutionType.findAll() - TSPSolutionType.Exhaustive
         }
         return availableTypes
     }
