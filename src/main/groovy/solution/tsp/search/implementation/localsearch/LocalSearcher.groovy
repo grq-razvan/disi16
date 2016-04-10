@@ -1,6 +1,5 @@
 package solution.tsp.search.implementation.localsearch
 
-import model.tsp.City
 import model.tsp.Route
 import org.apache.commons.math3.random.RandomDataGenerator
 import solution.tsp.search.implementation.AbstractTSPSearcher
@@ -26,12 +25,15 @@ class LocalSearcher extends AbstractTSPSearcher {
 
     private List<Route> solveInternal(Map params) {
         List<Route> routes = []
-        params.restarts.times {
+        if (params.restarts == 0) {
+            params.restarts = 1
+        }
+        for (i in (0..<params.restarts)) {
             Route candidate = new Route(cities: [], maxNumber: this.maxNumber)
             initRoute(candidate, cities.collect())
-            params.iterations.times {
-                int firstIndex = randomGenerator.nextInt(0, candidate.cities.size())
-                int lastIndex = randomGenerator.nextInt(firstIndex, candidate.cities.size())
+            for (j in (0..<params.iterations)) {
+                int firstIndex = randomGenerator.nextInt(candidate.cities.indices.first(), candidate.cities.indices.last() - 1)
+                int lastIndex = randomGenerator.nextInt(firstIndex + 1, candidate.cities.indices.last())
                 Route neighbor = create2SwapRoute(candidate, firstIndex, lastIndex)
                 if (neighbor.isBetter(candidate)) {
                     candidate = neighbor
@@ -40,14 +42,5 @@ class LocalSearcher extends AbstractTSPSearcher {
             routes.add(candidate)
         }
         return [routes.max { it.totalCost }]
-    }
-
-
-    private static Route createNeighborRoute(Route initial, int i, int j) {
-        List<City> swaps = initial.cities.collect()
-        def firstIndex = swaps.indices.first()
-        def lastIndex = swaps.indices.last()
-        def cities = swaps.subList(firstIndex, i) + swaps.subList(i, j).reverse() + swaps.subList(j, lastIndex)
-        return new Route(cities: cities, maxNumber: initial.maxNumber)
     }
 }

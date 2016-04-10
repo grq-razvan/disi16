@@ -34,6 +34,11 @@ abstract class AbstractTSPSearcher implements ISolver<Route> {
         List<City> swaps = initial.cities.collect()
         def firstIndex = swaps.indices.first()
         def lastIndex = swaps.indices.last()
+        if (i == firstIndex && j == lastIndex) {
+            Collections.swap(swaps, firstIndex, lastIndex)
+            def cities = swaps.reverse()
+            return new Route(cities: cities, maxNumber: initial.maxNumber)
+        }
         def cities = swaps.subList(firstIndex, i + 1) + swaps.subList(i + 1, j).reverse() + swaps.subList(j, lastIndex + 1)
         return new Route(cities: cities, maxNumber: initial.maxNumber)
     }

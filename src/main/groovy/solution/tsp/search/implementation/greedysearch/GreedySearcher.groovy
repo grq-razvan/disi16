@@ -27,6 +27,7 @@ class GreedySearcher extends AbstractTSPSearcher {
         List<City> temp = cities.collect()
         City startingPoint = temp.get(randomGenerator.nextInt(temp.indices.first(), temp.indices.last()))
         route.cities.add(startingPoint)
+        temp.remove(startingPoint)
         while (!temp.empty) {
             City minDistanceCity = temp.min { City city ->
                 startingPoint.distance(city)
