@@ -3,37 +3,40 @@ package solution.tsp.general
 import model.tsp.City
 import model.tsp.Route
 import solution.meta.AbstractExecutionHandler
-import solution.tsp.search.implementation.TSPSolutionType
 
 /**
  *  Created by stefangrecu on 07/04/16.
  */
 class ExecutionHandler extends AbstractExecutionHandler<City, Route> implements RuntimePathsContainer {
 
-    ExecutionHandler(Integer cityCount) {
+    ExecutionHandler(Map params) {
         this.dataHandler = new DataHandler()
-        this.resultHandler = new ResultHandler(cityCount)
+        this.resultHandler = new ResultHandler(params.cityCount as Integer)
     }
 
-    void writeTestDataFile(int cityCount, Number xMax = null, Number yMax = null, String path = DATA_BASE_PATH + "/instance-${cityCount}") {
-        inputData = dataHandler.generateData(cityCount, xMax, yMax)
+    @Override
+    void writeTestDataFile(Map data, String path = DATA_BASE_PATH + "/instance-${cityCount}") {
+        inputData = dataHandler.generateData(data)
         dataHandler.writeDataFile(inputData, path)
     }
 
+    @Override
     void writeResultDataFile(String path = createResultFile(inputData.size())) {
         resultHandler.writeResultFile(processedData.results as List<Route>, path)
     }
 
-    void processData(TSPSolutionType solutionType = TSPSolutionType.Exhaustive, String inputFilePath = getInputFile(inputData.size())) {
+    @Override
+    void processData(Map data, String inputFilePath = getInputFile(inputData.size())) {
         inputData = dataHandler.readDataFile(inputFilePath)
         processedData = [
-                results : resultHandler.generateResult(inputData, solutionType),
-                solution: solutionType
+                results : resultHandler.generateResult(inputData, data),
+                solution: data.solutionType
         ]
     }
 
-    void createResultHandlerWith(int cityCount) {
-        resultHandler = new ResultHandler(cityCount)
+    @Override
+    void createResultHandlerWith(Map data) {
+        resultHandler = new ResultHandler(data.cityCount as Integer)
     }
 
     private static String getInputFile(Object cityCount) {

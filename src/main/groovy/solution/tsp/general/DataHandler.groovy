@@ -19,11 +19,12 @@ class DataHandler extends AbstractDataHandler<City> {
         this.dataConverter = new DataFileConverter()
     }
 
-    List<City> generateData(Integer cityCount, Number xMax = 50.0, Number yMax = 50.0) {
+    @Override
+    List<City> generateData(Map data) {
         return dataGenerator.generateData(
-                cityCount: cityCount,
-                xMax: xMax,
-                yMax: yMax
+                cityCount: data.cityCount,
+                xMax: data.xMax ?: 50,
+                yMax: data.yMax ?: 50
         )
     }
 

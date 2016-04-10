@@ -7,11 +7,12 @@ import solution.ISolver
 /**
  *  Created by stefangrecu on 07/04/16.
  */
-abstract class AbstractResultHandler<T> {
-    protected IFileWriter<T> resultWriter
-    protected IResultConverter<T> resultConverter
-    protected List<ISolver<T>> solvers
+abstract class AbstractResultHandler<S, G> {
+    protected IFileWriter<G> resultWriter
+    protected IResultConverter<G> resultConverter
+    protected List<ISolver<G>> solvers
 
-    abstract void writeResultFile(List<T> result, String path)
+    abstract void writeResultFile(List<G> result, String path)
 
+    abstract List<G> generateResult(Collection<S> entities, Map data)
 }

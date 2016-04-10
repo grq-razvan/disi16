@@ -15,7 +15,7 @@ import solution.tsp.search.implementation.localsearch.LocalSearcher
 /**
  *  Created by stefangrecu on 07/04/16.
  */
-class ResultHandler extends AbstractResultHandler<Route> {
+class ResultHandler extends AbstractResultHandler<City, Route> {
 
     ResultHandler(Integer cityCount) {
         this.resultWriter = new ResultWriter()
@@ -34,9 +34,10 @@ class ResultHandler extends AbstractResultHandler<Route> {
         addSolver new LocalSearcher(cityCount)
     }
 
-    List<Route> generateResult(Collection<City> data, TSPSolutionType solutionTypeProvider = TSPSolutionType.Exhaustive) {
-        AbstractTSPSearcher searcher = getSolver(solutionTypeProvider)
-        searcher.cities = data
+    @Override
+    List<Route> generateResult(Collection<City> entities, Map data) {
+        AbstractTSPSearcher searcher = getSolver(TSPSolutionType.valueOf(data.solutionTypeProvider))
+        searcher.cities = entities
         return searcher.solve()
     }
 
@@ -45,6 +46,7 @@ class ResultHandler extends AbstractResultHandler<Route> {
         def resultMap = resultConverter.convertResultToMap(result)
         resultWriter.writeLines(path, resultMap)
     }
+
 
     private AbstractTSPSearcher getSolver(TSPSolutionType solutionType) {
         for (solver in solvers) {

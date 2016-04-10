@@ -18,4 +18,6 @@ abstract class AbstractDataHandler<T> {
 
     abstract Collection<T> readDataFile(String path)
 
+    abstract List<T> generateData(Map data)
+
 }

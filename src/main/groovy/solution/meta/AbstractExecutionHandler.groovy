@@ -6,6 +6,14 @@ abstract class AbstractExecutionHandler<S, G> {
     protected inputData
     protected processedData
     protected AbstractDataHandler<S> dataHandler
-    protected AbstractResultHandler<G> resultHandler
+    protected AbstractResultHandler<S, G> resultHandler
+
+    abstract void writeTestDataFile(Map data, String path)
+
+    abstract void writeResultDataFile(String path)
+
+    abstract void processData(Map data, String path)
+
+    abstract void createResultHandlerWith(Map data)
 
 }
