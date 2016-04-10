@@ -32,7 +32,7 @@ class ExecutionDataHolder {
             availableTypes = TSPSolutionType.findAll() - TSPSolutionType.Exhaustive
         }
         handler.createResultHandlerWith([cityCount: cityCount])
-        handler.processData([solutionType: TSPSolutionType.Local, cityCount: cityCount])
+        handler.processData([solutionType: TSPSolutionType.LocalExperiment, cityCount: cityCount])
         handler.writeResultDataFile()
 
     }

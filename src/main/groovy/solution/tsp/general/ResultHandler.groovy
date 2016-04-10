@@ -10,7 +10,9 @@ import solution.tsp.search.implementation.TSPSolutionType
 import solution.tsp.search.implementation.exhaustivesearch.ExhaustiveSearcher
 import solution.tsp.search.implementation.greedysearch.GreedySearcher
 import solution.tsp.search.implementation.localgreedysearch.LocalGreedySearcher
-import solution.tsp.search.implementation.localsearch.LocalSearcher
+import solution.tsp.search.implementation.localsearch.LocalSearchExperiment
+import solution.tsp.search.implementation.localsearch.LocalSearcherShift
+import solution.tsp.search.implementation.localsearch.LocalSearcherSwap
 
 /**
  *  Created by stefangrecu on 07/04/16.
@@ -33,7 +35,9 @@ class ResultHandler extends AbstractResultHandler<City, Route> {
             addSolver new ExhaustiveSearcher(cityCount)
             addSolver new GreedySearcher(cityCount)
             addSolver new LocalGreedySearcher(cityCount)
-            addSolver new LocalSearcher(cityCount)
+            addSolver new LocalSearcherSwap(cityCount)
+            addSolver new LocalSearcherShift(cityCount)
+            addSolver new LocalSearchExperiment(cityCount)
         }
     }
 

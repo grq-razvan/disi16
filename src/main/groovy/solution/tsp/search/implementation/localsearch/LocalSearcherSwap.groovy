@@ -8,11 +8,11 @@ import solution.tsp.search.implementation.TSPSolutionType
 /**
  *  Created by stefangrecu on 06/04/16.
  */
-class LocalSearcher extends AbstractTSPSearcher {
+class LocalSearcherSwap extends AbstractTSPSearcher {
 
-    LocalSearcher(Integer cityCount) {
+    LocalSearcherSwap(Integer cityCount) {
         super.randomGenerator = new RandomDataGenerator()
-        this.solutionType = TSPSolutionType.Local
+        this.solutionType = TSPSolutionType.Local2Swap
         this.maxNumber = cityCount
         this.runtimeParams.iterations = (cityCount * 1.5).toInteger()
         this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(10).intValue()

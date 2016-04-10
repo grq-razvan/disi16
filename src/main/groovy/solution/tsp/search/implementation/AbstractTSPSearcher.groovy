@@ -47,11 +47,63 @@ abstract class AbstractTSPSearcher implements ISolver<Route> {
         List<City> temp = initial.cities.collect()
         def firstIndex = temp.indices.first()
         def lastIndex = temp.indices.last()
+        if (i + length + shift >= lastIndex) {
+            Collections.rotate(temp, i + length + shift)
+            i = lastIndex - length
+        }
+
+        if (i + length > lastIndex) {
+            Collections.rotate(temp, i + length)
+            i = lastIndex - length
+        }
+
+        if (i == lastIndex) {
+            Collections.rotate(temp, 1)
+            i = firstIndex
+        }
         def cities = temp.subList(firstIndex, i) +
                 temp.subList(i + length, i + length + shift) +
                 temp.subList(i, i + length) +
                 temp.subList(i + length + shift, lastIndex + 1)
         return new Route(cities: cities, maxNumber: initial.maxNumber)
+    }
+
+    protected synchronized
+    static Route createQuadSwapMoveRoute(Route initial, int i, int j, int k, int t, int shift = 1) {
+        List<City> temp = initial.cities.collect()
+        def firstSwap = temp.subList(i, k)
+        def secondSwap = temp.subList(j, t)
+        def length = Math.abs(k - j)
+        List<City> partOne = get2SwapCities(new Route(cities: firstSwap, maxNumber: firstSwap.size()), firstSwap.indices.first(), firstSwap.indices.last())
+        List<City> partTwo = get2SwapCities(new Route(cities: secondSwap, maxNumber: secondSwap.size()), secondSwap.indices.first(), secondSwap.indices.last())
+        def result = []
+        if (i == 0) {
+            result += partOne
+
+        } else {
+            result += temp.subList(0, i)
+            result += partOne
+        }
+
+        result += temp.subList(j, k).findAll { !it in result }
+        result += partTwo.findAll { !it in result }
+        if (temp.subList(k, t) && !temp.subList(k, t).empty) {
+            result += temp.subList(k, t).findAll { !it in result }
+        }
+        if (result.size() != temp.size()) {
+            result.addAll(temp.findAll { !it in result })
+        }
+        List<City> finalPart = get3MoveCities(new Route(cities: result, maxNumber: initial.maxNumber), j, length, shift)
+
+        return new Route(cities: finalPart, maxNumber: initial.maxNumber)
+    }
+
+    private static List<City> get2SwapCities(Route route, int i, int j) {
+        return create2SwapRoute(route, i, j).cities
+    }
+
+    private static List<City> get3MoveCities(Route route, int i, int length, int shift) {
+        return create3MoveRoute(route, i, length, shift).cities
     }
 
 }
