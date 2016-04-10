@@ -4,25 +4,25 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9c98e40-3771-4a28-8e0e-2c5a1cd3ba66" name="Default" comment="- refactorings">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-10" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-15" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-20" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-5" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-6" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-7" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-8" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-9" />
+    <list default="true" id="d9c98e40-3771-4a28-8e0e-2c5a1cd3ba66" name="Default" comment="- bugfixing: fixed creating instance files">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/tsp/instance-10" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-10.tsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/tsp/instance-15" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-15.tsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/tsp/instance-20" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-20.tsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/tsp/instance-5" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-5.tsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/tsp/instance-6" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-6.tsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/tsp/instance-7" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-7.tsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/tsp/instance-8" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-8.tsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/tsp/instance-9" afterPath="$PROJECT_DIR$/src/main/resources/tsp/instance-9.tsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/application/tsp/Application.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/application/tsp/Application.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/generator/implementation/tsp/RandomCityGenerator.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/generator/implementation/tsp/RandomCityGenerator.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/io/converter/implementation/tsp/ResultConverter.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/io/converter/implementation/tsp/ResultConverter.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/model/tsp/City.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/model/tsp/City.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/model/tsp/Route.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/model/tsp/Route.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/meta/AbstractExecutionHandler.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/meta/AbstractExecutionHandler.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/DataHandler.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/DataHandler.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ExecutionHandler.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ExecutionHandler.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ResultHandler.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ResultHandler.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/RuntimePathsContainer.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/RuntimePathsContainer.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/exhaustivesearch/ExhaustiveSearcher.groovy" afterPath="$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/exhaustivesearch/ExhaustiveSearcher.groovy" />
     </list>
     <ignored path="laboratory.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -198,23 +198,55 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="RandomCityGenerator.groovy" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/implementation/tsp/RandomCityGenerator.groovy">
+          <file leaf-file-name="ExecutionDataHolder.groovy" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                  <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#25#46#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ResultHandler.groovy" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ResultHandler.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.58125">
+                  <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ExecutionDataHolder.groovy" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy">
+          <file leaf-file-name="ResultWriter.groovy" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/implementation/tsp/ResultWriter.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.225">
-                  <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ISolver.groovy" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/ISolver.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ExecutionHandler.groovy" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ExecutionHandler.groovy">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="64" column="71" selection-start-line="64" selection-start-column="71" selection-end-line="64" selection-end-column="71" />
                   <folding>
-                    <element signature="e#25#46#0" expanded="true" />
+                    <element signature="e#30#51#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -224,21 +256,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="ExecutionDataHolder.groovy" pinned="false" current-in-tab="false">
+          <file leaf-file-name="ExecutionDataHolder.groovy" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RuntimeConfiguration.groovy" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConfiguration.groovy">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3325">
-                  <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+                <state vertical-scroll-proportion="0.20625">
+                  <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -606,7 +628,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/RouteDataHolder.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/model/tsp/TSP.groovy" />
         <option value="$PROJECT_DIR$/src/main/resources/tsp/eil51.tsp" />
@@ -640,23 +661,24 @@
         <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/ExhaustiveSearcher.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/GreedySearcher.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/AbstractTSPSearcher.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/model/tsp/Route.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/LocalGreedySearcher.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/LocalSearcher.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/RuntimePathsContainer.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/meta/IDataHandler.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/meta/IExecutionHandler.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/meta/AbstractDataHandler.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/meta/AbstractResultHandler.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/DataHandler.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/application/tsp/Application.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ResultHandler.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ExecutionHandler.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/model/tsp/City.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/implementation/tsp/ResultConverter.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/generator/implementation/tsp/RandomCityGenerator.groovy" />
-        <option value="$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/RuntimePathsContainer.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ResultHandler.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/application/tsp/Application.groovy" />
         <option value="$PROJECT_DIR$/src/main/groovy/solution/meta/AbstractExecutionHandler.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ExecutionHandler.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/model/tsp/Route.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/exhaustivesearch/ExhaustiveSearcher.groovy" />
+        <option value="$PROJECT_DIR$/src/main/groovy/io/converter/implementation/tsp/ResultConverter.groovy" />
       </list>
     </option>
   </component>
@@ -804,6 +826,36 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="results" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -842,6 +894,78 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="solution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="solution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="implementation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laboratory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="solution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="general" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1779,7 +1903,7 @@
       <workItem from="1459175804050" duration="1255000" />
       <workItem from="1459177835440" duration="13000" />
       <workItem from="1459923072971" duration="7477000" />
-      <workItem from="1459977915914" duration="25273000" />
+      <workItem from="1459977915914" duration="28482000" />
     </task>
     <task id="LOCAL-00001" summary="finished manager; continue with extensive search, added binary bitstring representation">
       <created>1456438354691</created>
@@ -2015,11 +2139,17 @@
       <option name="project" value="LOCAL" />
       <updated>1460273718542</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="- bugfixing: fixed creating instance files">
+      <created>1460275871070</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1460275871070</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229016000" />
+    <option name="totallyTimeSpent" value="232225000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2038,14 +2168,15 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46336633" sideWeight="0.45260915" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46336633" sideWeight="0.5473908" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18019801" sideWeight="0.5905218" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18019801" sideWeight="0.41107562" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26039603" sideWeight="0.44022617" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18019801" sideWeight="0.40947816" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26039603" sideWeight="0.43823215" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37479806" sideWeight="0.48465267" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772276" sideWeight="0.4680511" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2060,7 +2191,6 @@
       <window_info id="Module Dependencies" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3987952" sideWeight="0.49427754" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279483" sideWeight="0.48546043" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2076,7 +2206,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
-    <MESSAGE value="added highest steep hill climbing - a functional approach and traditional one" />
     <MESSAGE value="some code refactoring ^^" />
     <MESSAGE value="documentation-and-results" />
     <MESSAGE value="cleanup, refactoring" />
@@ -2101,7 +2230,8 @@
     <MESSAGE value="- refreshed project structure" />
     <MESSAGE value="- removed older files;&#10;- abstracted solution handlers (will fail now, needs more refactoring later)" />
     <MESSAGE value="- refactorings" />
-    <option name="LAST_COMMIT_MESSAGE" value="- refactorings" />
+    <MESSAGE value="- bugfixing: fixed creating instance files" />
+    <option name="LAST_COMMIT_MESSAGE" value="- bugfixing: fixed creating instance files" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2175,19 +2305,50 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy</url>
-          <line>20</line>
+          <line>26</line>
           <properties />
-          <option name="timeStamp" value="158" />
+          <option name="timeStamp" value="160" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="161" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ExecutionHandler.groovy</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="162" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ResultHandler.groovy</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="163" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/exhaustivesearch/ExhaustiveSearcher.groovy</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="164" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/exhaustivesearch/ExhaustiveSearcher.groovy</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="165" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="159" />
+      <option name="time" value="166" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="handler" language="Groovy" custom="" />
+        <watch expression="route.totalCost" language="Groovy" custom="" />
       </configuration>
     </watches-manager>
   </component>
@@ -2196,48 +2357,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/implementation/tsp/CityFactory.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18703242">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/IFactory.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11221945">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/generator/implementation/knapsack/RandomItemGenerator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4125">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/implementation/knapsack/ResultConverter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="37" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/implementation/tsp/ResultWriter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13125">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#38#74#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/implementation/knapsack/ResultWriter.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2270,26 +2389,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/ExecutionHandler.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/DataHandler.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/ISolver.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09375">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -2307,16 +2410,6 @@
         <state vertical-scroll-proportion="0.13125">
           <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/exhaustivesearch/ExhaustiveSearcher.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6683047">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-          <folding>
-            <element signature="e#61#82#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2355,14 +2448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/model/tsp/Route.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66339064">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/AbstractTSPSearcher.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33660933">
@@ -2393,14 +2478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/RuntimePathsContainer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/greedysearch/GreedySearcher.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2415,40 +2492,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18427518">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/meta/AbstractResultHandler.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2625">
-          <caret line="16" column="68" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
-          <folding>
-            <marker date="1460273570000" expanded="true" signature="60:112" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConfiguration.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325">
-          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/tsp/Application.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -2469,24 +2512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ResultHandler.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ExecutionHandler.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-          <folding>
-            <element signature="e#30#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/meta/AbstractDataHandler.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2502,16 +2527,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/implementation/tsp/ResultConverter.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding>
-            <element signature="e#41#77#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2563,7 +2578,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/instance-20">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/instance-20.tsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2581,7 +2596,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/instance-7">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/instance-7.tsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2589,7 +2604,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/instance-9">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/instance-9.tsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
@@ -2597,7 +2612,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/instance-5">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/instance-5.tsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2615,19 +2630,163 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/meta/AbstractExecutionHandler.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20862308">
-          <caret line="10" column="80" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/meta/AbstractResultHandler.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <marker date="1460273570000" expanded="true" signature="60:112" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/IFileWriter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/tsp/Application.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/groovy/application/tsp/ExecutionDataHolder.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.225">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#25#46#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/RuntimePathsContainer.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.02086231">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/RuntimeConfiguration.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36995828">
+          <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/knapsack/general/ExecutionHandler.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58414465">
+          <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/application/knapsack/ExecutionDataHolder.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20625">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/writer/implementation/tsp/ResultWriter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ExecutionHandler.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="71" selection-start-line="64" selection-start-column="71" selection-end-line="64" selection-end-column="71" />
+          <folding>
+            <element signature="e#30#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/ISolver.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/ch130.tsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/results/exhaustive-instance-5.tsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tsp/instance-6.tsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/io/converter/implementation/tsp/ResultConverter.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6675939">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding>
+            <element signature="e#41#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/search/implementation/exhaustivesearch/ExhaustiveSearcher.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6675939">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding>
+            <element signature="e#61#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/model/tsp/Route.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16689847">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/groovy/solution/tsp/general/ResultHandler.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58125">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

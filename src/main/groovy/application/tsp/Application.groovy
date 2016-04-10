@@ -5,6 +5,7 @@ package application.tsp
 class Application {
     public static void main(String[] args) {
         ExecutionDataHolder holder = new ExecutionDataHolder()
-        holder.generateFiles()
+        //holder.generateFiles()
+        holder.executeSingleTest([dimension: 5])
     }
 }

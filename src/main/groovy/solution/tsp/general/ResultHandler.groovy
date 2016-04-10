@@ -39,7 +39,7 @@ class ResultHandler extends AbstractResultHandler<City, Route> {
 
     @Override
     List<Route> generateResult(Collection<City> entities, Map data) {
-        AbstractTSPSearcher searcher = getSolver(TSPSolutionType.valueOf(data.solutionTypeProvider))
+        AbstractTSPSearcher searcher = getSolver(data.solutionType)
         searcher.cities = entities
         return searcher.solve()
     }

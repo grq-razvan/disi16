@@ -30,6 +30,7 @@ class ExhaustiveSearcher extends AbstractTSPSearcher {
         def endTime = System.currentTimeMillis()
         Route route = new Route(cities: bestCityRoute, maxNumber: this.maxNumber)
         params.time = endTime - startTime
+        route.executionTime = params.time
         return [route]
     }
 }

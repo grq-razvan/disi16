@@ -25,7 +25,8 @@ class ExecutionHandler extends AbstractExecutionHandler<City, Route> implements 
     }
 
     @Override
-    void processData(Map data, String inputFilePath = getInputFile(inputData.size())) {
+    void processData(Map data) {
+        String inputFilePath = getInputFile(data.cityCount)
         inputData = dataHandler.readDataFile(inputFilePath)
         processedData = [
                 results : resultHandler.generateResult(inputData, data),
@@ -59,7 +60,11 @@ class ExecutionHandler extends AbstractExecutionHandler<City, Route> implements 
         if (!instance) {
             throw new NullPointerException("There is no instance with that name.")
         } else {
-            builder.append(RESULT_BASE_PATH).append(processedData.solution).append('-').append(instance.filePath)
+            builder.append(RESULT_BASE_PATH)
+                    .append('/')
+                    .append(processedData.solution.name().toLowerCase())
+                    .append('-')
+                    .append((instance.filePath as String).substring(1))
         }
         return builder.toString()
     }

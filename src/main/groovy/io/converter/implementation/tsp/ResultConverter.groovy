@@ -24,12 +24,16 @@ class ResultConverter implements IResultConverter<Route> {
         return map.collect { key, value ->
             def builder = new StringBuilder()
                     .append("${key} : \n")
+                    .append("\tExecution time (optional): ${value?.executionTime} ms")
                     .append("\tTotal cost: ${value.totalCost}\n")
                     .append("\tCities: ${value.maxNumber}\n")
             value.cities.eachWithIndex { City city, index ->
-                builder.append("\t\t ${index} ${city.label}")
+                builder.append("\t\t ${index} ${city.label}\n")
             }
-            builder.append("#######################################").toString()
+            (0..100).each {
+                builder.append('#')
+            }
+            builder.toString()
         }
     }
 }

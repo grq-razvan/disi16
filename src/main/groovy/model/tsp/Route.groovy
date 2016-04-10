@@ -6,6 +6,7 @@ package model.tsp
 class Route {
     List<City> cities
     Integer maxNumber
+    Number executionTime
 
     synchronized boolean isBetter(Route otherRoute) {
         return this.totalCost > otherRoute.totalCost

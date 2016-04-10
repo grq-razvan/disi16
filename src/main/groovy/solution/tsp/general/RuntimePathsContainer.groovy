@@ -9,6 +9,38 @@ interface RuntimePathsContainer {
 
     def INSTANCES_METADATA = [
             [
+                    filePath : '/instance-5.tsp',
+                    dimension: 5
+            ],
+            [
+                    filePath : '/instance-6.tsp',
+                    dimension: 6
+            ],
+            [
+                    filePath : '/instance-7.tsp',
+                    dimension: 7
+            ],
+            [
+                    filePath : '/instance-8.tsp',
+                    dimension: 8
+            ],
+            [
+                    filePath : '/instance-9.tsp',
+                    dimension: 9
+            ],
+            [
+                    filePath : '/instance-10.tsp',
+                    dimension: 10
+            ],
+            [
+                    filePath : '/instance-15.tsp',
+                    dimension: 15
+            ],
+            [
+                    filePath : '/instance-20.tsp',
+                    dimension: 20
+            ],
+            [
                     filePath      : '/eil51.tsp',
                     name          : 'eil51',
                     type          : 'tsp',

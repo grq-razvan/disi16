@@ -12,7 +12,7 @@ abstract class AbstractExecutionHandler<S, G> {
 
     abstract void writeResultDataFile(String path)
 
-    abstract void processData(Map data, String path)
+    abstract void processData(Map data)
 
     abstract void createResultHandlerWith(Map data)
 

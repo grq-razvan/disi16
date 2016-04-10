@@ -4,6 +4,7 @@ import model.tsp.City
 import model.tsp.Route
 import solution.meta.AbstractExecutionHandler
 import solution.tsp.general.ExecutionHandler
+import solution.tsp.search.implementation.TSPSolutionType
 
 /**
  *  Created by stefangrecu on 10/04/16.
@@ -18,8 +19,22 @@ class ExecutionDataHolder {
 
     void generateFiles() {
         for (Map<String, Integer> params in FILE_PARAMS) {
-            handler.writeTestDataFile(params.cityCount, params.xMax, params.yMax)
+            handler.writeTestDataFile(params.cityCount, params.xMax, params.yMax, null)
         }
+    }
+
+    void executeSingleTest(Map<String, Object> params) {
+        Integer cityCount = params.dimension as Integer
+        List<TSPSolutionType> availableTypes = []
+        if (cityCount <= 20) {
+            availableTypes = TSPSolutionType.findAll()
+        } else {
+            availableTypes = TSPSolutionType.findAll() - TSPSolutionType.Exhaustive
+        }
+        handler.createResultHandlerWith([cityCount: cityCount])
+        handler.processData([solutionType: TSPSolutionType.Exhaustive, cityCount: cityCount])
+        handler.writeResultDataFile()
+
     }
 
     private static final List<Map<String, Integer>> FILE_PARAMS = [
