@@ -13,8 +13,8 @@ class LocalSearcherShift extends AbstractTSPSearcher {
         super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.Local3Move
         this.maxNumber = cityCount
-        this.runtimeParams.iterations = (cityCount * 1.5).toInteger()
-        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(10).intValue()
+        this.runtimeParams.iterations = (cityCount * 3.5).toInteger()
+        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(8).intValue()
     }
 
     @Override
@@ -27,6 +27,7 @@ class LocalSearcherShift extends AbstractTSPSearcher {
         if (params.restarts == 0) {
             params.restarts = 1
         }
+        def startTime = System.currentTimeMillis()
         for (i in (0..<params.restarts)) {
             Route candidate = new Route(cities: [], maxNumber: this.maxNumber)
             initRoute(candidate, cities.collect())
@@ -39,6 +40,9 @@ class LocalSearcherShift extends AbstractTSPSearcher {
             }
             routes.add(candidate)
         }
-        return [routes.max { it.totalCost }]
+        def endTime = System.currentTimeMillis()
+        def maxRoute = routes.max { it.totalCost }
+        maxRoute.executionTime = endTime - startTime
+        return [maxRoute]
     }
 }

@@ -16,8 +16,8 @@ class LocalGreedySearcher extends AbstractTSPSearcher {
         super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.Mix
         this.maxNumber = maxNumber
-        this.runtimeParams.iterations = (maxNumber * 1.5).toInteger()
-        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(10).intValue()
+        this.runtimeParams.iterations = (maxNumber * 3.5).toInteger()
+        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(8).intValue()
     }
 
     @Override
@@ -27,15 +27,20 @@ class LocalGreedySearcher extends AbstractTSPSearcher {
 
     private List<Route> solveInternal(Map params) {
         CopyOnWriteArrayList<Route> routes = []
-        (1..params.restarts).eachParallel {
+        if (params.restarts == 0) {
+            params.restarts = 2
+        }
+        def start = System.currentTimeMillis()
+        params.restarts.times {
+            def tempCities = cities.collect()
             Route route = new Route(cities: [], maxNumber: this.maxNumber)
-            initRoute(route, Collections.synchronizedList(cities), this.maxNumber)
-            params.iterations.times {
-                CopyOnWriteArrayList<Route> swaps = []
-                CopyOnWriteArrayList<Route> moves = []
+            initRoute(route, tempCities, this.maxNumber)
+            for (int count in (0..<params.iterations)) {
                 int startIndex = route.cities.indices.first()
                 int lastIndex = route.cities.indices.last()
+                List<Route> moves = []
                 for (int i = startIndex; i < lastIndex - 1; i++) {
+                    List<Route> swaps = []
                     for (int j = i + 1; j < lastIndex; j++) {
                         def otherRoute = create2SwapRoute(route, i, j)
                         if (otherRoute.isBetter(route)) {
@@ -43,18 +48,20 @@ class LocalGreedySearcher extends AbstractTSPSearcher {
                             route = otherRoute
                         }
                     }
-                    def randomShift = randomGenerator.nextInt(0, 1)
-                    def otherRoute = create3MoveRoute(route, i, 3, randomShift)
-                    if (otherRoute.isBetter(swaps.max { it.totalCost })) {
+                    def otherRoute = create3MoveRoute(route, i, 3)
+                    if (otherRoute.isBetter(swaps.empty ? route : swaps.max { it.totalCost })) {
                         moves.add(otherRoute)
                         route = otherRoute
                     }
-
+                    routes += moves
+                    routes += swaps
                 }
-                def temp = swaps + moves
-                routes += temp
+
             }
         }
-        return routes.sort { a, b -> b.totalCost <=> a.totalCost }.take(3)
+        def finish = System.currentTimeMillis()
+        Route result = routes.max { it.totalCost }
+        result.executionTime = finish - start
+        return [result]
     }
 }

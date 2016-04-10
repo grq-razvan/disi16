@@ -9,7 +9,7 @@ import solution.tsp.search.implementation.TSPSolutionType
 /**
  *  Created by stefangrecu on 10/04/16.
  */
-class ExecutionDataHolder {
+class ExecutionDataHolder implements RuntimeConfiguration {
 
     private AbstractExecutionHandler<City, Route> handler
 
@@ -23,18 +23,49 @@ class ExecutionDataHolder {
         }
     }
 
-    void executeSingleTest(Map<String, Object> params) {
+    void executeSingleTest(Map<String, Object> params, solution = null) {
         Integer cityCount = params.dimension as Integer
+        if (!solution) {
+            List availableTypes = getAvailableTypes(cityCount)
+            availableTypes.each { type ->
+                handler.createResultHandlerWith([cityCount: cityCount])
+                handler.processData([solutionType: type, cityCount: cityCount])
+                handler.writeResultDataFile()
+            }
+        } else {
+            handler.createResultHandlerWith([cityCount: cityCount])
+            handler.processData([solutionType: solution, cityCount: cityCount])
+            handler.writeResultDataFile()
+        }
+
+    }
+
+    void executeMyTests(TSPSolutionType solutionType = null) {
+        MY_TESTS.each {
+            executeSingleTest(it, solutionType)
+        }
+    }
+
+
+    void executeReqTests() {
+        REQ_TESTS.each {
+            executeSingleTest(it)
+        }
+    }
+
+    void executeTests() {
+        executeMyTests()
+        executeReqTests()
+    }
+
+    private static List<TSPSolutionType> getAvailableTypes(int cityCount) {
         List<TSPSolutionType> availableTypes = []
         if (cityCount <= 20) {
-            availableTypes = TSPSolutionType.findAll()
+            availableTypes = TSPSolutionType.findAll() - TSPSolutionType.LocalExperiment
         } else {
-            availableTypes = TSPSolutionType.findAll() - TSPSolutionType.Exhaustive
+            availableTypes = TSPSolutionType.findAll() - TSPSolutionType.Exhaustive - TSPSolutionType.LocalExperiment
         }
-        handler.createResultHandlerWith([cityCount: cityCount])
-        handler.processData([solutionType: TSPSolutionType.LocalExperiment, cityCount: cityCount])
-        handler.writeResultDataFile()
-
+        return availableTypes
     }
 
     private static final List<Map<String, Integer>> FILE_PARAMS = [

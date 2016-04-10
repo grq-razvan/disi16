@@ -8,7 +8,10 @@ class Route {
     Integer maxNumber
     Number executionTime
 
-    synchronized boolean isBetter(Route otherRoute) {
+    synchronized boolean isBetter(Route otherRoute, boolean minimum = false) {
+        if (minimum) {
+            return totalCostMinimum < otherRoute.totalCostMinimum
+        }
         return this.totalCost > otherRoute.totalCost
     }
 
@@ -22,5 +25,10 @@ class Route {
             return 0
         }
         return cities.head().distance(cities.tail().head()) + getTotalCostInternal(cities.tail())
+    }
+
+    Number getTotalCostMinimum() {
+        Number result = cities.last().distance(cities.first())
+        return (result + getTotalCostInternal(cities))
     }
 }

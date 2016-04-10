@@ -8,14 +8,14 @@ import solution.tsp.search.implementation.TSPSolutionType
 /**
  *  Created by stefangrecu on 10/04/16.
  */
-class LocalSearchExperiment extends AbstractTSPSearcher {
+class LocalSearcherExperiment extends AbstractTSPSearcher {
 
-    LocalSearchExperiment(Integer cityCount) {
+    LocalSearcherExperiment(Integer cityCount) {
         super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.LocalExperiment
         this.maxNumber = cityCount
-        this.runtimeParams.iterations = (cityCount * 1.5).toInteger()
-        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(10).intValue()
+        this.runtimeParams.iterations = (cityCount * 10).toInteger()
+        this.runtimeParams.restarts = (this.runtimeParams.iterations as Integer).intdiv(5).intValue()
     }
 
     @Override
@@ -28,6 +28,7 @@ class LocalSearchExperiment extends AbstractTSPSearcher {
         if (params.restarts == 0) {
             params.restarts = 1
         }
+        def startTime = System.currentTimeMillis()
         for (i in (0..<params.restarts)) {
             Route candidate = new Route(cities: [], maxNumber: this.maxNumber)
             initRoute(candidate, cities.collect())
@@ -44,6 +45,9 @@ class LocalSearchExperiment extends AbstractTSPSearcher {
             }
             routes.add(candidate)
         }
-        return [routes.max { it.totalCost }]
+        def endTime = System.currentTimeMillis()
+        def maxRoute = routes.max { it.totalCost }
+        maxRoute.executionTime = endTime - startTime
+        return [maxRoute]
     }
 }

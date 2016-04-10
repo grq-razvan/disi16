@@ -24,6 +24,7 @@ class GreedySearcher extends AbstractTSPSearcher {
 
     private List<Route> solveInternal(Map params) {
         Route route = new Route(cities: [], maxNumber: super.maxNumber)
+        def startTime = System.currentTimeMillis()
         List<City> temp = cities.collect()
         City startingPoint = temp.get(randomGenerator.nextInt(temp.indices.first(), temp.indices.last()))
         route.cities.add(startingPoint)
@@ -36,6 +37,8 @@ class GreedySearcher extends AbstractTSPSearcher {
             temp.remove(minDistanceCity)
             startingPoint = minDistanceCity
         }
+        def endTime = System.currentTimeMillis()
+        route.executionTime = endTime - startTime
         return [route]
     }
 }

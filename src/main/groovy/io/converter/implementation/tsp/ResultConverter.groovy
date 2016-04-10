@@ -24,8 +24,9 @@ class ResultConverter implements IResultConverter<Route> {
         return map.collect { key, value ->
             def builder = new StringBuilder()
                     .append("${key} : \n")
-                    .append("\tExecution time (optional): ${value?.executionTime} ms")
-                    .append("\tTotal cost: ${value.totalCost}\n")
+                    .append("\tExecution time (optional): ${value?.executionTime} ms\n")
+                    .append("\tTotal cost (negamax attempt): ${value.totalCost}\n")
+                    .append("\tTotal cost (minimum): ${value.totalCostMinimum}\n")
                     .append("\tCities: ${value.maxNumber}\n")
             value.cities.eachWithIndex { City city, index ->
                 builder.append("\t\t ${index} ${city.label}\n")

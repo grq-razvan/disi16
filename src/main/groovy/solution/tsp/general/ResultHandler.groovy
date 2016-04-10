@@ -7,10 +7,11 @@ import model.tsp.Route
 import solution.meta.AbstractResultHandler
 import solution.tsp.search.implementation.AbstractTSPSearcher
 import solution.tsp.search.implementation.TSPSolutionType
+import solution.tsp.search.implementation.annealing.SimulatedAnnealingSearcher
 import solution.tsp.search.implementation.exhaustivesearch.ExhaustiveSearcher
 import solution.tsp.search.implementation.greedysearch.GreedySearcher
 import solution.tsp.search.implementation.localgreedysearch.LocalGreedySearcher
-import solution.tsp.search.implementation.localsearch.LocalSearchExperiment
+import solution.tsp.search.implementation.localsearch.LocalSearcherExperiment
 import solution.tsp.search.implementation.localsearch.LocalSearcherShift
 import solution.tsp.search.implementation.localsearch.LocalSearcherSwap
 
@@ -37,7 +38,8 @@ class ResultHandler extends AbstractResultHandler<City, Route> {
             addSolver new LocalGreedySearcher(cityCount)
             addSolver new LocalSearcherSwap(cityCount)
             addSolver new LocalSearcherShift(cityCount)
-            addSolver new LocalSearchExperiment(cityCount)
+            addSolver new LocalSearcherExperiment(cityCount)
+            addSolver new SimulatedAnnealingSearcher(cityCount)
         }
     }
 

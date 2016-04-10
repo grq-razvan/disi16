@@ -63,7 +63,7 @@ class ExecutionHandler extends AbstractExecutionHandler<City, Route> implements 
             builder.append(RESULT_BASE_PATH)
                     .append('/')
                     .append(processedData.solution.name().toLowerCase())
-                    .append('-')
+                    .append('/')
                     .append((instance.filePath as String).substring(1))
         }
         return builder.toString()
