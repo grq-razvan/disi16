@@ -27,7 +27,7 @@ class ResultConverter implements IResultConverter<Route> {
                     .append("\tTotal cost: ${value.totalCost}\n")
                     .append("\tCities: ${value.maxNumber}\n")
             value.cities.eachWithIndex { City city, index ->
-                builder.append("\t\t ${index} ${city}")
+                builder.append("\t\t ${index} ${city.label}")
             }
             builder.append("#######################################").toString()
         }

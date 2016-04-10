@@ -20,6 +20,7 @@ class ResultHandler extends AbstractResultHandler<City, Route> {
     ResultHandler(Integer cityCount) {
         this.resultWriter = new ResultWriter()
         this.resultConverter = new ResultConverter()
+        solvers = []
         initializeSolvers(cityCount)
     }
 
@@ -28,10 +29,12 @@ class ResultHandler extends AbstractResultHandler<City, Route> {
     }
 
     private void initializeSolvers(Integer cityCount) {
-        addSolver new ExhaustiveSearcher(cityCount)
-        addSolver new GreedySearcher(cityCount)
-        addSolver new LocalGreedySearcher(cityCount)
-        addSolver new LocalSearcher(cityCount)
+        if (solvers.empty) {
+            addSolver new ExhaustiveSearcher(cityCount)
+            addSolver new GreedySearcher(cityCount)
+            addSolver new LocalGreedySearcher(cityCount)
+            addSolver new LocalSearcher(cityCount)
+        }
     }
 
     @Override

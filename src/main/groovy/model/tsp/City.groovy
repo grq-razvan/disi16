@@ -18,6 +18,10 @@ class City {
 
     @Override
     public String toString() {
+        return """${coordinates.first} ${coordinates.second}"""
+    }
+
+    public String getLabel() {
         return """City with coordinates (${coordinates.first}, ${coordinates.second})"""
     }
 }

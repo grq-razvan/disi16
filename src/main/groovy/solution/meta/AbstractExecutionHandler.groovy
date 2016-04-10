@@ -8,7 +8,7 @@ abstract class AbstractExecutionHandler<S, G> {
     protected AbstractDataHandler<S> dataHandler
     protected AbstractResultHandler<S, G> resultHandler
 
-    abstract void writeTestDataFile(Map data, String path)
+    abstract void writeTestDataFile(Integer i, Integer j, Integer k, String path)
 
     abstract void writeResultDataFile(String path)
 

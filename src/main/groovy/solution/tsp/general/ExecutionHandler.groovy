@@ -14,9 +14,8 @@ class ExecutionHandler extends AbstractExecutionHandler<City, Route> implements 
         this.resultHandler = new ResultHandler(params.cityCount as Integer)
     }
 
-    @Override
-    void writeTestDataFile(Map data, String path = DATA_BASE_PATH + "/instance-${cityCount}") {
-        inputData = dataHandler.generateData(data)
+    void writeTestDataFile(Integer cityCount, Integer xMax, Integer yMax, String path = DATA_BASE_PATH + "/instance-${cityCount}") {
+        inputData = dataHandler.generateData([cityCount: cityCount, xMax: xMax, yMax: yMax])
         dataHandler.writeDataFile(inputData, path)
     }
 

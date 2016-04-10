@@ -25,12 +25,12 @@ class RandomCityGenerator implements IDataGenerator<City> {
         Integer cityCount = params.cityCount
         return Collections.unmodifiableList(
                 (0..<cityCount).collect {
-                    Number currentX = numberGenerator.nextUniform(0.1, xMax)
-                    Number currentY = numberGenerator.nextUniform(0.1, yMax)
+                    Double currentX = numberGenerator.nextUniform(0.1, xMax)
+                    Double currentY = numberGenerator.nextUniform(0.1, yMax)
                     cityFactory.create(
                             [
-                                    x: currentX,
-                                    y: currentY
+                                    x: currentX.toInteger(),
+                                    y: currentY.toInteger()
                             ]
                     )
                 }

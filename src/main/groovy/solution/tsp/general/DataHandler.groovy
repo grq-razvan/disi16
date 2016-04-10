@@ -22,7 +22,7 @@ class DataHandler extends AbstractDataHandler<City> {
     @Override
     List<City> generateData(Map data) {
         return dataGenerator.generateData(
-                cityCount: data.cityCount,
+                cityCount: data.cityCount ?: 5,
                 xMax: data.xMax ?: 50,
                 yMax: data.yMax ?: 50
         )
