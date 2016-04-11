@@ -14,8 +14,8 @@ class LocalSearcherSwap extends AbstractTSPSearcher {
         super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.Local2Swap
         this.maxNumber = cityCount
-        this.runtimeParams.iterations = 650
-        this.runtimeParams.restarts = 50
+        this.runtimeParams.iterations = 50000
+        this.runtimeParams.restarts = 10
     }
 
     @Override

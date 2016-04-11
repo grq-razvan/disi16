@@ -16,8 +16,8 @@ class LocalGreedySearcher extends AbstractTSPSearcher {
         super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.Mix
         this.maxNumber = maxNumber
-        this.runtimeParams.iterations = 500
-        this.runtimeParams.restarts = 50
+        this.runtimeParams.iterations = 75000
+        this.runtimeParams.restarts = 18
     }
 
     @Override
