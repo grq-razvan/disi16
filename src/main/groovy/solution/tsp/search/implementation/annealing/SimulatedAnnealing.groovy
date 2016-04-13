@@ -7,8 +7,8 @@ import org.apache.commons.math3.util.FastMath
  */
 trait SimulatedAnnealing {
     Double temperature
-    Double minTemperature
-    private final Double ALPHA = 0.995
+    static final Double MIN_TEMPERATURE = 1.0
+    private final Double ALPHA = 0.99
 
     abstract Double computeAcceptanceProbability(Double solutionEnergy, Double neighborEnergy)
 
@@ -16,11 +16,15 @@ trait SimulatedAnnealing {
         temperature *= ALPHA
     }
 
-    Double coolTemperatureLog(int i) {
-        temperature = temperature / FastMath.log(2, i + 1)
+    void heatUp(Double temperature) {
+        setTemperature(temperature)
     }
 
-    Double coolTemperatureFractional(int i) {
-        temperature /= i
+    Double applyLog(Double temperature, int i) {
+        return temperature / FastMath.log(2, i + 1)
+    }
+
+    Double applyFraction(Double temperature, int i) {
+        return temperature / i
     }
 }

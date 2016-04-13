@@ -16,10 +16,8 @@ class SimulatedAnnealingSearcher extends AbstractTSPSearcher implements Simulate
         this.solutionType = TSPSolutionType.SimulatedAnnealing
         this.cities = []
         this.maxNumber = maxNumber
-        this.runtimeParams.iterations = 12000
-        this.runtimeParams.restarts = 10
-        temperature = 100000.0
-        minTemperature = 0.1
+        this.runtimeParams.restarts = 1000
+        temperature = 10000.0
     }
 
     @Override
@@ -33,26 +31,32 @@ class SimulatedAnnealingSearcher extends AbstractTSPSearcher implements Simulate
             params.restarts = 1
         }
         def startTime = System.currentTimeMillis()
-        params.restarts.times {
+        params.restarts.times { Integer iteration ->
             Route candidate = new Route(cities: [], maxNumber: this.maxNumber)
             List<City> shuffledCities = cities.collect()
             initRoute(candidate, shuffledCities)
-            while (temperature > minTemperature) {
-                    int firstIndex = randomGenerator.nextInt(candidate.cities.indices.first(), candidate.cities.indices.last() - 1)
-                    int lastIndex = randomGenerator.nextInt(firstIndex + 1, candidate.cities.indices.last())
-                    Route neighbor = create2SwapRoute(candidate, firstIndex, lastIndex)
-                    if (neighbor.isBetter(candidate)) {
+            def entries = []
+            while (temperature > MIN_TEMPERATURE) {
+                int firstIndex = randomGenerator.nextInt(candidate.cities.indices.first(), candidate.cities.indices.last() - 1)
+                int lastIndex = randomGenerator.nextInt(firstIndex + 1, candidate.cities.indices.last())
+                Route neighbor = create2SwapRoute(candidate, firstIndex, lastIndex)
+                if (neighbor.isBetter(candidate)) {
+                    entries += neighbor
+                    candidate = neighbor
+                } else {
+                    Double acceptanceProbability = computeAcceptanceProbability(candidate.totalCostMinimum.doubleValue(),
+                            neighbor.totalCostMinimum.doubleValue())
+                    if (acceptanceProbability > randomGenerator.nextUniform(0.0, 1.0)) {
+                        entries += neighbor
                         candidate = neighbor
-                    } else {
-                        Double acceptanceProbability = computeAcceptanceProbability(candidate.totalCostMinimum.doubleValue(),
-                                neighbor.totalCostMinimum.doubleValue())
-                        if (acceptanceProbability > randomGenerator.nextUniform(0.0, 1.0)) {
-                            candidate = neighbor
-                        }
                     }
+                }
                 coolTemperatureLinear()
             }
-            routes.add(candidate)
+            heatUp(applyFraction(10000.0, iteration))
+            if (!entries.empty) {
+                routes += entries.max { it.totalCost }
+            }
         }
         def endTime = System.currentTimeMillis()
         def maxRoute = routes.max { it.totalCost }
@@ -62,6 +66,6 @@ class SimulatedAnnealingSearcher extends AbstractTSPSearcher implements Simulate
 
     @Override
     Double computeAcceptanceProbability(Double solutionEnergy, Double neighborEnergy) {
-        return neighborEnergy < solutionEnergy ? 1.0 : Math.exp((Math.abs(neighborEnergy - solutionEnergy)) / temperature)
+        return Math.exp((Math.abs(neighborEnergy - solutionEnergy)) / temperature)
     }
 }

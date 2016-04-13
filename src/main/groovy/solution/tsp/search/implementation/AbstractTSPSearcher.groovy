@@ -72,10 +72,10 @@ abstract class AbstractTSPSearcher implements ISolver<Route> {
     static Route createQuadSwapMoveRoute(Route initial, int i, int j, int k, int t, int shift = 1) {
         List<City> temp = initial.cities.collect()
         if (i + 1 != k - 1) {
-            Collections.swap(temp, i + 1, k - 1)
+            temp = get2SwapCities(new Route(cities: temp, maxNumber: initial.maxNumber), i, k)
         }
         if (j + 1 != t - 1) {
-            Collections.swap(temp, j + 1, t - 1)
+            temp = get2SwapCities(new Route(cities: temp, maxNumber: initial.maxNumber), j, t)
         }
         def length = Math.abs(k - j)
 //        if (j + length + 1 <= temp.indices.last()) {
