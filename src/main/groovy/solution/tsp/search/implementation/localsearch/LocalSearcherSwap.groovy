@@ -15,7 +15,7 @@ class LocalSearcherSwap extends AbstractTSPSearcher {
         this.solutionType = TSPSolutionType.Local2Swap
         this.maxNumber = cityCount
         this.runtimeParams.iterations = 50000
-        this.runtimeParams.restarts = 10
+        this.runtimeParams.restarts = 25
     }
 
     @Override

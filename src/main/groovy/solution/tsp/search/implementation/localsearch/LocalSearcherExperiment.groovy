@@ -15,7 +15,7 @@ class LocalSearcherExperiment extends AbstractTSPSearcher {
         this.solutionType = TSPSolutionType.LocalExperiment
         this.maxNumber = cityCount
         this.runtimeParams.iterations = 75000
-        this.runtimeParams.restarts = 12
+        this.runtimeParams.restarts = 20
     }
 
     @Override
