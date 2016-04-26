@@ -32,6 +32,7 @@ class LocalSearcherExperiment extends AbstractTSPSearcher {
         for (i in (0..<params.restarts)) {
             Route candidate = new Route(cities: [], maxNumber: this.maxNumber)
             initRoute(candidate, cities.collect())
+            def entries = []
             for (j in (0..<params.iterations)) {
                 def cityIndices = candidate.cities.indices
                 int firstIndex = randomGenerator.nextInt(cityIndices.first(), cityIndices.last().intdiv(2).intValue() - 1)
@@ -40,10 +41,14 @@ class LocalSearcherExperiment extends AbstractTSPSearcher {
                 int lastIndex = randomGenerator.nextInt(thirdIndex + 1, cityIndices.last())
                 Route neighbor = createQuadSwapMoveRoute(candidate, firstIndex, secondIndex, thirdIndex, lastIndex)
                 if (neighbor.isBetter(candidate)) {
+                    entries.add(neighbor)
                     candidate = neighbor
                 }
             }
-            routes.add(candidate)
+            if (!entries.empty) {
+                routes += entries.max { it.totalCost }
+            }
+
         }
         def endTime = System.currentTimeMillis()
         def maxRoute = routes.max { it.totalCost }

@@ -16,8 +16,8 @@ class LocalGreedySearcher extends AbstractTSPSearcher {
         super.randomGenerator = new RandomDataGenerator()
         this.solutionType = TSPSolutionType.Mix
         this.maxNumber = maxNumber
-        this.runtimeParams.iterations = 75000
-        this.runtimeParams.restarts = 18
+        this.runtimeParams.iterations = 2
+        this.runtimeParams.restarts = 1000
     }
 
     @Override
@@ -35,28 +35,20 @@ class LocalGreedySearcher extends AbstractTSPSearcher {
             def tempCities = cities.collect()
             Route route = new Route(cities: [], maxNumber: this.maxNumber)
             initRoute(route, tempCities, this.maxNumber)
-            for (int count in (0..<params.iterations)) {
-                int startIndex = route.cities.indices.first()
-                int lastIndex = route.cities.indices.last()
-                List<Route> moves = []
-                for (int i = startIndex; i < lastIndex - 1; i++) {
-                    List<Route> swaps = []
-                    for (int j = i + 1; j < lastIndex; j++) {
-                        def otherRoute = create2SwapRoute(route, i, j)
-                        if (otherRoute.isBetter(route)) {
-                            swaps.add(otherRoute)
-                            route = otherRoute
-                        }
-                    }
-                    def otherRoute = create3MoveRoute(route, i, 3)
-                    if (otherRoute.isBetter(swaps.empty ? route : swaps.max { it.totalCost })) {
-                        moves.add(otherRoute)
+            int startIndex = route.cities.indices.first()
+            int lastIndex = route.cities.indices.last()
+            List<Route> swaps = []
+            for (int i = startIndex; i < lastIndex - 1; i++) {
+                for (int j = i + 1; j < lastIndex; j++) {
+                    def otherRoute = create2SwapRoute(route, i, j)
+                    if (otherRoute.isBetter(route)) {
+                        swaps.add(otherRoute)
                         route = otherRoute
                     }
-                    routes += moves
-                    routes += swaps
                 }
-
+                if (!swaps.empty) {
+                    routes += swaps.max { it.totalCost }
+                }
             }
         }
         def finish = System.currentTimeMillis()
