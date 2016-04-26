@@ -16,7 +16,8 @@ class SimulatedAnnealingSearcher extends AbstractTSPSearcher implements Simulate
         this.solutionType = TSPSolutionType.SimulatedAnnealing
         this.cities = []
         this.maxNumber = maxNumber
-        this.runtimeParams.restarts = 1000
+        this.runtimeParams.restarts = 50
+        this.runtimeParams.iterations = 5000
         temperature = 10000.0
     }
 
@@ -31,29 +32,31 @@ class SimulatedAnnealingSearcher extends AbstractTSPSearcher implements Simulate
             params.restarts = 1
         }
         def startTime = System.currentTimeMillis()
-        params.restarts.times { Integer iteration ->
+        params.restarts.times { Integer restart ->
             Route candidate = new Route(cities: [], maxNumber: this.maxNumber)
             List<City> shuffledCities = cities.collect()
             initRoute(candidate, shuffledCities)
             def entries = []
-            while (temperature > MIN_TEMPERATURE) {
-                int firstIndex = randomGenerator.nextInt(candidate.cities.indices.first(), candidate.cities.indices.last() - 1)
-                int lastIndex = randomGenerator.nextInt(firstIndex + 1, candidate.cities.indices.last())
-                Route neighbor = create2SwapRoute(candidate, firstIndex, lastIndex)
-                if (neighbor.isBetter(candidate)) {
-                    entries += neighbor
-                    candidate = neighbor
-                } else {
-                    Double acceptanceProbability = computeAcceptanceProbability(candidate.totalCostMinimum.doubleValue(),
-                            neighbor.totalCostMinimum.doubleValue())
-                    if (acceptanceProbability > randomGenerator.nextUniform(0.0, 1.0)) {
+            params.iterations.times { Integer iteration ->
+                while (temperature > MIN_TEMPERATURE) {
+                    int firstIndex = randomGenerator.nextInt(candidate.cities.indices.first(), candidate.cities.indices.last() - 1)
+                    int lastIndex = randomGenerator.nextInt(firstIndex + 1, candidate.cities.indices.last())
+                    Route neighbor = create2SwapRoute(candidate, firstIndex, lastIndex)
+                    if (neighbor.isBetter(candidate)) {
                         entries += neighbor
                         candidate = neighbor
+                    } else {
+                        Double acceptanceProbability = computeAcceptanceProbability(candidate.totalCostMinimum.doubleValue(),
+                                neighbor.totalCostMinimum.doubleValue())
+                        if (acceptanceProbability > randomGenerator.nextUniform(0.0, 1.0)) {
+                            entries += neighbor
+                            candidate = neighbor
+                        }
                     }
+                    coolTemperatureLinear()
                 }
-                coolTemperatureLinear()
             }
-            heatUp(applyFraction(10000.0, iteration))
+            heatUp(10000)
             if (!entries.empty) {
                 routes += entries.max { it.totalCost }
             }

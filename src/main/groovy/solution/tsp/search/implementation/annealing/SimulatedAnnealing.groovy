@@ -24,7 +24,7 @@ trait SimulatedAnnealing {
         return temperature / FastMath.log(2, i + 1)
     }
 
-    Double applyFraction(Double temperature, int i) {
+    Double applyFraction(int i) {
         return temperature / i
     }
 }
